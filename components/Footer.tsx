@@ -15,24 +15,21 @@ export function Footer() {
           <div>
             <h4 className="text-white font-semibold mb-4">Insurance Types</h4>
             <ul className="space-y-2 text-sm text-slate-400">
-              <li><Link href="/class-3-scooter-insurance" className="hover:text-white transition-colors">Class 3 Scooter Insurance</Link></li>
-              <li><Link href="/breakdown-cover" className="hover:text-white transition-colors">Breakdown Cover</Link></li>
-              <li><Link href="/compare" className="hover:text-white transition-colors">Compare Insurance</Link></li>
+              <li><Link href="/class-3-mobility-scooter-insurance" className="hover:text-white transition-colors">Class 3 Mobility Scooter Insurance</Link></li>
+              <li><Link href="/mobility-scooter-breakdown-cover" className="hover:text-white transition-colors">Mobility Scooter Breakdown Cover</Link></li>
+              <li><Link href="/compare-mobility-scooter-insurance" className="hover:text-white transition-colors">Compare Mobility Scooter Insurance</Link></li>
             </ul>
           </div>
           <div>
-            <h4 className="text-white font-semibold mb-4">Providers</h4>
+            <h4 className="text-white font-semibold mb-4">Guides</h4>
             <ul className="space-y-2 text-sm text-slate-400">
-              <li><Link href="/providers/surewise" className="hover:text-white transition-colors">Surewise</Link></li>
-              <li><Link href="/providers/age-uk" className="hover:text-white transition-colors">Age UK</Link></li>
-              <li><Link href="/providers/mark-bates" className="hover:text-white transition-colors">Mark Bates</Link></li>
-              <li><Link href="/compare" className="hover:text-white transition-colors">Compare All</Link></li>
+              <li><Link href="/do-you-need-mobility-scooter-insurance" className="hover:text-white transition-colors">Do You Need Mobility Scooter Insurance?</Link></li>
+              <li><Link href="/compare-mobility-scooter-insurance" className="hover:text-white transition-colors">Compare Providers</Link></li>
             </ul>
           </div>
           <div>
             <h4 className="text-white font-semibold mb-4">Resources</h4>
             <ul className="space-y-2 text-sm text-slate-400">
-              <li><Link href="/do-you-need-insurance" className="hover:text-white transition-colors">Do You Need Insurance?</Link></li>
               <li><Link href="/contact" className="hover:text-white transition-colors">Contact Us</Link></li>
               <li><Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link></li>
               <li><Link href="/terms" className="hover:text-white transition-colors">Terms of Service</Link></li>

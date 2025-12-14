@@ -12,14 +12,17 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "Mobility Scooter Insurance UK 2025 | Compare Quotes & Save",
+    default: "Mobility Scooter Insurance UK | Compare Quotes from £4/month",
     template: "%s | Mobility Scooter Insurance UK"
   },
-  description: "Compare mobility scooter insurance quotes from UK specialist insurers. Get comprehensive cover for your mobility scooter, powerchair, or electric wheelchair. Protect against theft, damage & breakdown from just £4/month.",
+  description: "Mobility scooter insurance UK - compare quotes from specialist insurers. Get insurance for mobility scooter, powerchair or wheelchair. Cheap cover from £4/month with theft, damage & breakdown protection.",
   keywords: [
     "mobility scooter insurance",
     "mobility scooter insurance uk",
     "insurance for mobility scooter",
+    "insurance mobility scooter",
+    "scooter mobility insurance",
+    "insurance for mobility scooter uk",
     "do you need insurance for mobility scooter",
     "cheap mobility scooter insurance",
     "best mobility scooter insurance uk",
@@ -40,13 +43,13 @@ export const metadata: Metadata = {
     locale: "en_GB",
     url: "https://mobilityscooterinsurance.quest",
     siteName: "Mobility Scooter Insurance UK",
-    title: "Mobility Scooter Insurance UK 2025 | Compare Quotes",
-    description: "Compare mobility scooter insurance quotes from UK specialist insurers. Protect your mobility equipment from theft, damage & breakdown.",
+    title: "Mobility Scooter Insurance UK | Best Quotes 2025",
+    description: "Mobility scooter insurance UK - get insurance for mobility scooter from specialist providers. Compare cheap quotes with theft, accidental damage & breakdown cover.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Mobility Scooter Insurance UK 2025",
-    description: "Compare mobility scooter insurance quotes from UK specialist insurers.",
+    title: "Mobility Scooter Insurance UK | Compare Quotes",
+    description: "Mobility scooter insurance from UK specialists. Compare cheap quotes for scooter, powerchair & wheelchair cover.",
   },
   robots: {
     index: true,
@@ -66,8 +69,9 @@ const organizationJsonLd = {
   "@type": "WebSite",
   "@id": "https://mobilityscooterinsurance.quest/#website",
   name: "Mobility Scooter Insurance UK",
+  alternateName: ["Insurance for Mobility Scooter UK", "Scooter Mobility Insurance"],
   url: "https://mobilityscooterinsurance.quest",
-  description: "Compare mobility scooter insurance quotes from UK specialist insurers. Find the best cover for mobility scooters, powerchairs, and electric wheelchairs.",
+  description: "Mobility scooter insurance UK comparison service. Get insurance for mobility scooter, powerchair or electric wheelchair from specialist UK insurers.",
   inLanguage: "en-GB",
   publisher: {
     "@type": "Organization",
@@ -80,8 +84,9 @@ const serviceJsonLd = {
   "@context": "https://schema.org",
   "@type": "Service",
   "@id": "https://mobilityscooterinsurance.quest/#service",
-  name: "Mobility Scooter Insurance Comparison",
-  description: "Free comparison service for mobility scooter insurance in the UK. Compare quotes from specialist insurers including Surewise, Age UK, and Mark Bates.",
+  name: "Mobility Scooter Insurance UK Comparison",
+  alternateName: "Insurance for Mobility Scooter Comparison",
+  description: "Compare mobility scooter insurance UK quotes from specialist providers. Find cheap insurance for mobility scooter with theft, damage and breakdown cover. Compare Surewise, Age UK, Mark Bates and more.",
   provider: {
     "@type": "Organization",
     name: "Mobility Scooter Insurance UK"
@@ -90,12 +95,12 @@ const serviceJsonLd = {
     "@type": "Country",
     name: "United Kingdom"
   },
-  serviceType: "Insurance Comparison",
+  serviceType: "Mobility Scooter Insurance Comparison",
   offers: {
     "@type": "Offer",
     price: "0",
     priceCurrency: "GBP",
-    description: "Free mobility scooter insurance quotes"
+    description: "Free mobility scooter insurance quotes UK"
   }
 }
 

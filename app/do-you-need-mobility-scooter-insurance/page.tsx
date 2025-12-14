@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     'is mobility scooter insurance compulsory',
   ],
   alternates: {
-    canonical: 'https://mobilityscooterinsurance.quest/do-you-need-insurance',
+    canonical: 'https://mobilityscooterinsurance.quest/do-you-need-mobility-scooter-insurance',
   },
 }
 

@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     'mobility scooter insurance compare',
   ],
   alternates: {
-    canonical: 'https://mobilityscooterinsurance.quest/compare',
+    canonical: 'https://mobilityscooterinsurance.quest/compare-mobility-scooter-insurance',
   },
 }
 

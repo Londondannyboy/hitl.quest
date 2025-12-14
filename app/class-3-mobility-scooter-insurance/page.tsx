@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     '8mph scooter insurance',
   ],
   alternates: {
-    canonical: 'https://mobilityscooterinsurance.quest/class-3-scooter-insurance',
+    canonical: 'https://mobilityscooterinsurance.quest/class-3-mobility-scooter-insurance',
   },
 }
 

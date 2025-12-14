@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     'mobility scooter recovery',
   ],
   alternates: {
-    canonical: 'https://mobilityscooterinsurance.quest/breakdown-cover',
+    canonical: 'https://mobilityscooterinsurance.quest/mobility-scooter-breakdown-cover',
   },
 }
 

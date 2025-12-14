@@ -2,8 +2,8 @@ import { Metadata } from 'next'
 import { QuoteCalculator } from '@/components/QuoteCalculator'
 
 export const metadata: Metadata = {
-  title: 'Mobility Scooter Insurance UK 2025 | Compare Quotes & Save',
-  description: 'Compare mobility scooter insurance quotes from UK specialist insurers. Get comprehensive cover for your mobility scooter, powerchair, or electric wheelchair. Protect against theft, damage & breakdown from just £4/month.',
+  title: 'Mobility Scooter Insurance UK | Compare Quotes from £4/month',
+  description: 'Mobility scooter insurance UK - compare quotes from specialist insurers. Get insurance for mobility scooter, powerchair or wheelchair. Cheap cover from £4/month with theft, damage & breakdown protection.',
   alternates: {
     canonical: 'https://mobilityscooterinsurance.quest',
   },
