@@ -374,6 +374,56 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Articles & Resources Section */}
+      <section className="py-16 px-4">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-2xl font-bold text-white text-center mb-4">
+            Expert Articles & Guides
+          </h2>
+          <p className="text-slate-400 text-center mb-12 max-w-3xl mx-auto">
+            Explore our comprehensive guides on yoga teacher insurance, coverage types, costs, and specialized requirements.
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <a href="/articles/yoga-insurance-costs-guide" className="group bg-slate-800/50 rounded-xl p-6 border border-slate-700/50 hover:border-blue-500/50 transition-colors">
+              <h3 className="text-lg font-bold text-blue-400 group-hover:text-blue-300 mb-2">Insurance Costs Guide</h3>
+              <p className="text-sm text-slate-400">Complete breakdown of yoga teacher insurance pricing, factors affecting costs, and budgeting tips.</p>
+              <div className="text-xs text-blue-400 mt-4">Read Guide →</div>
+            </a>
+
+            <a href="/articles/hot-yoga-insurance-coverage" className="group bg-slate-800/50 rounded-xl p-6 border border-slate-700/50 hover:border-blue-500/50 transition-colors">
+              <h3 className="text-lg font-bold text-blue-400 group-hover:text-blue-300 mb-2">Hot Yoga Insurance</h3>
+              <p className="text-sm text-slate-400">Specialized coverage for heated yoga classes, Bikram yoga, and heat-related injury protection.</p>
+              <div className="text-xs text-blue-400 mt-4">Read Guide →</div>
+            </a>
+
+            <a href="/articles/aerial-yoga-insurance-explained" className="group bg-slate-800/50 rounded-xl p-6 border border-slate-700/50 hover:border-blue-500/50 transition-colors">
+              <h3 className="text-lg font-bold text-blue-400 group-hover:text-blue-300 mb-2">Aerial Yoga Insurance</h3>
+              <p className="text-sm text-slate-400">Protection for suspension equipment, inversion classes, and high-risk aerial yoga practices.</p>
+              <div className="text-xs text-blue-400 mt-4">Read Guide →</div>
+            </a>
+
+            <a href="/articles/public-liability-vs-professional-indemnity" className="group bg-slate-800/50 rounded-xl p-6 border border-slate-700/50 hover:border-blue-500/50 transition-colors">
+              <h3 className="text-lg font-bold text-blue-400 group-hover:text-blue-300 mb-2">Insurance Types Explained</h3>
+              <p className="text-sm text-slate-400">Clear explanation of public liability vs professional indemnity and what each covers.</p>
+              <div className="text-xs text-blue-400 mt-4">Read Guide →</div>
+            </a>
+
+            <a href="/articles/yoga-alliance-insurance-requirements" className="group bg-slate-800/50 rounded-xl p-6 border border-slate-700/50 hover:border-blue-500/50 transition-colors">
+              <h3 className="text-lg font-bold text-blue-400 group-hover:text-blue-300 mb-2">Yoga Alliance Requirements</h3>
+              <p className="text-sm text-slate-400">Insurance requirements for Yoga Alliance members and professional standards.</p>
+              <div className="text-xs text-blue-400 mt-4">Read Guide →</div>
+            </a>
+
+            <a href="/articles" className="group bg-slate-800/50 rounded-xl p-6 border border-slate-700/50 hover:border-blue-500/50 transition-colors">
+              <h3 className="text-lg font-bold text-blue-400 group-hover:text-blue-300 mb-2">View All Articles</h3>
+              <p className="text-sm text-slate-400">Explore our complete collection of yoga teacher insurance guides and educational resources.</p>
+              <div className="text-xs text-blue-400 mt-4">View Articles →</div>
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* FAQ Section */}
       <section id="faq" className="py-16 px-4">
         <div className="max-w-4xl mx-auto">
@@ -414,7 +464,7 @@ export default function HomePage() {
                 </svg>
               </summary>
               <p className="mt-4 text-slate-400">
-                Yoga teacher insurance typically costs between £15-£38 per month depending on experience level, coverage type, and teaching situation. New teachers (0-2 years) generally pay more than experienced teachers (5+ years). Basic public liability insurance starts around £180-£240 per year, while combined professional indemnity and public liability insurance ranges from £240-£456 per year. Get a personalized quote based on your teaching profile using our calculator.
+                Yoga teacher insurance typically costs between £15-£38 per month depending on experience level, coverage type, and teaching situation. New teachers (0-2 years) generally pay more than experienced teachers (5+ years). Basic public liability insurance starts around £180-£240 per year, while combined professional indemnity and public liability insurance ranges from £240-£456 per year. <a href="/articles/yoga-insurance-costs-guide" className="text-blue-400 hover:text-blue-300 underline">Read our complete costs guide</a> for detailed pricing information. Get a personalized quote based on your teaching profile using our calculator.
               </p>
             </details>
 
@@ -426,7 +476,7 @@ export default function HomePage() {
                 </svg>
               </summary>
               <p className="mt-4 text-slate-400">
-                Professional Indemnity Insurance covers claims that your teaching advice or instruction caused injury or loss to a student due to negligence. Public Liability Insurance covers injury to students or damage to property that occurs during your classes. Most yoga teachers need both types of coverage for comprehensive protection. Combined policies are often more cost-effective than buying separately, typically providing better value for money.
+                Professional Indemnity Insurance covers claims that your teaching advice or instruction caused injury or loss to a student due to negligence. Public Liability Insurance covers injury to students or damage to property that occurs during your classes. Most yoga teachers need both types of coverage for comprehensive protection. <a href="/articles/public-liability-vs-professional-indemnity" className="text-blue-400 hover:text-blue-300 underline">Learn the key differences</a> between these two essential coverage types.
               </p>
             </details>
 
@@ -438,7 +488,7 @@ export default function HomePage() {
                 </svg>
               </summary>
               <p className="mt-4 text-slate-400">
-                Yes, trainee yoga teachers are strongly recommended to have insurance, especially if they are teaching students during their training. Many yoga teacher training programs require trainees to carry professional indemnity insurance. Insurance protects both you and your students during the learning process and is often available at lower rates for trainees. This is an important investment in your teaching career from the start.
+                Yes, trainee yoga teachers are strongly recommended to have insurance, especially if they are teaching students during their training. Many yoga teacher training programs require trainees to carry professional indemnity insurance. <a href="/articles/trainee-yoga-teacher-insurance" className="text-blue-400 hover:text-blue-300 underline">Check our trainee insurance guide</a> for affordable coverage options during your training. Insurance protects both you and your students during the learning process and is often available at lower rates for trainees.
               </p>
             </details>
 
@@ -462,7 +512,7 @@ export default function HomePage() {
                 </svg>
               </summary>
               <p className="mt-4 text-slate-400">
-                Yes, specialized yoga styles including hot yoga and aerial yoga can be insured. Some providers offer specific coverage for these high-risk practices. Hot yoga requires coverage for heat-related injury risks, while aerial yoga requires coverage for fall and equipment risks. Specialist insurers understand these specific requirements and can provide appropriate coverage at fair rates. When getting quotes, always mention your specific yoga specialties.
+                Yes, specialized yoga styles including hot yoga and aerial yoga can be insured. Some providers offer specific coverage for these high-risk practices. <a href="/articles/hot-yoga-insurance-coverage" className="text-blue-400 hover:text-blue-300 underline">Hot yoga requires coverage for heat-related risks</a>, while <a href="/articles/aerial-yoga-insurance-explained" className="text-blue-400 hover:text-blue-300 underline">aerial yoga requires coverage for fall and equipment risks</a>. Specialist insurers understand these specific requirements and can provide appropriate coverage at fair rates. When getting quotes, always mention your specific yoga specialties.
               </p>
             </details>
 
