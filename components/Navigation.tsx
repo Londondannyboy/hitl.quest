@@ -28,7 +28,7 @@ export function Navigation() {
               <span className="text-xl font-bold text-white">
                 Yoga Teacher <span className="text-blue-400">Insurance</span>
               </span>
-              <p className="text-xs text-slate-400 hidden sm:block">UK Professional Cover</p>
+              <p className="text-xs text-slate-400 hidden sm:block">Comparison Site - Not an Insurer</p>
             </div>
           </Link>
 
