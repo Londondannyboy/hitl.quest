@@ -633,33 +633,33 @@ export default function HomePage() {
               </div>
             </a>
 
-            <a href="/articles/hot-yoga-insurance-coverage" className="group bg-slate-800 hover:bg-slate-700 rounded-xl overflow-hidden transition-all border border-slate-700 hover:border-orange-500/50">
+            <a href="/hot-yoga-insurance" className="group bg-slate-800 hover:bg-slate-700 rounded-xl overflow-hidden transition-all border border-slate-700 hover:border-orange-500/50">
               <div className="relative h-48 overflow-hidden bg-slate-700">
                 <img
                   src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=600&h=400&crop=entropy"
-                  alt="hot yoga insurance bikram yoga heated class coverage requirements"
+                  alt="hot yoga insurance bikram yoga heated class coverage requirements UK quotes"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-lg font-bold text-orange-400 group-hover:text-orange-300 mb-2">Hot Yoga Insurance</h3>
-                <p className="text-sm text-slate-400 mb-4">Specialized coverage for heated yoga classes, Bikram yoga, and heat-related injury protection.</p>
-                <div className="text-xs text-orange-400">Read Guide →</div>
+                <h3 className="text-lg font-bold text-orange-400 group-hover:text-orange-300 mb-2">Hot Yoga Insurance UK</h3>
+                <p className="text-sm text-slate-400 mb-4">Specialized coverage for heated yoga classes, Bikram yoga, heat-related injury protection. Get quotes now.</p>
+                <div className="text-xs text-orange-400">Get Quote →</div>
               </div>
             </a>
 
-            <a href="/articles/aerial-yoga-insurance-explained" className="group bg-slate-800 hover:bg-slate-700 rounded-xl overflow-hidden transition-all border border-slate-700 hover:border-purple-500/50">
+            <a href="/aerial-yoga-insurance" className="group bg-slate-800 hover:bg-slate-700 rounded-xl overflow-hidden transition-all border border-slate-700 hover:border-red-500/50">
               <div className="relative h-48 overflow-hidden bg-slate-700">
                 <img
-                  src="https://images.unsplash.com/photo-1588568694645-e7a7c7ed65b9?w=600&h=400&crop=entropy"
-                  alt="aerial yoga insurance suspension equipment protection inversion classes"
+                  src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=600&h=400&crop=entropy"
+                  alt="aerial yoga insurance suspended yoga equipment liability fall protection UK coverage calculator"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-lg font-bold text-purple-400 group-hover:text-purple-300 mb-2">Aerial Yoga Insurance</h3>
-                <p className="text-sm text-slate-400 mb-4">Protection for suspension equipment, inversion classes, and high-risk aerial yoga practices.</p>
-                <div className="text-xs text-purple-400">Read Guide →</div>
+                <h3 className="text-lg font-bold text-red-400 group-hover:text-red-300 mb-2">Aerial Yoga Insurance UK</h3>
+                <p className="text-sm text-slate-400 mb-4">Complete protection for suspension equipment, fall risks, rigging liability. Use our calculator for instant quotes.</p>
+                <div className="text-xs text-red-400">Get Quote + Calculator →</div>
               </div>
             </a>
 
