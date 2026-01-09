@@ -18,3 +18,19 @@ details summary::-webkit-details-marker {
 details summary::marker {
   display: none;
 }
+
+/* CopilotKit z-index fix */
+[data-copilotkit-popup],
+[data-copilotkit-sidebar],
+.copilotkit-dev-console,
+.copilotKitPopup,
+.copilotKitSidebar {
+  z-index: 9999 !important;
+}
+
+/* Ensure CopilotKit button is clickable */
+[data-copilotkit-button],
+.copilotKitButton {
+  z-index: 9998 !important;
+  pointer-events: auto !important;
+}
