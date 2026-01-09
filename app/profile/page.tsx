@@ -3,18 +3,9 @@
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { authClient } from '@/lib/auth/client';
-import { useCoAgent } from '@copilotkit/react-core';
 
-// Agent state type - must match the Pydantic model in agent.py
-type UserProfile = {
-  id: string | null;
-  name: string | null;
-  firstName: string | null;
-  email: string | null;
-};
-
-type AgentState = {
-  user: UserProfile | null;
+// Profile state type
+type ProfileState = {
   yoga_styles: string[];
   teaching_locations: string[];
   student_count: string | null;
@@ -52,15 +43,12 @@ export default function ProfilePage() {
   const { data: session, isPending } = authClient.useSession();
   const user = session?.user;
 
-  const { state, setState } = useCoAgent<AgentState>({
-    name: "yoga_agent",
-    initialState: {
-      user: null,
-      yoga_styles: [],
-      teaching_locations: [],
-      student_count: null,
-      has_existing_insurance: false,
-    },
+  // Local state for profile preferences
+  const [profile, setProfile] = useState<ProfileState>({
+    yoga_styles: [],
+    teaching_locations: [],
+    student_count: null,
+    has_existing_insurance: false,
   });
 
   const [saved, setSaved] = useState(false);
@@ -73,62 +61,82 @@ export default function ProfilePage() {
   }, [isPending, user, router]);
 
   const handleStyleToggle = (styleId: string) => {
-    const currentStyles = state?.yoga_styles ?? [];
+    const currentStyles = profile.yoga_styles;
     const newStyles = currentStyles.includes(styleId)
-      ? currentStyles.filter((s) => s !== styleId)
+      ? currentStyles.filter((s: string) => s !== styleId)
       : [...currentStyles, styleId];
 
-    setState((prev): AgentState => ({
-      user: prev?.user ?? null,
+    setProfile((prev) => ({
+      ...prev,
       yoga_styles: newStyles,
-      teaching_locations: prev?.teaching_locations ?? [],
-      student_count: prev?.student_count ?? null,
-      has_existing_insurance: prev?.has_existing_insurance ?? false,
     }));
     setSaved(false);
   };
 
   const handleLocationToggle = (locationId: string) => {
-    const currentLocations = state?.teaching_locations ?? [];
+    const currentLocations = profile.teaching_locations;
     const newLocations = currentLocations.includes(locationId)
-      ? currentLocations.filter((l) => l !== locationId)
+      ? currentLocations.filter((l: string) => l !== locationId)
       : [...currentLocations, locationId];
 
-    setState((prev): AgentState => ({
-      user: prev?.user ?? null,
-      yoga_styles: prev?.yoga_styles ?? [],
+    setProfile((prev) => ({
+      ...prev,
       teaching_locations: newLocations,
-      student_count: prev?.student_count ?? null,
-      has_existing_insurance: prev?.has_existing_insurance ?? false,
     }));
     setSaved(false);
   };
 
   const handleStudentCountChange = (count: string | null) => {
-    setState((prev): AgentState => ({
-      user: prev?.user ?? null,
-      yoga_styles: prev?.yoga_styles ?? [],
-      teaching_locations: prev?.teaching_locations ?? [],
+    setProfile((prev) => ({
+      ...prev,
       student_count: count,
-      has_existing_insurance: prev?.has_existing_insurance ?? false,
     }));
     setSaved(false);
   };
 
   const handleInsuranceToggle = () => {
-    setState((prev): AgentState => ({
-      user: prev?.user ?? null,
-      yoga_styles: prev?.yoga_styles ?? [],
-      teaching_locations: prev?.teaching_locations ?? [],
-      student_count: prev?.student_count ?? null,
-      has_existing_insurance: !(prev?.has_existing_insurance ?? false),
+    setProfile((prev) => ({
+      ...prev,
+      has_existing_insurance: !prev.has_existing_insurance,
     }));
     setSaved(false);
   };
 
-  const handleSave = () => {
-    // For now, state is synced to agent automatically
-    // In future, could persist to database here
+  const handleSave = async () => {
+    // Save to Zep for memory persistence (if configured)
+    if (user) {
+      try {
+        await fetch('/api/zep', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            userId: user.id,
+            email: user.email,
+            name: user.name,
+            action: 'ensure_user',
+          }),
+        });
+
+        // Add profile facts to Zep
+        const profileFact = `User ${user.name} teaches: ${profile.yoga_styles.join(', ') || 'not specified'}. ` +
+          `Locations: ${profile.teaching_locations.join(', ') || 'not specified'}. ` +
+          `Student count: ${profile.student_count || 'not specified'}. ` +
+          `Has existing insurance: ${profile.has_existing_insurance ? 'yes' : 'no'}.`;
+
+        await fetch('/api/zep', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            userId: user.id,
+            action: 'add_fact',
+            fact: profileFact,
+          }),
+        });
+      } catch (e) {
+        console.log('Zep not configured, skipping memory save');
+      }
+    }
+
     setSaved(true);
     setTimeout(() => setSaved(false), 3000);
   };
@@ -180,13 +188,13 @@ export default function ProfilePage() {
                 key={style.id}
                 onClick={() => handleStyleToggle(style.id)}
                 className={`px-4 py-3 rounded-xl text-left transition-all ${
-                  (state?.yoga_styles ?? []).includes(style.id)
+                  (profile.yoga_styles ?? []).includes(style.id)
                     ? 'bg-blue-600 text-white border-blue-500'
                     : 'bg-slate-700/50 text-slate-300 border-slate-600 hover:bg-slate-700'
                 } border`}
               >
                 <span className="flex items-center gap-2">
-                  {(state?.yoga_styles ?? []).includes(style.id) && (
+                  {(profile.yoga_styles ?? []).includes(style.id) && (
                     <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
@@ -210,13 +218,13 @@ export default function ProfilePage() {
                 key={location.id}
                 onClick={() => handleLocationToggle(location.id)}
                 className={`px-4 py-3 rounded-xl text-left transition-all ${
-                  (state?.teaching_locations ?? []).includes(location.id)
+                  (profile.teaching_locations ?? []).includes(location.id)
                     ? 'bg-blue-600 text-white border-blue-500'
                     : 'bg-slate-700/50 text-slate-300 border-slate-600 hover:bg-slate-700'
                 } border`}
               >
                 <span className="flex items-center gap-2">
-                  {(state?.teaching_locations ?? []).includes(location.id) && (
+                  {(profile.teaching_locations ?? []).includes(location.id) && (
                     <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
@@ -240,13 +248,13 @@ export default function ProfilePage() {
                 key={option.id}
                 onClick={() => handleStudentCountChange(option.id)}
                 className={`px-4 py-3 rounded-xl text-left transition-all ${
-                  state?.student_count === option.id
+                  profile.student_count === option.id
                     ? 'bg-blue-600 text-white border-blue-500'
                     : 'bg-slate-700/50 text-slate-300 border-slate-600 hover:bg-slate-700'
                 } border`}
               >
                 <span className="flex items-center gap-2">
-                  {state?.student_count === option.id && (
+                  {profile.student_count === option.id && (
                     <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
@@ -264,13 +272,13 @@ export default function ProfilePage() {
           <button
             onClick={handleInsuranceToggle}
             className={`w-full px-4 py-3 rounded-xl text-left transition-all ${
-              state?.has_existing_insurance
+              profile.has_existing_insurance
                 ? 'bg-green-600/20 text-green-400 border-green-500/50'
                 : 'bg-slate-700/50 text-slate-300 border-slate-600 hover:bg-slate-700'
             } border`}
           >
             <span className="flex items-center gap-2">
-              {state?.has_existing_insurance ? (
+              {profile.has_existing_insurance ? (
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                 </svg>
