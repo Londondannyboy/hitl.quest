@@ -2,13 +2,13 @@ import { MetadataRoute } from 'next'
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: 'Yoga Teacher Insurance UK',
-    short_name: 'Yoga Insurance',
-    description: 'Compare yoga teacher insurance quotes from UK specialist providers',
+    name: 'HITL.quest - Human-in-the-Loop AI Agency',
+    short_name: 'HITL.quest',
+    description: 'We build AI systems with intelligent human oversight. Customer service, voice, documents, and more.',
     start_url: '/',
     display: 'standalone',
     background_color: '#0f172a',
-    theme_color: '#7c3aed',
+    theme_color: '#06b6d4',
     icons: [
       {
         src: '/icon.svg',

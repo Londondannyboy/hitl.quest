@@ -9,7 +9,7 @@ import { NextRequest } from "next/server";
 // Use empty adapter since we're only using one agent
 const serviceAdapter = new ExperimentalEmptyAdapter();
 
-const agentUrl = process.env.AGENT_URL || "https://yoga-insurance-agent-production.up.railway.app/agui/";
+const agentUrl = process.env.AGENT_URL || "http://localhost:8000/agui/";
 
 // Log the agent URL at startup
 console.log("[CopilotKit API] Initializing with agent URL:", agentUrl);
@@ -17,7 +17,7 @@ console.log("[CopilotKit API] Initializing with agent URL:", agentUrl);
 // Create the CopilotRuntime with our Pydantic AI agent
 const runtime = new CopilotRuntime({
   agents: {
-    yoga_agent: new HttpAgent({
+    hitl_agent: new HttpAgent({
       url: agentUrl
     }),
   },

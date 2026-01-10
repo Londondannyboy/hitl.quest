@@ -1,8 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { ZepClient } from '@getzep/zep-cloud';
 
-// Graph ID for shared insurance knowledge
-const INSURANCE_GRAPH_ID = 'insurance';
+// Graph ID for shared HITL knowledge
+const HITL_GRAPH_ID = 'hitl_knowledge';
 
 // Initialize Zep client
 const getZepClient = () => {
@@ -70,49 +70,49 @@ export async function POST(request: NextRequest) {
         });
         return NextResponse.json({ success: true });
 
-      case 'init_insurance_graph':
-        // Initialize the shared insurance knowledge graph
+      case 'init_hitl_graph':
+        // Initialize the shared HITL knowledge graph
         try {
           await client.graph.create({
-            graphId: INSURANCE_GRAPH_ID,
-            name: 'Yoga Teacher Insurance Knowledge Graph',
+            graphId: HITL_GRAPH_ID,
+            name: 'HITL Knowledge Graph',
           });
-          return NextResponse.json({ success: true, graphId: INSURANCE_GRAPH_ID, created: true });
+          return NextResponse.json({ success: true, graphId: HITL_GRAPH_ID, created: true });
         } catch (e: any) {
           // Graph might already exist
           if (e.message?.includes('already exists')) {
-            return NextResponse.json({ success: true, graphId: INSURANCE_GRAPH_ID, created: false });
+            return NextResponse.json({ success: true, graphId: HITL_GRAPH_ID, created: false });
           }
           throw e;
         }
 
-      case 'add_insurance_knowledge':
-        // Add knowledge to the shared insurance graph
+      case 'add_hitl_knowledge':
+        // Add knowledge to the shared HITL graph
         const { knowledge } = body;
         if (!knowledge) {
           return NextResponse.json(
-            { error: 'knowledge is required for add_insurance_knowledge action' },
+            { error: 'knowledge is required for add_hitl_knowledge action' },
             { status: 400 }
           );
         }
         await client.graph.add({
-          graphId: INSURANCE_GRAPH_ID,
+          graphId: HITL_GRAPH_ID,
           type: 'text',
           data: knowledge,
         });
         return NextResponse.json({ success: true });
 
-      case 'search_insurance':
-        // Search the insurance knowledge graph
+      case 'search_hitl':
+        // Search the HITL knowledge graph
         const { query } = body;
         if (!query) {
           return NextResponse.json(
-            { error: 'query is required for search_insurance action' },
+            { error: 'query is required for search_hitl action' },
             { status: 400 }
           );
         }
         const results = await client.graph.search({
-          graphId: INSURANCE_GRAPH_ID,
+          graphId: HITL_GRAPH_ID,
           query: query,
           limit: 10,
         });

@@ -18,11 +18,11 @@ export default function Icon() {
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          background: 'linear-gradient(135deg, #7c3aed 0%, #a855f7 100%)',
+          background: 'linear-gradient(135deg, #06b6d4 0%, #3b82f6 100%)',
           borderRadius: '20%',
         }}
       >
-        {/* Stylized Y for Yoga */}
+        {/* H for HITL */}
         <div
           style={{
             display: 'flex',
@@ -33,7 +33,7 @@ export default function Icon() {
             letterSpacing: '-2px',
           }}
         >
-          Y
+          H
         </div>
       </div>
     ),

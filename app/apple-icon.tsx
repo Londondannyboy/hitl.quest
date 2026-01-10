@@ -18,11 +18,11 @@ export default function AppleIcon() {
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          background: 'linear-gradient(135deg, #7c3aed 0%, #a855f7 100%)',
+          background: 'linear-gradient(135deg, #06b6d4 0%, #3b82f6 100%)',
           borderRadius: '22%',
         }}
       >
-        {/* Stylized Y for Yoga */}
+        {/* H for HITL */}
         <div
           style={{
             display: 'flex',
@@ -33,7 +33,7 @@ export default function AppleIcon() {
             letterSpacing: '-4px',
           }}
         >
-          Y
+          H
         </div>
       </div>
     ),

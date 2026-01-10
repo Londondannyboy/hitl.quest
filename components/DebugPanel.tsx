@@ -13,16 +13,12 @@ export function DebugPanel() {
 
   // Get page context (same logic as providers.tsx)
   const getPageContext = (path: string): string => {
-    if (path.includes('aerial')) return 'aerial-yoga-insurance';
-    if (path.includes('hot-yoga')) return 'hot-yoga-insurance';
-    if (path.includes('meditation')) return 'meditation-teacher-insurance';
-    if (path.includes('studio')) return 'yoga-studio-insurance';
-    if (path.includes('public-liability')) return 'public-liability-insurance';
-    if (path.includes('profile') || path.includes('dashboard')) return 'user-profile';
-    if (path.includes('pilates')) return 'pilates-instructor-insurance';
-    if (path.includes('compare')) return 'compare-providers';
-    if (path.includes('cost') || path.includes('how-much')) return 'insurance-costs';
-    if (path.includes('articles')) return 'articles';
+    if (path.includes('customer-service')) return 'customer-service';
+    if (path.includes('voice') || path.includes('call')) return 'voice';
+    if (path.includes('document')) return 'document-processing';
+    if (path.includes('moderation')) return 'content-moderation';
+    if (path.includes('contact')) return 'contact';
+    if (path.includes('profile') || path.includes('dashboard')) return 'profile';
     return 'homepage';
   };
 
@@ -120,9 +116,9 @@ export function DebugPanel() {
     email: user.email,
   } : null,
   current_page: currentPage,
-  yoga_styles: [],
-  teaching_locations: [],
-  has_existing_insurance: false,
+  interested_services: [],
+  company_type: null,
+  use_case: null,
 }, null, 2)}
               </pre>
             </div>
