@@ -29,29 +29,49 @@ DATABASE_URL = os.getenv("DATABASE_URL")
 _cached_user_context: dict = {}
 
 def extract_user_from_instructions(instructions: str) -> dict:
-    """Extract user info from CopilotKit instructions text."""
+    """Extract user info from CopilotKit instructions text or Hume system prompt."""
     result = {"user_id": None, "name": None, "email": None}
 
     if not instructions:
         return result
 
     import re
+
+    # Try multiple formats for user ID
     id_match = re.search(r'User ID:\s*([a-f0-9-]+)', instructions, re.IGNORECASE)
     if id_match:
         result["user_id"] = id_match.group(1)
 
-    name_match = re.search(r'User Name:\s*([^\n]+)', instructions, re.IGNORECASE)
-    if name_match:
-        result["name"] = name_match.group(1).strip()
+    # Try multiple formats for name (HeroVoice uses "- Name:" format)
+    name_patterns = [
+        r'User Name:\s*([^\n]+)',      # CopilotKit format
+        r'-\s*Name:\s*([^\n]+)',        # HeroVoice format
+        r'Name:\s*([^\n]+)',            # Simple format
+        r'first name \(([^)]+)\)',      # "first name (Dan)" format
+    ]
+    for pattern in name_patterns:
+        name_match = re.search(pattern, instructions, re.IGNORECASE)
+        if name_match:
+            result["name"] = name_match.group(1).strip()
+            break
 
-    email_match = re.search(r'User Email:\s*([^\n]+)', instructions, re.IGNORECASE)
-    if email_match:
-        result["email"] = email_match.group(1).strip()
+    # Try multiple formats for email
+    email_patterns = [
+        r'User Email:\s*([^\n]+)',     # CopilotKit format
+        r'-\s*Email:\s*([^\n]+)',       # HeroVoice format
+        r'Email:\s*([^\s\n]+)',         # Simple format
+    ]
+    for pattern in email_patterns:
+        email_match = re.search(pattern, instructions, re.IGNORECASE)
+        if email_match:
+            result["email"] = email_match.group(1).strip()
+            break
 
-    if result["user_id"]:
+    # Cache if we found any user info
+    if result["user_id"] or result["name"]:
         global _cached_user_context
         _cached_user_context = result
-        print(f"[Agent] Cached user from instructions: {result['name']}", file=sys.stderr)
+        print(f"[Agent] Cached user from instructions: {result}", file=sys.stderr)
 
     return result
 
