@@ -1,7 +1,7 @@
 [project]
-name = "yoga-insurance-agent"
+name = "hitl-quest-agent"
 version = "0.1.0"
-description = "CopilotKit + Pydantic AI agent for Yoga Teacher Insurance"
+description = "CopilotKit + Pydantic AI agent for HITL.quest"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
