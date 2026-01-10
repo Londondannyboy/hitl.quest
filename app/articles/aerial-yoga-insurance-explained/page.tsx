@@ -71,7 +71,7 @@ export default function ArticlePage() {
             <span>•</span>
             <span>8 min read</span>
             <span>•</span>
-            <span>Updated 2025</span>
+            <span>Updated 2026</span>
           </div>
         </div>
       </section>
@@ -259,7 +259,7 @@ export default function ArticlePage() {
             </li>
           </ul>
 
-          <h3 className="text-2xl font-bold mb-4 mt-8">2025 Aerial Yoga Insurance Cost Breakdown</h3>
+          <h3 className="text-2xl font-bold mb-4 mt-8">2026 Aerial Yoga Insurance Cost Breakdown</h3>
 
           <p className="text-slate-300 leading-relaxed mb-6">
             Here's what you can expect to pay for aerial yoga insurance:

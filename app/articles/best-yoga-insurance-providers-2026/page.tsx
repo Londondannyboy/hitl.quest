@@ -2,13 +2,13 @@ import type { Metadata } from "next"
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: "Best Yoga Teacher Insurance Providers UK 2025: Detailed Comparison",
+  title: "Best Yoga Teacher Insurance Providers UK 2026: Detailed Comparison",
   description: "Comprehensive comparison of leading yoga teacher insurance providers in the UK. Find the best coverage for your yoga teaching practice.",
   keywords: [
     "best yoga teacher insurance uk",
     "yoga insurance providers",
     "yoga teacher insurance comparison",
-    "best yoga insurance providers 2025",
+    "best yoga insurance providers 2026",
     "yoga insurance quotes uk"
   ],
 }
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 const articleJsonLd = {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  headline: "Best Yoga Teacher Insurance Providers UK 2025: Detailed Comparison",
+  headline: "Best Yoga Teacher Insurance Providers UK 2026: Detailed Comparison",
   description: "Comprehensive comparison of leading yoga teacher insurance providers.",
   author: {
     "@type": "Organization",
@@ -39,7 +39,7 @@ export default function ArticlePage() {
         <div className="max-w-4xl mx-auto text-sm">
           <Link href="/articles" className="text-blue-400 hover:text-blue-300">Articles</Link>
           <span className="text-slate-500 mx-2">/</span>
-          <span className="text-slate-300">Best Yoga Insurance Providers 2025</span>
+          <span className="text-slate-300">Best Yoga Insurance Providers 2026</span>
         </div>
       </div>
 
@@ -50,7 +50,7 @@ export default function ArticlePage() {
             <div className="relative h-64 md:h-72 rounded-xl overflow-hidden mb-8 border border-emerald-500/20">
               <img
                 src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&h=600&crop=entropy"
-                alt="best yoga insurance providers 2025 comparison UK specialists"
+                alt="best yoga insurance providers 2026 comparison UK specialists"
                 className="w-full h-full object-cover"
               />
             </div>
@@ -59,7 +59,7 @@ export default function ArticlePage() {
             </span>
           </div>
           <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
-            Best Yoga Teacher Insurance Providers 2025
+            Best Yoga Teacher Insurance Providers 2026
             <span className="text-emerald-400"> UK Comparison</span>
           </h1>
           <p className="text-xl text-slate-300 mb-6">
@@ -70,7 +70,7 @@ export default function ArticlePage() {
             <span>•</span>
             <span>9 min read</span>
             <span>•</span>
-            <span>Updated 2025</span>
+            <span>Updated 2026</span>
           </div>
         </div>
       </section>
@@ -78,7 +78,7 @@ export default function ArticlePage() {
       {/* Quick Answer Box */}
       <section className="py-8 px-4">
         <div className="max-w-4xl mx-auto bg-gradient-to-r from-emerald-900/30 to-green-900/30 border border-emerald-500/30 rounded-xl p-8 mb-12">
-          <h2 className="text-2xl font-bold mb-4 text-emerald-400">2025 Provider Overview</h2>
+          <h2 className="text-2xl font-bold mb-4 text-emerald-400">2026 Provider Overview</h2>
           <p className="text-lg text-slate-200 mb-4">
             The UK yoga insurance market features multiple providers ranging from budget-friendly specialists to comprehensive, feature-rich packages. <strong>No single provider is best for everyone—the best choice depends on your specific teaching situation.</strong>
           </p>
@@ -152,7 +152,7 @@ export default function ArticlePage() {
             How easy is it to reach the provider if you have questions? What's the claims process? Do they have a dedicated yoga insurance team or general customer service? Reviews often highlight customer service quality.
           </p>
 
-          <h3 className="text-2xl font-bold mb-4 mt-8">Top Yoga Teacher Insurance Providers 2025</h3>
+          <h3 className="text-2xl font-bold mb-4 mt-8">Top Yoga Teacher Insurance Providers 2026</h3>
 
           <p className="text-slate-300 leading-relaxed mb-4">
             Here are leading providers offering yoga teacher insurance in the UK:

@@ -71,7 +71,7 @@ export default function ArticlePage() {
             <span>•</span>
             <span>7 min read</span>
             <span>•</span>
-            <span>Updated 2025</span>
+            <span>Updated 2026</span>
           </div>
         </div>
       </section>
@@ -302,7 +302,7 @@ export default function ArticlePage() {
           <h3 className="text-2xl font-bold mb-4 mt-8">Hot Yoga Insurance Cost Comparison</h3>
 
           <p className="text-slate-300 leading-relaxed mb-6">
-            Here's what you can expect to pay for hot yoga insurance in 2025:
+            Here's what you can expect to pay for hot yoga insurance in 2026:
           </p>
 
           <table className="w-full mb-6 text-slate-300 border-collapse">

@@ -14,7 +14,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "Yoga Teacher Insurance UK 2025 | Compare Quotes from £15/month",
+    default: "Yoga Teacher Insurance UK 2026 | Compare Quotes from £15/month",
     template: "%s | Yoga Teacher Insurance UK"
   },
   description: "Yoga teacher insurance UK - compare quotes from specialist providers. Get professional indemnity & public liability insurance for yoga instructors, trainers & studio owners. Quotes from leading insurers.",
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     locale: "en_GB",
     url: "https://yogateacherinsurance.quest",
     siteName: "Yoga Teacher Insurance UK",
-    title: "Yoga Teacher Insurance UK 2025 | Compare Quotes",
+    title: "Yoga Teacher Insurance UK 2026 | Compare Quotes",
     description: "Yoga teacher insurance UK - compare quotes from specialist providers. Get professional indemnity & public liability insurance for yoga instructors & studio owners.",
   },
   twitter: {

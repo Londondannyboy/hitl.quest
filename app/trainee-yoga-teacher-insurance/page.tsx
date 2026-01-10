@@ -2,7 +2,7 @@ import Link from "next/link"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Trainee Yoga Teacher Insurance UK | Affordable Student Coverage 2025",
+  title: "Trainee Yoga Teacher Insurance UK | Affordable Student Coverage 2026",
   description: "Insurance for trainee yoga teachers completing certification. Affordable trainee coverage £15-£20/month. Many programs require professional indemnity insurance.",
   alternates: {
     canonical: "https://yogateacherinsurance.quest/trainee-yoga-teacher-insurance",

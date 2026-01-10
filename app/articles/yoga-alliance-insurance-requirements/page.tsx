@@ -2,7 +2,7 @@ import type { Metadata } from "next"
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: "Yoga Alliance Insurance Requirements UK: 2025 Complete Guide",
+  title: "Yoga Alliance Insurance Requirements UK: 2026 Complete Guide",
   description: "Complete guide to Yoga Alliance insurance requirements, membership benefits, and professional standards. Learn what coverage Yoga Alliance members need.",
   keywords: [
     "yoga alliance insurance uk",
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 const articleJsonLd = {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  headline: "Yoga Alliance Insurance Requirements UK: 2025 Complete Guide",
+  headline: "Yoga Alliance Insurance Requirements UK: 2026 Complete Guide",
   description: "Complete guide to Yoga Alliance insurance requirements and membership standards.",
   author: {
     "@type": "Organization",
@@ -49,7 +49,7 @@ export default function ArticlePage() {
             <div className="relative h-64 md:h-72 rounded-xl overflow-hidden mb-8 border border-teal-500/20">
               <img
                 src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1200&h=600&crop=entropy"
-                alt="yoga alliance insurance requirements accreditation standards membership 2025"
+                alt="yoga alliance insurance requirements accreditation standards membership 2026"
                 className="w-full h-full object-cover"
               />
             </div>
@@ -59,7 +59,7 @@ export default function ArticlePage() {
           </div>
           <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
             Yoga Alliance Insurance Requirements
-            <span className="text-teal-400"> 2025 UK Guide</span>
+            <span className="text-teal-400"> 2026 UK Guide</span>
           </h1>
           <p className="text-xl text-slate-300 mb-6">
             Complete guide to Yoga Alliance requirements, how insurance factors into membership, and professional standards for UK yoga teachers.
@@ -69,7 +69,7 @@ export default function ArticlePage() {
             <span>•</span>
             <span>8 min read</span>
             <span>•</span>
-            <span>Updated 2025</span>
+            <span>Updated 2026</span>
           </div>
         </div>
       </section>
@@ -317,11 +317,11 @@ export default function ArticlePage() {
               </p>
             </Link>
             <Link
-              href="/articles/best-yoga-insurance-providers-2025"
+              href="/articles/best-yoga-insurance-providers-2026"
               className="group bg-slate-800 hover:bg-slate-700 rounded-lg p-6 transition-all border border-slate-700 hover:border-blue-500/50"
             >
               <h4 className="font-bold text-lg group-hover:text-blue-400 transition-colors mb-2">
-                Best Yoga Insurance Providers 2025
+                Best Yoga Insurance Providers 2026
               </h4>
               <p className="text-slate-400 text-sm">
                 Comparison of leading UK yoga teacher insurance providers.

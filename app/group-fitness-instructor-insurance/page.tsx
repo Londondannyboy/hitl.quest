@@ -2,7 +2,7 @@ import Link from "next/link"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Group Fitness Instructor Insurance UK | Class Coverage 2025",
+  title: "Group Fitness Instructor Insurance UK | Class Coverage 2026",
   description: "Professional liability insurance for group fitness instructors. Coverage for fitness classes, aerobics, dance, bootcamps, and group training. From £18-£25/month.",
   alternates: {
     canonical: "https://yogateacherinsurance.quest/group-fitness-instructor-insurance",

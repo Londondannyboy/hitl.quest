@@ -13,7 +13,7 @@ export default function Page() {
     <div className="min-h-screen py-16 px-4">
       <article className="max-w-4xl mx-auto">
         <h1 className="text-4xl font-bold text-white mb-8">Terms of Service</h1>
-        <p className="text-slate-400 mb-6">Last updated: December 2025</p>
+        <p className="text-slate-400 mb-6">Last updated: December 2026</p>
 
         <section className="mb-8">
           <h2 className="text-2xl font-bold text-white mb-4">1. Acceptance of Terms</h2>

@@ -2,7 +2,7 @@ import Link from "next/link"
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Compare Yoga Teacher Insurance UK | Best Quotes 2025',
+  title: 'Compare Yoga Teacher Insurance UK | Best Quotes 2026',
   description: 'Compare yoga teacher insurance quotes from Yoga Alliance, Balens, and specialist UK providers. Find the best coverage at the best price. Professional indemnity and public liability insurance.',
   alternates: {
     canonical: 'https://yogateacherinsurance.quest/compare-yoga-teacher-insurance-uk',

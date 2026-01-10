@@ -69,7 +69,7 @@ export default function ArticlePage() {
             <span>•</span>
             <span>7 min read</span>
             <span>•</span>
-            <span>Updated 2025</span>
+            <span>Updated 2026</span>
           </div>
         </div>
       </section>
@@ -427,11 +427,11 @@ export default function ArticlePage() {
               </p>
             </Link>
             <Link
-              href="/articles/best-yoga-insurance-providers-2025"
+              href="/articles/best-yoga-insurance-providers-2026"
               className="group bg-slate-800 hover:bg-slate-700 rounded-lg p-6 transition-all border border-slate-700 hover:border-blue-500/50"
             >
               <h4 className="font-bold text-lg group-hover:text-blue-400 transition-colors mb-2">
-                Best Yoga Insurance Providers 2025
+                Best Yoga Insurance Providers 2026
               </h4>
               <p className="text-slate-400 text-sm">
                 Comparison of leading UK yoga insurance providers.

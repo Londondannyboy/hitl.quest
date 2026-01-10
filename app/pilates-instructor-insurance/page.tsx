@@ -2,7 +2,7 @@ import Link from "next/link"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Pilates Instructor Insurance UK | Specialist Coverage 2025",
+  title: "Pilates Instructor Insurance UK | Specialist Coverage 2026",
   description: "Professional liability insurance for pilates instructors in the UK. Coverage for mat and equipment-based pilates. From £18-£28/month.",
   alternates: {
     canonical: "https://yogateacherinsurance.quest/pilates-instructor-insurance",

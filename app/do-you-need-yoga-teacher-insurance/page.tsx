@@ -2,7 +2,7 @@ import Link from "next/link"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Do You Need Yoga Teacher Insurance UK? | Essential Guide 2025",
+  title: "Do You Need Yoga Teacher Insurance UK? | Essential Guide 2026",
   description: "Complete guide to yoga teacher insurance requirements in the UK. Learn if you need insurance, legal requirements, studio demands, and how to protect yourself professionally.",
   alternates: {
     canonical: "https://yogateacherinsurance.quest/do-you-need-yoga-teacher-insurance",

@@ -2,7 +2,7 @@ import type { Metadata } from "next"
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: "How Much Does Yoga Teacher Insurance Cost? 2025 UK Guide",
+  title: "How Much Does Yoga Teacher Insurance Cost? 2026 UK Guide",
   description: "Complete breakdown of yoga teacher insurance costs in the UK. Learn about pricing factors, annual premiums, and how much to budget for professional cover as a yoga instructor.",
   keywords: [
     "how much does yoga teacher insurance cost",
@@ -11,14 +11,14 @@ export const metadata: Metadata = {
     "yoga instructor insurance cost",
     "professional yoga insurance price",
     "how much yoga teacher insurance",
-    "yoga insurance prices 2025"
+    "yoga insurance prices 2026"
   ],
 }
 
 const articleJsonLd = {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  headline: "How Much Does Yoga Teacher Insurance Cost? 2025 UK Guide",
+  headline: "How Much Does Yoga Teacher Insurance Cost? 2026 UK Guide",
   description: "Complete breakdown of yoga teacher insurance costs in the UK. Learn about pricing factors, annual premiums, and how much to budget.",
   author: {
     "@type": "Organization",
@@ -62,7 +62,7 @@ export default function ArticlePage() {
             <div className="relative h-64 md:h-72 rounded-xl overflow-hidden mb-8 border border-blue-500/20">
               <img
                 src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=1200&h=600&fit=crop&q=80"
-                alt="yoga teacher insurance costs 2025 UK pricing guide budget breakdown comparison"
+                alt="yoga teacher insurance costs 2026 UK pricing guide budget breakdown comparison"
                 className="w-full h-full object-cover"
               />
             </div>
@@ -72,7 +72,7 @@ export default function ArticlePage() {
           </div>
           <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
             How Much Does Yoga Teacher Insurance Cost?
-            <span className="text-blue-400"> 2025 UK Pricing Guide</span>
+            <span className="text-blue-400"> 2026 UK Pricing Guide</span>
           </h1>
           <p className="text-xl text-slate-300 mb-6">
             Complete breakdown of yoga teacher insurance costs, pricing factors, and how much you should budget for professional indemnity and public liability cover in the UK.
@@ -82,7 +82,7 @@ export default function ArticlePage() {
             <span>•</span>
             <span>8 min read</span>
             <span>•</span>
-            <span>Updated 2025</span>
+            <span>Updated 2026</span>
           </div>
         </div>
       </section>
@@ -176,10 +176,10 @@ export default function ArticlePage() {
             A clean claims history keeps your premiums down. If you've previously claimed on your insurance, expect to pay higher premiums going forward. Conversely, teachers with 5+ years of claims-free teaching often qualify for loyalty discounts.
           </p>
 
-          <h3 className="text-2xl font-bold mb-4 mt-8">2025 Yoga Teacher Insurance Price Ranges by Provider</h3>
+          <h3 className="text-2xl font-bold mb-4 mt-8">2026 Yoga Teacher Insurance Price Ranges by Provider</h3>
 
           <p className="text-slate-300 leading-relaxed mb-6">
-            While exact prices vary based on your specific circumstances, here's what you can typically expect from major UK yoga teacher insurance providers in 2025:
+            While exact prices vary based on your specific circumstances, here's what you can typically expect from major UK yoga teacher insurance providers in 2026:
           </p>
 
           <table className="w-full mb-6 text-slate-300 border-collapse">
@@ -289,10 +289,10 @@ export default function ArticlePage() {
             </li>
           </ul>
 
-          <h3 className="text-2xl font-bold mb-4 mt-8">Getting the Best Deal in 2025</h3>
+          <h3 className="text-2xl font-bold mb-4 mt-8">Getting the Best Deal in 2026</h3>
 
           <p className="text-slate-300 leading-relaxed mb-6">
-            The yoga teacher insurance market in 2025 is competitive, which is good news for your wallet. Multiple providers are actively competing for yoga teachers' business, resulting in competitive pricing and special offers. Here's how to make the most of this:
+            The yoga teacher insurance market in 2026 is competitive, which is good news for your wallet. Multiple providers are actively competing for yoga teachers' business, resulting in competitive pricing and special offers. Here's how to make the most of this:
           </p>
 
           <ol className="space-y-4 mb-6 text-slate-300">

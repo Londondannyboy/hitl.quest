@@ -637,7 +637,7 @@ export default function HomePage() {
               <div className="relative h-48 overflow-hidden bg-slate-700">
                 <img
                   src="https://images.unsplash.com/photo-1542654291-526a40ef6050?w=600&h=400&crop=entropy"
-                  alt="yoga teacher insurance costs 2025 UK pricing guide budget breakdown"
+                  alt="yoga teacher insurance costs 2026 UK pricing guide budget breakdown"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 />
               </div>

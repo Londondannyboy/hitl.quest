@@ -4,13 +4,13 @@ export default function ArticlesPage() {
   const articles = [
     {
       slug: 'yoga-insurance-costs-guide',
-      title: 'The Complete Guide to Yoga Teacher Insurance Costs in 2025',
+      title: 'The Complete Guide to Yoga Teacher Insurance Costs in 2026',
       description: 'Comprehensive breakdown of yoga teacher insurance pricing, factors affecting costs, and how much you should budget.',
       date: 'December 2024',
       readTime: '8 min read',
       featured: true,
       image: 'https://images.unsplash.com/photo-1542654291-526a40ef6050?w=600&h=400&crop=entropy',
-      imageAlt: 'yoga teacher insurance costs 2025 UK pricing guide budget breakdown',
+      imageAlt: 'yoga teacher insurance costs 2026 UK pricing guide budget breakdown',
       color: 'from-green-900',
     },
     {
@@ -48,7 +48,7 @@ export default function ArticlesPage() {
     },
     {
       slug: 'yoga-alliance-insurance-requirements',
-      title: 'Yoga Alliance Insurance Requirements: Complete 2025 Guide',
+      title: 'Yoga Alliance Insurance Requirements: Complete 2026 Guide',
       description: 'Full breakdown of Yoga Alliance insurance requirements, accreditation standards, and how to ensure compliance.',
       date: 'December 2024',
       readTime: '8 min read',
@@ -69,14 +69,14 @@ export default function ArticlesPage() {
       color: 'from-amber-900',
     },
     {
-      slug: 'best-yoga-insurance-providers-2025',
-      title: 'Best Yoga Teacher Insurance Providers 2025: Detailed Comparison',
+      slug: 'best-yoga-insurance-providers-2026',
+      title: 'Best Yoga Teacher Insurance Providers 2026: Detailed Comparison',
       description: 'Comprehensive comparison of leading yoga teacher insurance providers including pricing, coverage, and customer reviews.',
       date: 'December 2024',
       readTime: '9 min read',
       featured: false,
       image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=400&crop=entropy',
-      imageAlt: 'best yoga insurance providers 2025 comparison UK specialists',
+      imageAlt: 'best yoga insurance providers 2026 comparison UK specialists',
       color: 'from-emerald-900',
     },
     {

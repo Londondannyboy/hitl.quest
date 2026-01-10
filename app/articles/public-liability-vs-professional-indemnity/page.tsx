@@ -70,7 +70,7 @@ export default function ArticlePage() {
             <span>•</span>
             <span>7 min read</span>
             <span>•</span>
-            <span>Updated 2025</span>
+            <span>Updated 2026</span>
           </div>
         </div>
       </section>

@@ -2,7 +2,7 @@ import Link from "next/link"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Yoga Alliance UK Insurance | Professional Requirements 2025",
+  title: "Yoga Alliance UK Insurance | Professional Requirements 2026",
   description: "Insurance for Yoga Alliance UK registered members. Professional indemnity requirements for RYA members and yoga teachers.",
   alternates: {
     canonical: "https://yogateacherinsurance.quest/yoga-alliance-insurance-uk",

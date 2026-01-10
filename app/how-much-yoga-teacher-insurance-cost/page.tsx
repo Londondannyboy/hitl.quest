@@ -2,8 +2,8 @@ import Link from "next/link"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "How Much Does Yoga Teacher Insurance Cost? | 2025 Pricing Guide",
-  description: "Complete yoga teacher insurance cost breakdown 2025. Pricing from £15-£38/month by experience level, teaching style, and coverage options. Get free quotes.",
+  title: "How Much Does Yoga Teacher Insurance Cost? | 2026 Pricing Guide",
+  description: "Complete yoga teacher insurance cost breakdown 2026. Pricing from £15-£38/month by experience level, teaching style, and coverage options. Get free quotes.",
   alternates: {
     canonical: "https://yogateacherinsurance.quest/how-much-yoga-teacher-insurance-cost",
   },
@@ -14,7 +14,7 @@ export default function Page() {
     <div className="min-h-screen py-16 px-4">
       <article className="max-w-4xl mx-auto">
         <h1 className="text-4xl sm:text-5xl font-bold text-white mb-6">
-          How Much Does Yoga Teacher Insurance Cost? 2025 Pricing Guide
+          How Much Does Yoga Teacher Insurance Cost? 2026 Pricing Guide
         </h1>
 
         <p className="text-lg text-slate-400 mb-8">
@@ -24,7 +24,7 @@ export default function Page() {
         <div className="relative h-64 md:h-72 rounded-xl overflow-hidden mb-8 border border-blue-500/20">
           <img
             src="https://images.unsplash.com/photo-1542654291-526a40ef6050?w=1200&h=600&crop=entropy"
-            alt="yoga teacher insurance costs pricing 2025 budget affordable monthly rates"
+            alt="yoga teacher insurance costs pricing 2026 budget affordable monthly rates"
             className="w-full h-full object-cover"
           />
         </div>

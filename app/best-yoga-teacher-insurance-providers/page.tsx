@@ -2,13 +2,13 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Best Yoga Teacher Insurance Providers UK 2025 | Expert Comparison',
+  title: 'Best Yoga Teacher Insurance Providers UK 2026 | Expert Comparison',
   description: 'Compare the top 5 yoga teacher insurance providers in the UK. Expert analysis of coverage, pricing, and specialist features for yoga professionals. From £15/month.',
   alternates: {
     canonical: 'https://yogateacherinsurance.quest/best-yoga-teacher-insurance-providers',
   },
   openGraph: {
-    title: 'Best Yoga Teacher Insurance Providers UK 2025 | Expert Comparison',
+    title: 'Best Yoga Teacher Insurance Providers UK 2026 | Expert Comparison',
     description: 'Compare the top 5 yoga teacher insurance providers in the UK. Expert analysis of coverage, pricing, and specialist features.',
     url: 'https://yogateacherinsurance.quest/best-yoga-teacher-insurance-providers',
     siteName: 'Yoga Teacher Insurance UK',
@@ -52,7 +52,7 @@ export default function BestProvidersPage() {
       <section className="relative py-24 px-4 overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <div className="inline-block px-6 py-2 bg-blue-500/20 border border-blue-500/30 rounded-full text-blue-400 text-sm font-semibold mb-6">
-            EXPERT COMPARISON GUIDE 2025
+            EXPERT COMPARISON GUIDE 2026
           </div>
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
             Best Yoga Teacher Insurance Providers UK
@@ -61,7 +61,7 @@ export default function BestProvidersPage() {
             We've analyzed dozens of insurers to find the top 5 providers for yoga professionals
           </p>
           <p className="text-lg text-slate-400">
-            Expert comparison of coverage, pricing, and specialist features • Updated December 2025
+            Expert comparison of coverage, pricing, and specialist features • Updated December 2026
           </p>
         </div>
       </section>
@@ -772,7 +772,7 @@ export default function BestProvidersPage() {
                 </svg>
               </summary>
               <p className="mt-4 text-slate-400">
-                We review this guide quarterly (every 3 months) to ensure pricing remains accurate and providers continue to offer competitive coverage for yoga teachers. Insurance rates can change annually, and providers occasionally adjust their underwriting criteria or add/remove coverage options. If you notice outdated information or have experience with a provider we should consider, please contact us. Last updated: December 2025.
+                We review this guide quarterly (every 3 months) to ensure pricing remains accurate and providers continue to offer competitive coverage for yoga teachers. Insurance rates can change annually, and providers occasionally adjust their underwriting criteria or add/remove coverage options. If you notice outdated information or have experience with a provider we should consider, please contact us. Last updated: December 2026.
               </p>
             </details>
           </div>

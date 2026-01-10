@@ -2,7 +2,7 @@ import Link from "next/link"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Best Yoga Teacher Insurance UK | Top Providers 2025",
+  title: "Best Yoga Teacher Insurance UK | Top Providers 2026",
   description: "Compare the best yoga teacher insurance providers in the UK. Expert reviews of specialist insurers, coverage options, and pricing. Find the perfect policy for your needs.",
   alternates: {
     canonical: "https://yogateacherinsurance.quest/best-yoga-teacher-insurance-uk",
@@ -14,7 +14,7 @@ export default function Page() {
     <div className="min-h-screen py-16 px-4">
       <article className="max-w-4xl mx-auto">
         <h1 className="text-4xl sm:text-5xl font-bold text-white mb-6">
-          Best Yoga Teacher Insurance UK | Top Providers 2025
+          Best Yoga Teacher Insurance UK | Top Providers 2026
         </h1>
 
         <p className="text-lg text-slate-400 mb-8">
