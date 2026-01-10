@@ -1,12 +1,11 @@
 import { Metadata } from 'next'
-import { QuoteCalculator } from '@/components/QuoteCalculator'
 import { HeroVoice } from '@/components/HeroVoice'
 
 export const metadata: Metadata = {
-  title: 'Yoga Teacher Insurance UK 2026 | Compare Quotes from £15/month',
-  description: 'Yoga teacher insurance UK - compare quotes from specialist providers. Professional indemnity & public liability insurance for yoga instructors, trainers, meditation teachers & studio owners. Affordable coverage from leading UK insurers.',
+  title: 'HITL.quest | Human-in-the-Loop AI Agency',
+  description: 'We build intelligent AI systems with human oversight. Customer service automation, call response systems, and AI workflows with the human touch. Best-in-class HITL solutions.',
   alternates: {
-    canonical: 'https://yogateacherinsurance.quest',
+    canonical: 'https://hitl.quest',
   },
 }
 
@@ -16,66 +15,34 @@ const faqJsonLd = {
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'Do yoga teachers need insurance in the UK?',
+      name: 'What is Human-in-the-Loop AI?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'While not legally required by law, yoga teacher insurance is highly recommended for professional protection. Most yoga studios require teachers to have liability insurance, and Yoga Alliance register members are strongly advised to carry professional indemnity and public liability cover. Insurance protects you against claims from students and provides essential financial protection.',
+        text: 'Human-in-the-Loop (HITL) AI is an approach where humans work alongside AI systems to provide oversight, make critical decisions, and ensure quality. The AI handles routine tasks while humans step in for complex situations, edge cases, or when empathy and judgment are needed.',
       },
     },
     {
       '@type': 'Question',
-      name: 'What does yoga teacher insurance cover?',
+      name: 'Why do I need human oversight in my AI systems?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yoga teacher insurance typically covers two main types: Professional Indemnity Insurance protects against claims of negligence or poor teaching causing injury, and Public Liability Insurance covers injury to students or damage to property during classes. Combined policies offer both protections. Many providers also offer additional coverage for yoga alliances and online classes.',
+        text: 'AI systems can make mistakes, especially in novel situations. Human oversight ensures quality, builds customer trust, handles edge cases appropriately, and provides the empathy that pure automation cannot. HITL systems typically achieve 95%+ customer satisfaction compared to 60-70% for fully automated systems.',
       },
     },
     {
       '@type': 'Question',
-      name: 'How much does yoga teacher insurance cost?',
+      name: 'What services does HITL.quest offer?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yoga teacher insurance typically costs between £15-£38 per month depending on experience level, coverage type, and teaching situation. New teachers (0-2 years) generally pay more than experienced teachers (5+ years). Basic public liability insurance starts around £180-£240 per year, while combined professional indemnity and public liability insurance ranges from £240-£456 per year.',
+        text: 'We build custom HITL solutions including AI-powered customer service with human escalation, intelligent call response systems, document processing with human review, content moderation systems, and AI-assisted decision support tools. We use cutting-edge tools like CopilotKit, AG-UI, Pydantic AI, and Hume for emotional intelligence.',
       },
     },
     {
       '@type': 'Question',
-      name: 'What is the difference between professional indemnity and public liability insurance?',
+      name: 'How does the AI handoff to humans work?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Professional Indemnity Insurance covers claims that your teaching advice or instruction caused injury or loss to a student due to negligence. Public Liability Insurance covers injury to students or damage to property that occurs during your classes. Most yoga teachers need both types of coverage for comprehensive protection. Combined policies are often more cost-effective than buying separately.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Do trainee yoga teachers need insurance?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes, trainee yoga teachers are strongly recommended to have insurance, especially if they are teaching students during their training. Many yoga teacher training programs require trainees to carry professional indemnity insurance. Insurance protects both you and your students during the learning process and is often available at lower rates for trainees.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What is yoga teacher liability insurance?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yoga teacher liability insurance refers to both professional indemnity and public liability coverage combined. This comprehensive insurance protects you against claims from students regarding injury or damage caused by your teaching. It covers legal fees, compensation claims, and defense costs, making it essential for any yoga professional offering classes or one-on-one sessions.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Can hot yoga or aerial yoga be insured?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes, specialized yoga styles including hot yoga and aerial yoga can be insured. Some providers offer specific coverage for these high-risk practices. Hot yoga requires coverage for heat-related injury risks, while aerial yoga requires coverage for fall and equipment risks. Specialist insurers understand these specific requirements and can provide appropriate coverage at fair rates.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Do studio owners need different yoga insurance?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes, yoga studio owners typically need more comprehensive insurance than independent teachers. Studio insurance should cover all teachers working at the studio, property damage, equipment, and employer\'s liability. Studio owners should also ensure they have adequate public liability coverage for the increased foot traffic and potential injury risks. Many insurers offer specific studio-owner policies.',
+        text: 'Our systems detect when human intervention is needed through confidence scoring, sentiment analysis, and complexity detection. The AI seamlessly escalates to a human agent with full context, allowing the human to take over without the customer repeating themselves. Agents can also train the AI in real-time.',
       },
     },
   ],
@@ -89,806 +56,600 @@ export default function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
 
-      {/* Hero Section with Yoga Background */}
+      {/* Hero Section */}
       <section className="relative py-24 sm:py-32 px-4 overflow-hidden">
-        {/* Background Image */}
+        {/* Abstract Background */}
         <div className="absolute inset-0 z-0">
-          <img
-            src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=1920&h=1080&crop=entropy"
-            alt="Peaceful yoga practice meditation morning mindfulness wellness"
-            className="w-full h-full object-cover"
-          />
-          {/* Gradient Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-r from-slate-900/90 via-slate-900/75 to-slate-900/60"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-blue-950 to-purple-950"></div>
+          {/* Grid pattern */}
+          <div className="absolute inset-0 opacity-20" style={{
+            backgroundImage: `radial-gradient(circle at 1px 1px, rgba(255,255,255,0.15) 1px, transparent 0)`,
+            backgroundSize: '40px 40px'
+          }}></div>
+          {/* Glow effects */}
+          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl"></div>
         </div>
 
         {/* Content */}
         <div className="relative z-10 max-w-4xl mx-auto text-center">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 mb-8">
+            <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
+            <span className="text-sm text-slate-200">AI + Human Intelligence</span>
+          </div>
+
           <h1 className="text-4xl sm:text-6xl font-bold text-white mb-6 leading-tight">
-            Protect Your Practice
-            <span className="block bg-gradient-to-r from-blue-300 to-blue-400 bg-clip-text text-transparent mt-2">with Peace of Mind</span>
+            Human-in-the-Loop
+            <span className="block bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent mt-2">AI Solutions</span>
           </h1>
           <p className="text-xl text-slate-100 mb-4 font-light">
-            Comprehensive yoga teacher insurance from specialist UK providers
+            We build AI systems that know when to ask for help
           </p>
-          <p className="text-lg text-slate-200 mb-8">
-            Get <strong>professional indemnity & public liability insurance</strong> for yoga instructors, trainers & studio owners.
+          <p className="text-lg text-slate-300 mb-8 max-w-2xl mx-auto">
+            Customer service automation, intelligent call response, and AI workflows with <strong>seamless human oversight</strong>. The best of both worlds.
           </p>
-          <p className="text-sm text-slate-300 mb-6">
-            <strong>Yoga teacher insurance from £15/month</strong> • Compare quotes in minutes • Get instant coverage
-          </p>
+
           <div className="flex flex-wrap justify-center gap-3 text-sm text-slate-200 mb-10">
-            <span className="px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20">Professional Indemnity</span>
-            <span className="px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20">Public Liability</span>
-            <span className="px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20">Yoga Alliance</span>
-            <span className="px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20">Studio Insurance</span>
-            <span className="px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20">Meditation Teachers</span>
+            <span className="px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20">Customer Service</span>
+            <span className="px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20">Call Response</span>
+            <span className="px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20">Voice AI</span>
+            <span className="px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20">Document Processing</span>
+            <span className="px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20">Content Moderation</span>
           </div>
 
-          {/* Voice Assistant */}
+          {/* Voice Assistant Demo */}
           <HeroVoice />
+          <p className="text-sm text-slate-400 mt-4">Try our voice AI demo - experience the future of customer interaction</p>
         </div>
       </section>
 
-      {/* Quote Calculator Section */}
-      <section id="calculator" className="py-8 px-4">
-        <QuoteCalculator />
-      </section>
-
-      {/* Why Insurance Section with Yoga Background */}
-      <section id="coverage" className="relative py-16 px-4 overflow-hidden">
-        {/* Background Image */}
-        <div className="absolute inset-0 z-0">
-          <img
-            src="https://images.unsplash.com/photo-1588286840104-8957b019727f?w=1920&h=1080&fit=crop&q=80"
-            alt="yoga studio class practice meditation mindfulness wellness"
-            className="w-full h-full object-cover"
-          />
-          {/* Gradient Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-r from-slate-900/95 via-slate-900/92 to-slate-900/95"></div>
-        </div>
-
-        <div className="relative z-10 max-w-6xl mx-auto">
-          <h2 className="text-2xl font-bold text-white text-center mb-4">
-            Why Do Yoga Teachers Need Insurance?
-          </h2>
-          <p className="text-slate-400 text-center mb-12 max-w-3xl mx-auto">
-            <strong>Yoga teacher insurance</strong> protects you from liability claims and provides
-            essential coverage for your professional practice. With increasing litigation, the right
-            insurance gives you peace of mind while you teach.
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="bg-slate-800/50 rounded-2xl p-6 border border-slate-700/50">
-              <div className="w-12 h-12 rounded-xl bg-blue-500/20 flex items-center justify-center mb-4">
-                <svg className="w-6 h-6 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-                </svg>
-              </div>
-              <h3 className="text-lg font-semibold text-white mb-2">Professional Protection</h3>
-              <p className="text-sm text-slate-400">
-                Professional indemnity insurance covers claims that your teaching advice or
-                instruction caused injury to a student due to negligence or poor practice.
-              </p>
-            </div>
-
-            <div className="bg-slate-800/50 rounded-2xl p-6 border border-slate-700/50">
-              <div className="w-12 h-12 rounded-xl bg-blue-500/20 flex items-center justify-center mb-4">
-                <svg className="w-6 h-6 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-              </div>
-              <h3 className="text-lg font-semibold text-white mb-2">Student Protection</h3>
-              <p className="text-sm text-slate-400">
-                Public liability insurance covers injury to students or damage to property
-                during your classes. Essential for protecting your students and your business.
-              </p>
-            </div>
-
-            <div className="bg-slate-800/50 rounded-2xl p-6 border border-slate-700/50">
-              <div className="w-12 h-12 rounded-xl bg-blue-500/20 flex items-center justify-center mb-4">
-                <svg className="w-6 h-6 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                </svg>
-              </div>
-              <h3 className="text-lg font-semibold text-white mb-2">Legal Support</h3>
-              <p className="text-sm text-slate-400">
-                Coverage includes legal fees and compensation costs if a claim is made against
-                you. Protects your financial security and professional reputation.
-              </p>
-            </div>
-
-            <div className="bg-slate-800/50 rounded-2xl p-6 border border-slate-700/50">
-              <div className="w-12 h-12 rounded-xl bg-blue-500/20 flex items-center justify-center mb-4">
-                <svg className="w-6 h-6 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                </svg>
-              </div>
-              <h3 className="text-lg font-semibold text-white mb-2">Peace of Mind</h3>
-              <p className="text-sm text-slate-400">
-                Focus on teaching while knowing you&apos;re protected. Insurance covers defense
-                against claims and helps resolve disputes professionally.
-              </p>
-            </div>
-
-            <div className="bg-slate-800/50 rounded-2xl p-6 border border-slate-700/50">
-              <div className="w-12 h-12 rounded-xl bg-blue-500/20 flex items-center justify-center mb-4">
-                <svg className="w-6 h-6 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                </svg>
-              </div>
-              <h3 className="text-lg font-semibold text-white mb-2">Studio Requirements</h3>
-              <p className="text-sm text-slate-400">
-                Most yoga studios require teachers to carry insurance. Some insurers provide
-                coverage that meets studio owner requirements and Yoga Alliance standards.
-              </p>
-            </div>
-
-            <div className="bg-slate-800/50 rounded-2xl p-6 border border-slate-700/50">
-              <div className="w-12 h-12 rounded-xl bg-blue-500/20 flex items-center justify-center mb-4">
-                <svg className="w-6 h-6 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
-                </svg>
-              </div>
-              <h3 className="text-lg font-semibold text-white mb-2">Affordable Rates</h3>
-              <p className="text-sm text-slate-400">
-                Yoga teacher insurance is reasonably priced. Specialist insurers offer
-                competitive rates from as little as £15/month for comprehensive coverage.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Providers Section */}
-      <section id="providers" className="py-16 px-4">
+      {/* What is HITL Section */}
+      <section id="what-is-hitl" className="py-20 px-4 bg-slate-800/30">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-2xl font-bold text-white text-center mb-4">
-            Leading Yoga Teacher Insurance Providers
-          </h2>
-          <p className="text-slate-400 text-center mb-12 max-w-3xl mx-auto">
-            Compare quotes from the UK's leading <strong>yoga teacher insurance</strong> specialists.
-            We help you find the best coverage at the best price.
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-            <div className="bg-slate-800/30 rounded-2xl p-8 border border-slate-700/50 text-center">
-              <h3 className="text-xl font-bold text-blue-400 mb-2">Yoga Alliance</h3>
-              <p className="text-slate-400 text-sm mb-4">
-                Official insurance for Yoga Alliance registered members. Recognized and trusted provider.
-              </p>
-              <p className="text-sm text-slate-500">Professional + Public Liability</p>
-            </div>
-
-            <div className="bg-slate-800/30 rounded-2xl p-8 border border-slate-700/50 text-center">
-              <h3 className="text-xl font-bold text-blue-400 mb-2">Balens</h3>
-              <p className="text-slate-400 text-sm mb-4">
-                Specialist fitness and yoga professional insurance with competitive rates.
-              </p>
-              <p className="text-sm text-slate-500">Comprehensive Coverage</p>
-            </div>
-
-            <div className="bg-slate-800/30 rounded-2xl p-8 border border-slate-700/50 text-center">
-              <h3 className="text-xl font-bold text-blue-400 mb-2">Specialist Providers</h3>
-              <p className="text-slate-400 text-sm mb-4">
-                UK insurers specializing in yoga, fitness, and wellness professionals.
-              </p>
-              <p className="text-sm text-slate-500">Flexible Options Available</p>
-            </div>
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-bold text-white mb-4">
+              What is Human-in-the-Loop?
+            </h2>
+            <p className="text-slate-400 max-w-3xl mx-auto text-lg">
+              HITL is an AI design philosophy where humans and machines work together.
+              The AI handles the volume, humans handle the nuance.
+            </p>
           </div>
 
-          <div className="text-center">
-            <a
-              href="/best-yoga-teacher-insurance-providers"
-              className="inline-block px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-bold rounded-xl hover:from-blue-700 hover:to-cyan-700 transition-all shadow-lg hover:shadow-xl"
-            >
-              View Detailed Provider Comparison →
-            </a>
-            <p className="text-slate-400 text-sm mt-4">Compare the top 5 yoga insurance specialists | Coverage details | Expert analysis</p>
-          </div>
-        </div>
-      </section>
-
-      {/* Why Choose Our Service Section */}
-      <section className="py-16 px-4">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-2xl font-bold text-white text-center mb-12">
-            Why Choose Yoga Teacher Insurance UK
-          </h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-slate-800/30 rounded-2xl p-8 border border-slate-700/50">
-              <h3 className="text-lg font-bold text-blue-400 mb-3">⚡ Instant Quotes</h3>
-              <p className="text-slate-400">
-                Get personalized insurance quotes in minutes. Our calculator analyzes your specific teaching situation to provide accurate pricing.
-              </p>
-            </div>
-            <div className="bg-slate-800/30 rounded-2xl p-8 border border-slate-700/50">
-              <h3 className="text-lg font-bold text-blue-400 mb-3">🏆 Specialist Providers</h3>
-              <p className="text-slate-400">
-                We work exclusively with UK insurers who specialize in yoga teacher coverage, understanding your unique risks and needs.
-              </p>
-            </div>
-            <div className="bg-slate-800/30 rounded-2xl p-8 border border-slate-700/50">
-              <h3 className="text-lg font-bold text-blue-400 mb-3">📊 Transparent Pricing</h3>
-              <p className="text-slate-400">
-                No hidden fees or surprises. See exactly what you're paying for with clear breakdowns of professional indemnity and public liability costs.
-              </p>
-            </div>
-            <div className="bg-slate-800/30 rounded-2xl p-8 border border-slate-700/50">
-              <h3 className="text-lg font-bold text-blue-400 mb-3">✓ Quick Comparison</h3>
-              <p className="text-slate-400">
-                Compare multiple providers side-by-side to find the best coverage at the best price for your teaching situation and requirements.
-              </p>
-            </div>
-            <div className="bg-slate-800/30 rounded-2xl p-8 border border-slate-700/50">
-              <h3 className="text-lg font-bold text-blue-400 mb-3">🎯 Specialized Coverage</h3>
-              <p className="text-slate-400">
-                Whether you teach hot yoga, aerial yoga, or standard classes, we help you find insurance tailored to your specific teaching style.
-              </p>
-            </div>
-            <div className="bg-slate-800/30 rounded-2xl p-8 border border-slate-700/50">
-              <h3 className="text-lg font-bold text-blue-400 mb-3">🚀 Expert Support</h3>
-              <p className="text-slate-400">
-                Our guides and resources help you understand insurance options, making informed decisions about protecting your yoga teaching career.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Types of Cover Section */}
-      <section className="py-16 px-4 bg-slate-800/30">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-2xl font-bold text-white text-center mb-12">
-            Types of Yoga Teacher Insurance Cover
-          </h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-slate-800/50 rounded-2xl p-8 border border-slate-700/50">
-              <h3 className="text-xl font-bold text-blue-400 mb-4">Professional Indemnity</h3>
-              <p className="text-slate-400 mb-4">
-                Covers claims of professional negligence, poor advice, or inadequate instruction
-                that causes injury to a student. Essential for protecting your professional practice.
-              </p>
-              <ul className="space-y-2 text-sm text-slate-400">
-                <li className="flex items-center gap-2">
-                  <svg className="w-4 h-4 text-blue-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
-                  </svg>
-                  Covers negligence claims
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            {/* The Problem */}
+            <div className="bg-gradient-to-br from-red-900/20 to-red-800/10 rounded-2xl p-8 border border-red-500/30">
+              <div className="w-12 h-12 rounded-xl bg-red-500/20 flex items-center justify-center mb-6">
+                <svg className="w-6 h-6 text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-red-300 mb-4">Fully Automated AI</h3>
+              <ul className="space-y-3 text-slate-400">
+                <li className="flex items-start gap-2">
+                  <span className="text-red-400 mt-1">✗</span>
+                  <span>Fails on edge cases</span>
                 </li>
-                <li className="flex items-center gap-2">
-                  <svg className="w-4 h-4 text-blue-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
-                  </svg>
-                  Legal defense included
+                <li className="flex items-start gap-2">
+                  <span className="text-red-400 mt-1">✗</span>
+                  <span>No empathy or nuance</span>
                 </li>
-                <li className="flex items-center gap-2">
-                  <svg className="w-4 h-4 text-blue-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
-                  </svg>
-                  Compensation costs covered
+                <li className="flex items-start gap-2">
+                  <span className="text-red-400 mt-1">✗</span>
+                  <span>Frustrates customers</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-red-400 mt-1">✗</span>
+                  <span>60-70% satisfaction</span>
                 </li>
               </ul>
             </div>
 
-            <div className="bg-slate-800/50 rounded-2xl p-8 border border-slate-700/50">
-              <h3 className="text-xl font-bold text-blue-400 mb-4">Public Liability</h3>
-              <p className="text-slate-400 mb-4">
-                Covers injury to students or damage to property during your classes.
-                Recommended for all yoga teachers, required by most studios.
-              </p>
-              <ul className="space-y-2 text-sm text-slate-400">
-                <li className="flex items-center gap-2">
-                  <svg className="w-4 h-4 text-blue-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
-                  </svg>
-                  Student injury covered
-                </li>
-                <li className="flex items-center gap-2">
-                  <svg className="w-4 h-4 text-blue-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
-                  </svg>
-                  Property damage covered
-                </li>
-                <li className="flex items-center gap-2">
-                  <svg className="w-4 h-4 text-blue-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
-                  </svg>
-                  Studio requirements met
-                </li>
-              </ul>
-            </div>
-
-            <div className="bg-slate-800/50 rounded-2xl p-8 border border-slate-700/50">
-              <h3 className="text-xl font-bold text-blue-400 mb-4">Combined Coverage</h3>
-              <p className="text-slate-400 mb-4">
-                Both professional indemnity and public liability insurance in one policy.
-                Best value for comprehensive protection and peace of mind.
-              </p>
-              <ul className="space-y-2 text-sm text-slate-400">
-                <li className="flex items-center gap-2">
-                  <svg className="w-4 h-4 text-blue-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
-                  </svg>
-                  Comprehensive professional protection
-                </li>
-                <li className="flex items-center gap-2">
-                  <svg className="w-4 h-4 text-blue-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
-                  </svg>
-                  Cost-effective bundled rate
-                </li>
-                <li className="flex items-center gap-2">
-                  <svg className="w-4 h-4 text-blue-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
-                  </svg>
-                  Single renewal and invoice
-                </li>
-              </ul>
-            </div>
-
-            <div className="bg-slate-800/50 rounded-2xl p-8 border border-slate-700/50">
-              <h3 className="text-xl font-bold text-blue-400 mb-4">Specialized Coverage</h3>
-              <p className="text-slate-400 mb-4">
-                Additional options for hot yoga, aerial yoga, online classes, and studio owners.
-                Customize coverage to match your teaching specialty.
-              </p>
-              <ul className="space-y-2 text-sm text-slate-400">
-                <li className="flex items-center gap-2">
-                  <svg className="w-4 h-4 text-blue-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
-                  </svg>
-                  Hot and aerial yoga
-                </li>
-                <li className="flex items-center gap-2">
-                  <svg className="w-4 h-4 text-blue-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
-                  </svg>
-                  Online class coverage
-                </li>
-                <li className="flex items-center gap-2">
-                  <svg className="w-4 h-4 text-blue-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
-                  </svg>
-                  Studio owner policies
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Who Needs Yoga Insurance Section with Yoga Background */}
-      <section className="relative py-16 px-4 overflow-hidden">
-        {/* Background Image */}
-        <div className="absolute inset-0 z-0">
-          <img
-            src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=1920&h=1080&fit=crop&q=80"
-            alt="peaceful yoga meditation mindfulness practice wellness"
-            className="w-full h-full object-cover"
-          />
-          {/* Gradient Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-r from-slate-900/95 via-slate-900/90 to-slate-900/95"></div>
-        </div>
-
-        <div className="relative z-10 max-w-6xl mx-auto">
-          <h2 className="text-2xl font-bold text-white text-center mb-12">
-            Who Needs Yoga Teacher Insurance?
-          </h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-slate-800/50 rounded-2xl p-8 border border-slate-700/50">
-              <h3 className="text-xl font-bold text-green-400 mb-4">✓ You Need Insurance If You:</h3>
-              <ul className="space-y-3 text-slate-300">
-                <li className="flex items-start gap-3">
-                  <span className="text-green-400 font-bold flex-shrink-0">✓</span>
-                  <span>Teach yoga classes to students (group or private)</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-green-400 font-bold flex-shrink-0">✓</span>
-                  <span>Are self-employed or run a yoga studio</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-green-400 font-bold flex-shrink-0">✓</span>
-                  <span>Are training to become a yoga teacher</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-green-400 font-bold flex-shrink-0">✓</span>
-                  <span>Teach specialized styles (hot yoga, aerial yoga)</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-green-400 font-bold flex-shrink-0">✓</span>
-                  <span>Are a Yoga Alliance member or want accreditation</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-green-400 font-bold flex-shrink-0">✓</span>
-                  <span>Work at studios or venues that require insurance</span>
-                </li>
-              </ul>
-            </div>
-
-            <div className="bg-slate-800/50 rounded-2xl p-8 border border-slate-700/50">
-              <h3 className="text-xl font-bold text-blue-400 mb-4">📚 Teacher Types We Serve:</h3>
-              <ul className="space-y-3 text-slate-300">
-                <li className="flex items-start gap-3">
-                  <span className="text-blue-400 font-bold flex-shrink-0">•</span>
-                  <span><strong>Experienced teachers</strong> - Established practices seeking comprehensive coverage</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-blue-400 font-bold flex-shrink-0">•</span>
-                  <span><strong>New teachers</strong> - Recently qualified instructors starting their careers</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-blue-400 font-bold flex-shrink-0">•</span>
-                  <span><strong>Trainees</strong> - Students completing yoga teacher training programs</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-blue-400 font-bold flex-shrink-0">•</span>
-                  <span><strong>Studio owners</strong> - Multi-teacher studios needing comprehensive protection</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-blue-400 font-bold flex-shrink-0">•</span>
-                  <span><strong>Freelance instructors</strong> - Teaching at multiple venues or online</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-blue-400 font-bold flex-shrink-0">•</span>
-                  <span><strong>Specialists</strong> - Hot yoga, aerial yoga, therapeutic practitioners</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* How to Get Insured Section */}
-      <section className="py-16 px-4">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-2xl font-bold text-white text-center mb-12">
-            How to Get Yoga Teacher Insurance in 4 Steps
-          </h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-            <div className="bg-gradient-to-br from-blue-900/30 to-blue-800/10 rounded-2xl p-6 border border-blue-500/30 relative">
-              <div className="absolute top--4 left-6 w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center font-bold text-white text-lg">1</div>
-              <div className="mt-6">
-                <h3 className="text-lg font-bold text-blue-300 mb-3">Share Your Details</h3>
-                <p className="text-slate-400 text-sm">
-                  Tell us about your yoga teaching practice - styles you teach, experience level, number of students, and whether you teach online or in-person.
-                </p>
+            {/* HITL Solution */}
+            <div className="bg-gradient-to-br from-green-900/20 to-green-800/10 rounded-2xl p-8 border border-green-500/30 relative">
+              <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 bg-green-500 text-white text-xs font-bold rounded-full">
+                RECOMMENDED
               </div>
-            </div>
-
-            <div className="bg-gradient-to-br from-blue-900/30 to-blue-800/10 rounded-2xl p-6 border border-blue-500/30 relative">
-              <div className="absolute top-4 left-6 w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center font-bold text-white text-lg">2</div>
-              <div className="mt-6">
-                <h3 className="text-lg font-bold text-blue-300 mb-3">Get Instant Quotes</h3>
-                <p className="text-slate-400 text-sm">
-                  Receive personalized quotes from multiple specialist insurers within minutes. See pricing for different coverage options and compare providers.
-                </p>
-              </div>
-            </div>
-
-            <div className="bg-gradient-to-br from-blue-900/30 to-blue-800/10 rounded-2xl p-6 border border-blue-500/30 relative">
-              <div className="absolute top-4 left-6 w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center font-bold text-white text-lg">3</div>
-              <div className="mt-6">
-                <h3 className="text-lg font-bold text-blue-300 mb-3">Choose Your Policy</h3>
-                <p className="text-slate-400 text-sm">
-                  Select the coverage option that best fits your teaching practice and budget. Choose professional indemnity, public liability, or combined policies.
-                </p>
-              </div>
-            </div>
-
-            <div className="bg-gradient-to-br from-blue-900/30 to-blue-800/10 rounded-2xl p-6 border border-blue-500/30 relative">
-              <div className="absolute top-4 left-6 w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center font-bold text-white text-lg">4</div>
-              <div className="mt-6">
-                <h3 className="text-lg font-bold text-blue-300 mb-3">Get Protected</h3>
-                <p className="text-slate-400 text-sm">
-                  Complete your policy and receive your certificate. You're now fully insured and can start teaching with complete peace of mind.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Why It Matters Section */}
-      <section className="py-16 px-4 bg-gradient-to-r from-blue-900/30 to-blue-600/20">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-2xl font-bold text-white mb-6">
-            Why Yoga Teacher Insurance Matters
-          </h2>
-          <p className="text-slate-300 text-lg mb-6">
-            A single injury claim could cost you thousands in legal fees and compensation. Without insurance, you could face:
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700">
-              <p className="text-red-400 font-bold text-xl mb-2">£10,000+</p>
-              <p className="text-slate-300 text-sm">Average legal defense costs</p>
-            </div>
-            <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700">
-              <p className="text-red-400 font-bold text-xl mb-2">£50,000+</p>
-              <p className="text-slate-300 text-sm">Potential compensation claims</p>
-            </div>
-            <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700">
-              <p className="text-red-400 font-bold text-xl mb-2">Career Risk</p>
-              <p className="text-slate-300 text-sm">Loss of reputation and income</p>
-            </div>
-          </div>
-          <p className="text-slate-300 mt-8">
-            Yoga teacher insurance protects your livelihood, reputation, and financial security. For less than £30/month, you get complete peace of mind to focus on teaching.
-          </p>
-        </div>
-      </section>
-
-      {/* Articles & Resources Section */}
-      <section className="py-16 px-4 bg-slate-800/30">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-2xl font-bold text-white text-center mb-4">
-            Expert Articles & Guides
-          </h2>
-          <p className="text-slate-400 text-center mb-12 max-w-3xl mx-auto">
-            Explore our comprehensive guides on yoga teacher insurance, coverage types, costs, and specialized requirements.
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <a href="/articles/yoga-insurance-costs-guide" className="group bg-slate-800 hover:bg-slate-700 rounded-xl overflow-hidden transition-all border border-slate-700 hover:border-blue-500/50">
-              <div className="relative h-48 overflow-hidden bg-slate-700">
-                <img
-                  src="https://images.unsplash.com/photo-1542654291-526a40ef6050?w=600&h=400&crop=entropy"
-                  alt="yoga teacher insurance costs 2026 UK pricing guide budget breakdown"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-              </div>
-              <div className="p-6">
-                <h3 className="text-lg font-bold text-blue-400 group-hover:text-blue-300 mb-2">Insurance Costs Guide</h3>
-                <p className="text-sm text-slate-400 mb-4">Complete breakdown of yoga teacher insurance pricing, factors affecting costs, and budgeting tips.</p>
-                <div className="text-xs text-blue-400">Read Guide →</div>
-              </div>
-            </a>
-
-            <a href="/hot-yoga-insurance" className="group bg-slate-800 hover:bg-slate-700 rounded-xl overflow-hidden transition-all border border-slate-700 hover:border-orange-500/50">
-              <div className="relative h-48 overflow-hidden bg-slate-700">
-                <img
-                  src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=600&h=400&crop=entropy"
-                  alt="hot yoga insurance bikram yoga heated class coverage requirements UK quotes"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-              </div>
-              <div className="p-6">
-                <h3 className="text-lg font-bold text-orange-400 group-hover:text-orange-300 mb-2">Hot Yoga Insurance UK</h3>
-                <p className="text-sm text-slate-400 mb-4">Specialized coverage for heated yoga classes, Bikram yoga, heat-related injury protection. Get quotes now.</p>
-                <div className="text-xs text-orange-400">Get Quote →</div>
-              </div>
-            </a>
-
-            <a href="/aerial-yoga-insurance" className="group bg-slate-800 hover:bg-slate-700 rounded-xl overflow-hidden transition-all border border-slate-700 hover:border-red-500/50">
-              <div className="relative h-48 overflow-hidden bg-slate-700">
-                <img
-                  src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=600&h=400&crop=entropy"
-                  alt="aerial yoga insurance suspended yoga equipment liability fall protection UK coverage calculator"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-              </div>
-              <div className="p-6">
-                <h3 className="text-lg font-bold text-red-400 group-hover:text-red-300 mb-2">Aerial Yoga Insurance UK</h3>
-                <p className="text-sm text-slate-400 mb-4">Complete protection for suspension equipment, fall risks, rigging liability. Use our calculator for instant quotes.</p>
-                <div className="text-xs text-red-400">Get Quote + Calculator →</div>
-              </div>
-            </a>
-
-            <a href="/articles/public-liability-vs-professional-indemnity" className="group bg-slate-800 hover:bg-slate-700 rounded-xl overflow-hidden transition-all border border-slate-700 hover:border-indigo-500/50">
-              <div className="relative h-48 overflow-hidden bg-slate-700">
-                <img
-                  src="https://images.unsplash.com/photo-1552621554-5fefe8c9ef14?w=600&h=400&crop=entropy"
-                  alt="public liability professional indemnity insurance comparison yoga teachers"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-              </div>
-              <div className="p-6">
-                <h3 className="text-lg font-bold text-indigo-400 group-hover:text-indigo-300 mb-2">Insurance Types Explained</h3>
-                <p className="text-sm text-slate-400 mb-4">Clear explanation of public liability vs professional indemnity and what each covers.</p>
-                <div className="text-xs text-indigo-400">Read Guide →</div>
-              </div>
-            </a>
-
-            <a href="/articles/yoga-alliance-insurance-requirements" className="group bg-slate-800 hover:bg-slate-700 rounded-xl overflow-hidden transition-all border border-slate-700 hover:border-teal-500/50">
-              <div className="relative h-48 overflow-hidden bg-slate-700">
-                <img
-                  src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&h=400&crop=entropy"
-                  alt="yoga alliance insurance requirements accreditation standards membership"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-              </div>
-              <div className="p-6">
-                <h3 className="text-lg font-bold text-teal-400 group-hover:text-teal-300 mb-2">Yoga Alliance Requirements</h3>
-                <p className="text-sm text-slate-400 mb-4">Insurance requirements for Yoga Alliance members and professional standards.</p>
-                <div className="text-xs text-teal-400">Read Guide →</div>
-              </div>
-            </a>
-
-            <a href="/articles" className="group bg-slate-800 hover:bg-slate-700 rounded-xl overflow-hidden transition-all border border-slate-700 hover:border-emerald-500/50">
-              <div className="relative h-48 overflow-hidden bg-gradient-to-br from-blue-900 to-slate-900 flex items-center justify-center">
-                <div className="text-center">
-                  <svg className="w-12 h-12 text-blue-400 mx-auto mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C6.5 6.253 2 10.998 2 17c0 5.523 3.692 10 8 10c1.906 0 3.674-.586 5-1.566 1.326.98 3.094 1.566 5 1.566 4.308 0 8-4.477 8-10 0-6.002-4.5-10.747-10-10.253z" />
-                  </svg>
-                  <p className="text-slate-300 font-semibold">View All Articles</p>
-                </div>
-              </div>
-              <div className="p-6">
-                <h3 className="text-lg font-bold text-emerald-400 group-hover:text-emerald-300 mb-2">Complete Collection</h3>
-                <p className="text-sm text-slate-400 mb-4">Explore our complete collection of yoga teacher insurance guides and educational resources.</p>
-                <div className="text-xs text-emerald-400">Browse All →</div>
-              </div>
-            </a>
-          </div>
-        </div>
-      </section>
-
-      {/* Specialty Insurance Section */}
-      <section className="py-16 px-4">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-2xl font-bold text-white text-center mb-4">
-            Specialist Yoga & Wellness Insurance
-          </h2>
-          <p className="text-slate-400 text-center mb-12 max-w-3xl mx-auto">
-            Whether you're a yoga instructor, meditation teacher, studio owner, or fitness trainer, we help you find affordable specialist insurance coverage.
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <a href="/yoga-studio-insurance" className="group bg-slate-800/50 hover:bg-slate-700/50 rounded-2xl p-6 border border-slate-700/50 hover:border-green-500/50 transition-all">
-              <div className="w-12 h-12 rounded-xl bg-green-500/20 flex items-center justify-center mb-4">
+              <div className="w-12 h-12 rounded-xl bg-green-500/20 flex items-center justify-center mb-6">
                 <svg className="w-6 h-6 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
-              <h3 className="text-lg font-bold text-green-400 group-hover:text-green-300 mb-2">Yoga Studio Insurance</h3>
-              <p className="text-sm text-slate-400">Complete business coverage for studio owners, property, equipment & staff.</p>
-            </a>
+              <h3 className="text-xl font-bold text-green-300 mb-4">Human-in-the-Loop</h3>
+              <ul className="space-y-3 text-slate-400">
+                <li className="flex items-start gap-2">
+                  <span className="text-green-400 mt-1">✓</span>
+                  <span>AI handles 80% of volume</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-green-400 mt-1">✓</span>
+                  <span>Humans handle complexity</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-green-400 mt-1">✓</span>
+                  <span>Seamless escalation</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-green-400 mt-1">✓</span>
+                  <span>95%+ satisfaction</span>
+                </li>
+              </ul>
+            </div>
 
-            <a href="/meditation-teacher-insurance" className="group bg-slate-800/50 hover:bg-slate-700/50 rounded-2xl p-6 border border-slate-700/50 hover:border-purple-500/50 transition-all">
-              <div className="w-12 h-12 rounded-xl bg-purple-500/20 flex items-center justify-center mb-4">
+            {/* Manual Only */}
+            <div className="bg-gradient-to-br from-yellow-900/20 to-yellow-800/10 rounded-2xl p-8 border border-yellow-500/30">
+              <div className="w-12 h-12 rounded-xl bg-yellow-500/20 flex items-center justify-center mb-6">
+                <svg className="w-6 h-6 text-yellow-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-yellow-300 mb-4">Fully Manual</h3>
+              <ul className="space-y-3 text-slate-400">
+                <li className="flex items-start gap-2">
+                  <span className="text-yellow-400 mt-1">~</span>
+                  <span>High quality service</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-yellow-400 mt-1">~</span>
+                  <span>Doesn&apos;t scale</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-yellow-400 mt-1">~</span>
+                  <span>Long wait times</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-yellow-400 mt-1">~</span>
+                  <span>Expensive at volume</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Services Section */}
+      <section id="services" className="py-20 px-4">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-bold text-white mb-4">
+              What We Build
+            </h2>
+            <p className="text-slate-400 max-w-2xl mx-auto">
+              Custom HITL solutions powered by cutting-edge AI with elegant human escalation
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="bg-slate-800/50 rounded-2xl p-6 border border-slate-700/50 hover:border-blue-500/50 transition-colors group">
+              <div className="w-12 h-12 rounded-xl bg-blue-500/20 flex items-center justify-center mb-4 group-hover:bg-blue-500/30 transition-colors">
+                <svg className="w-6 h-6 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                </svg>
+              </div>
+              <h3 className="text-lg font-semibold text-white mb-2">AI Customer Service</h3>
+              <p className="text-sm text-slate-400 mb-4">
+                Chat and email support that handles routine queries instantly, escalates complex issues to humans with full context.
+              </p>
+              <div className="flex flex-wrap gap-2">
+                <span className="text-xs px-2 py-1 bg-blue-500/20 text-blue-300 rounded">CopilotKit</span>
+                <span className="text-xs px-2 py-1 bg-blue-500/20 text-blue-300 rounded">AG-UI</span>
+              </div>
+            </div>
+
+            <div className="bg-slate-800/50 rounded-2xl p-6 border border-slate-700/50 hover:border-purple-500/50 transition-colors group">
+              <div className="w-12 h-12 rounded-xl bg-purple-500/20 flex items-center justify-center mb-4 group-hover:bg-purple-500/30 transition-colors">
                 <svg className="w-6 h-6 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                </svg>
+              </div>
+              <h3 className="text-lg font-semibold text-white mb-2">Voice Call Systems</h3>
+              <p className="text-sm text-slate-400 mb-4">
+                AI voice agents with emotional intelligence that detect when to transfer to humans. Natural, empathetic conversations.
+              </p>
+              <div className="flex flex-wrap gap-2">
+                <span className="text-xs px-2 py-1 bg-purple-500/20 text-purple-300 rounded">Hume AI</span>
+                <span className="text-xs px-2 py-1 bg-purple-500/20 text-purple-300 rounded">EVI</span>
+              </div>
+            </div>
+
+            <div className="bg-slate-800/50 rounded-2xl p-6 border border-slate-700/50 hover:border-green-500/50 transition-colors group">
+              <div className="w-12 h-12 rounded-xl bg-green-500/20 flex items-center justify-center mb-4 group-hover:bg-green-500/30 transition-colors">
+                <svg className="w-6 h-6 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+              </div>
+              <h3 className="text-lg font-semibold text-white mb-2">Document Processing</h3>
+              <p className="text-sm text-slate-400 mb-4">
+                AI extracts and validates data, flags uncertain items for human review. 10x faster with human-level accuracy.
+              </p>
+              <div className="flex flex-wrap gap-2">
+                <span className="text-xs px-2 py-1 bg-green-500/20 text-green-300 rounded">Pydantic AI</span>
+                <span className="text-xs px-2 py-1 bg-green-500/20 text-green-300 rounded">Structured</span>
+              </div>
+            </div>
+
+            <div className="bg-slate-800/50 rounded-2xl p-6 border border-slate-700/50 hover:border-orange-500/50 transition-colors group">
+              <div className="w-12 h-12 rounded-xl bg-orange-500/20 flex items-center justify-center mb-4 group-hover:bg-orange-500/30 transition-colors">
+                <svg className="w-6 h-6 text-orange-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                </svg>
+              </div>
+              <h3 className="text-lg font-semibold text-white mb-2">Content Moderation</h3>
+              <p className="text-sm text-slate-400 mb-4">
+                AI filters obvious violations, surfaces edge cases for human judgment. Scale moderation without sacrificing quality.
+              </p>
+              <div className="flex flex-wrap gap-2">
+                <span className="text-xs px-2 py-1 bg-orange-500/20 text-orange-300 rounded">Classification</span>
+                <span className="text-xs px-2 py-1 bg-orange-500/20 text-orange-300 rounded">Queues</span>
+              </div>
+            </div>
+
+            <div className="bg-slate-800/50 rounded-2xl p-6 border border-slate-700/50 hover:border-cyan-500/50 transition-colors group">
+              <div className="w-12 h-12 rounded-xl bg-cyan-500/20 flex items-center justify-center mb-4 group-hover:bg-cyan-500/30 transition-colors">
+                <svg className="w-6 h-6 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
                 </svg>
               </div>
-              <h3 className="text-lg font-bold text-purple-400 group-hover:text-purple-300 mb-2">Meditation Teacher Insurance</h3>
-              <p className="text-sm text-slate-400">Specialist cover for meditation, mindfulness & breathwork instructors.</p>
-            </a>
+              <h3 className="text-lg font-semibold text-white mb-2">Decision Support</h3>
+              <p className="text-sm text-slate-400 mb-4">
+                AI analyzes data and suggests actions, humans approve or override. Augment expertise, don&apos;t replace it.
+              </p>
+              <div className="flex flex-wrap gap-2">
+                <span className="text-xs px-2 py-1 bg-cyan-500/20 text-cyan-300 rounded">Analytics</span>
+                <span className="text-xs px-2 py-1 bg-cyan-500/20 text-cyan-300 rounded">Workflows</span>
+              </div>
+            </div>
 
-            <a href="/public-liability-insurance-yoga-teachers" className="group bg-slate-800/50 hover:bg-slate-700/50 rounded-2xl p-6 border border-slate-700/50 hover:border-blue-500/50 transition-all">
-              <div className="w-12 h-12 rounded-xl bg-blue-500/20 flex items-center justify-center mb-4">
-                <svg className="w-6 h-6 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+            <div className="bg-slate-800/50 rounded-2xl p-6 border border-slate-700/50 hover:border-pink-500/50 transition-colors group">
+              <div className="w-12 h-12 rounded-xl bg-pink-500/20 flex items-center justify-center mb-4 group-hover:bg-pink-500/30 transition-colors">
+                <svg className="w-6 h-6 text-pink-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
                 </svg>
               </div>
-              <h3 className="text-lg font-bold text-blue-400 group-hover:text-blue-300 mb-2">Public Liability Insurance</h3>
-              <p className="text-sm text-slate-400">Essential coverage for yoga teachers from £10/month. Studio required.</p>
-            </a>
-
-            <a href="/pilates-instructor-insurance" className="group bg-slate-800/50 hover:bg-slate-700/50 rounded-2xl p-6 border border-slate-700/50 hover:border-cyan-500/50 transition-all">
-              <div className="w-12 h-12 rounded-xl bg-cyan-500/20 flex items-center justify-center mb-4">
-                <svg className="w-6 h-6 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                </svg>
+              <h3 className="text-lg font-semibold text-white mb-2">Custom Solutions</h3>
+              <p className="text-sm text-slate-400 mb-4">
+                Your unique workflows deserve custom AI. We design bespoke HITL systems for your specific needs.
+              </p>
+              <div className="flex flex-wrap gap-2">
+                <span className="text-xs px-2 py-1 bg-pink-500/20 text-pink-300 rounded">Bespoke</span>
+                <span className="text-xs px-2 py-1 bg-pink-500/20 text-pink-300 rounded">Integration</span>
               </div>
-              <h3 className="text-lg font-bold text-cyan-400 group-hover:text-cyan-300 mb-2">Yoga-Pilates Instructor</h3>
-              <p className="text-sm text-slate-400">Combined coverage for yoga and pilates teaching from one policy.</p>
-            </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* How It Works */}
+      <section className="py-20 px-4 bg-slate-800/30">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-bold text-white mb-4">
+              How HITL Works
+            </h2>
+            <p className="text-slate-400 max-w-2xl mx-auto">
+              Intelligent escalation that feels seamless to customers
+            </p>
           </div>
 
-          <div className="mt-8 text-center">
-            <p className="text-slate-400 text-sm">
-              Looking for <strong>cheap yoga insurance</strong> or <strong>affordable yoga instructor insurance</strong>?
-              Compare quotes from UK yoga insurance companies and find the cheapest yoga teacher insurance that meets your needs.
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+            <div className="relative">
+              <div className="bg-slate-800/50 rounded-2xl p-6 border border-slate-700/50 h-full">
+                <div className="w-10 h-10 rounded-full bg-blue-500 flex items-center justify-center text-white font-bold mb-4">1</div>
+                <h3 className="text-lg font-bold text-white mb-2">Customer Engages</h3>
+                <p className="text-sm text-slate-400">
+                  Customer starts a chat, call, or submits a request. AI immediately begins processing.
+                </p>
+              </div>
+              <div className="hidden md:block absolute top-1/2 -right-3 transform -translate-y-1/2 text-slate-600 text-2xl">→</div>
+            </div>
+
+            <div className="relative">
+              <div className="bg-slate-800/50 rounded-2xl p-6 border border-slate-700/50 h-full">
+                <div className="w-10 h-10 rounded-full bg-blue-500 flex items-center justify-center text-white font-bold mb-4">2</div>
+                <h3 className="text-lg font-bold text-white mb-2">AI Analyzes</h3>
+                <p className="text-sm text-slate-400">
+                  AI assesses complexity, sentiment, and confidence. Handles routine requests instantly.
+                </p>
+              </div>
+              <div className="hidden md:block absolute top-1/2 -right-3 transform -translate-y-1/2 text-slate-600 text-2xl">→</div>
+            </div>
+
+            <div className="relative">
+              <div className="bg-slate-800/50 rounded-2xl p-6 border border-slate-700/50 h-full">
+                <div className="w-10 h-10 rounded-full bg-purple-500 flex items-center justify-center text-white font-bold mb-4">3</div>
+                <h3 className="text-lg font-bold text-white mb-2">Smart Escalation</h3>
+                <p className="text-sm text-slate-400">
+                  Complex cases route to humans with full context. No customer repetition needed.
+                </p>
+              </div>
+              <div className="hidden md:block absolute top-1/2 -right-3 transform -translate-y-1/2 text-slate-600 text-2xl">→</div>
+            </div>
+
+            <div className="bg-slate-800/50 rounded-2xl p-6 border border-slate-700/50 h-full">
+              <div className="w-10 h-10 rounded-full bg-green-500 flex items-center justify-center text-white font-bold mb-4">4</div>
+              <h3 className="text-lg font-bold text-white mb-2">Continuous Learning</h3>
+              <p className="text-sm text-slate-400">
+                Human decisions train the AI. The system gets smarter over time.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Tech Stack */}
+      <section id="tech" className="py-20 px-4">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-bold text-white mb-4">
+              Our Tech Stack
+            </h2>
+            <p className="text-slate-400 max-w-2xl mx-auto">
+              We use the best tools in the industry to build production-ready HITL systems
             </p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+            <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700/50 text-center hover:border-blue-500/50 transition-colors">
+              <div className="text-3xl mb-3">🤖</div>
+              <h3 className="font-semibold text-white mb-1">CopilotKit</h3>
+              <p className="text-xs text-slate-400">AI UI Framework</p>
+            </div>
+
+            <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700/50 text-center hover:border-purple-500/50 transition-colors">
+              <div className="text-3xl mb-3">🎯</div>
+              <h3 className="font-semibold text-white mb-1">AG-UI</h3>
+              <p className="text-xs text-slate-400">Agent Protocol</p>
+            </div>
+
+            <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700/50 text-center hover:border-green-500/50 transition-colors">
+              <div className="text-3xl mb-3">🐍</div>
+              <h3 className="font-semibold text-white mb-1">Pydantic AI</h3>
+              <p className="text-xs text-slate-400">Structured Output</p>
+            </div>
+
+            <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700/50 text-center hover:border-pink-500/50 transition-colors">
+              <div className="text-3xl mb-3">🎭</div>
+              <h3 className="font-semibold text-white mb-1">Hume AI</h3>
+              <p className="text-xs text-slate-400">Emotional Voice</p>
+            </div>
+
+            <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700/50 text-center hover:border-cyan-500/50 transition-colors">
+              <div className="text-3xl mb-3">🧠</div>
+              <h3 className="font-semibold text-white mb-1">Zep</h3>
+              <p className="text-xs text-slate-400">Memory Layer</p>
+            </div>
+
+            <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700/50 text-center hover:border-orange-500/50 transition-colors">
+              <div className="text-3xl mb-3">⚡</div>
+              <h3 className="font-semibold text-white mb-1">Next.js</h3>
+              <p className="text-xs text-slate-400">React Framework</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Why HITL Matters */}
+      <section className="py-20 px-4 bg-gradient-to-r from-blue-900/30 via-purple-900/30 to-blue-900/30">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl font-bold text-white mb-6">
+            Why HITL Matters
+          </h2>
+          <p className="text-slate-300 text-lg mb-10">
+            The numbers speak for themselves
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-slate-800/50 rounded-xl p-8 border border-slate-700">
+              <p className="text-4xl font-bold text-cyan-400 mb-2">95%+</p>
+              <p className="text-slate-300">Customer Satisfaction</p>
+              <p className="text-xs text-slate-500 mt-2">vs 60-70% for full automation</p>
+            </div>
+            <div className="bg-slate-800/50 rounded-xl p-8 border border-slate-700">
+              <p className="text-4xl font-bold text-green-400 mb-2">80%</p>
+              <p className="text-slate-300">Automation Rate</p>
+              <p className="text-xs text-slate-500 mt-2">AI handles the volume</p>
+            </div>
+            <div className="bg-slate-800/50 rounded-xl p-8 border border-slate-700">
+              <p className="text-4xl font-bold text-purple-400 mb-2">10x</p>
+              <p className="text-slate-300">Faster Resolution</p>
+              <p className="text-xs text-slate-500 mt-2">Compared to manual processing</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Use Cases */}
+      <section className="py-20 px-4">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-bold text-white mb-4">
+              Perfect For
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="bg-slate-800/50 rounded-2xl p-8 border border-slate-700/50">
+              <h3 className="text-xl font-bold text-blue-400 mb-4">Customer Support Teams</h3>
+              <ul className="space-y-3 text-slate-300">
+                <li className="flex items-start gap-3">
+                  <span className="text-blue-400 font-bold flex-shrink-0">✓</span>
+                  <span>Handle 10x more tickets without hiring</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-blue-400 font-bold flex-shrink-0">✓</span>
+                  <span>Focus agents on high-value interactions</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-blue-400 font-bold flex-shrink-0">✓</span>
+                  <span>24/7 availability with instant response</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-blue-400 font-bold flex-shrink-0">✓</span>
+                  <span>Reduce average handle time by 60%</span>
+                </li>
+              </ul>
+            </div>
+
+            <div className="bg-slate-800/50 rounded-2xl p-8 border border-slate-700/50">
+              <h3 className="text-xl font-bold text-purple-400 mb-4">Operations Leaders</h3>
+              <ul className="space-y-3 text-slate-300">
+                <li className="flex items-start gap-3">
+                  <span className="text-purple-400 font-bold flex-shrink-0">✓</span>
+                  <span>Automate document processing pipelines</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-purple-400 font-bold flex-shrink-0">✓</span>
+                  <span>Maintain compliance with human review</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-purple-400 font-bold flex-shrink-0">✓</span>
+                  <span>Scale operations without proportional cost</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-purple-400 font-bold flex-shrink-0">✓</span>
+                  <span>Built-in audit trails and oversight</span>
+                </li>
+              </ul>
+            </div>
+
+            <div className="bg-slate-800/50 rounded-2xl p-8 border border-slate-700/50">
+              <h3 className="text-xl font-bold text-green-400 mb-4">Product Teams</h3>
+              <ul className="space-y-3 text-slate-300">
+                <li className="flex items-start gap-3">
+                  <span className="text-green-400 font-bold flex-shrink-0">✓</span>
+                  <span>Add AI features with confidence</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-green-400 font-bold flex-shrink-0">✓</span>
+                  <span>Human fallback for edge cases</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-green-400 font-bold flex-shrink-0">✓</span>
+                  <span>Gather training data from human decisions</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-green-400 font-bold flex-shrink-0">✓</span>
+                  <span>Iterate quickly with real feedback</span>
+                </li>
+              </ul>
+            </div>
+
+            <div className="bg-slate-800/50 rounded-2xl p-8 border border-slate-700/50">
+              <h3 className="text-xl font-bold text-orange-400 mb-4">Enterprise IT</h3>
+              <ul className="space-y-3 text-slate-300">
+                <li className="flex items-start gap-3">
+                  <span className="text-orange-400 font-bold flex-shrink-0">✓</span>
+                  <span>Enterprise-grade security and compliance</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-orange-400 font-bold flex-shrink-0">✓</span>
+                  <span>Integrate with existing systems</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-orange-400 font-bold flex-shrink-0">✓</span>
+                  <span>On-premise or cloud deployment</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-orange-400 font-bold flex-shrink-0">✓</span>
+                  <span>Full observability and monitoring</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 px-4 bg-gradient-to-br from-blue-900/50 to-purple-900/50">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl font-bold text-white mb-6">
+            Ready to Build Something Amazing?
+          </h2>
+          <p className="text-slate-300 text-lg mb-8">
+            Let&apos;s discuss how HITL can transform your operations
+          </p>
+          <div className="flex flex-col sm:flex-row justify-center gap-4">
+            <a
+              href="/contact"
+              className="inline-block px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-bold rounded-xl hover:from-blue-700 hover:to-cyan-700 transition-all shadow-lg hover:shadow-xl"
+            >
+              Start a Conversation
+            </a>
+            <a
+              href="#services"
+              className="inline-block px-8 py-4 bg-white/10 text-white font-bold rounded-xl hover:bg-white/20 transition-all border border-white/20"
+            >
+              Explore Services
+            </a>
           </div>
         </div>
       </section>
 
       {/* FAQ Section */}
-      <section id="faq" className="py-16 px-4">
+      <section id="faq" className="py-20 px-4">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-2xl font-bold text-white text-center mb-12">
-            Yoga Teacher Insurance FAQs
+          <h2 className="text-3xl font-bold text-white text-center mb-12">
+            Frequently Asked Questions
           </h2>
 
           <div className="space-y-6">
             <details className="bg-slate-800/50 rounded-xl border border-slate-700/50 p-6 group">
               <summary className="text-lg font-semibold text-white cursor-pointer list-none flex justify-between items-center">
-                Do yoga teachers need insurance in the UK?
+                What is Human-in-the-Loop AI?
                 <svg className="w-5 h-5 text-blue-400 transform group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7"/>
                 </svg>
               </summary>
               <p className="mt-4 text-slate-400">
-                While not legally required by UK law, yoga teacher insurance is highly recommended for professional protection. Most yoga studios require teachers to have liability insurance, and Yoga Alliance register members are strongly advised to carry professional indemnity and public liability cover. Insurance protects you against potential claims from students and provides essential financial protection for your teaching business.
+                Human-in-the-Loop (HITL) AI is an approach where humans work alongside AI systems to provide oversight, make critical decisions, and ensure quality. The AI handles routine tasks while humans step in for complex situations, edge cases, or when empathy and judgment are needed. It&apos;s the best of both worlds - AI speed with human wisdom.
               </p>
             </details>
 
             <details className="bg-slate-800/50 rounded-xl border border-slate-700/50 p-6 group">
               <summary className="text-lg font-semibold text-white cursor-pointer list-none flex justify-between items-center">
-                What does yoga teacher insurance cover?
+                How does escalation to humans work?
                 <svg className="w-5 h-5 text-blue-400 transform group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7"/>
                 </svg>
               </summary>
               <p className="mt-4 text-slate-400">
-                Yoga teacher insurance typically covers two main types: Professional Indemnity Insurance protects against claims of negligence or poor teaching causing injury, and Public Liability Insurance covers injury to students or damage to property during classes. Combined policies offer both protections for comprehensive coverage. Many providers also offer additional coverage for yoga alliances and online classes.
+                Our systems use multiple signals to detect when human intervention is needed: confidence scores, sentiment analysis, complexity detection, and explicit user requests. When escalation triggers, the full context is passed to the human agent seamlessly - the customer never has to repeat themselves. Humans can also train the AI in real-time through their decisions.
               </p>
             </details>
 
             <details className="bg-slate-800/50 rounded-xl border border-slate-700/50 p-6 group">
               <summary className="text-lg font-semibold text-white cursor-pointer list-none flex justify-between items-center">
-                How much does yoga teacher insurance cost?
+                What&apos;s the typical implementation timeline?
                 <svg className="w-5 h-5 text-blue-400 transform group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7"/>
                 </svg>
               </summary>
               <p className="mt-4 text-slate-400">
-                Yoga teacher insurance typically costs between £15-£38 per month depending on experience level, coverage type, and teaching situation. New teachers (0-2 years) generally pay more than experienced teachers (5+ years). Basic public liability insurance starts around £180-£240 per year, while combined professional indemnity and public liability insurance ranges from £240-£456 per year. <a href="/articles/yoga-insurance-costs-guide" className="text-blue-400 hover:text-blue-300 underline">Read our complete costs guide</a> for detailed pricing information. Get a personalized quote based on your teaching profile using our calculator.
+                It depends on complexity. A basic customer service chatbot with human escalation can be deployed in weeks. More complex systems with multiple integrations, custom workflows, and extensive training data may take longer. We work in phases - starting with an MVP and iterating based on real usage data.
               </p>
             </details>
 
             <details className="bg-slate-800/50 rounded-xl border border-slate-700/50 p-6 group">
               <summary className="text-lg font-semibold text-white cursor-pointer list-none flex justify-between items-center">
-                What is the difference between professional indemnity and public liability insurance?
+                Do you provide ongoing support?
                 <svg className="w-5 h-5 text-blue-400 transform group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7"/>
                 </svg>
               </summary>
               <p className="mt-4 text-slate-400">
-                Professional Indemnity Insurance covers claims that your teaching advice or instruction caused injury or loss to a student due to negligence. Public Liability Insurance covers injury to students or damage to property that occurs during your classes. Most yoga teachers need both types of coverage for comprehensive protection. <a href="/articles/public-liability-vs-professional-indemnity" className="text-blue-400 hover:text-blue-300 underline">Learn the key differences</a> between these two essential coverage types.
+                Yes! HITL systems benefit from continuous improvement. We offer ongoing support packages that include monitoring, performance optimization, model updates, and feature enhancements. The system gets smarter over time as it learns from human decisions.
               </p>
             </details>
 
             <details className="bg-slate-800/50 rounded-xl border border-slate-700/50 p-6 group">
               <summary className="text-lg font-semibold text-white cursor-pointer list-none flex justify-between items-center">
-                Do trainee yoga teachers need insurance?
+                How do you ensure data security?
                 <svg className="w-5 h-5 text-blue-400 transform group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7"/>
                 </svg>
               </summary>
               <p className="mt-4 text-slate-400">
-                Yes, trainee yoga teachers are strongly recommended to have insurance, especially if they are teaching students during their training. Many yoga teacher training programs require trainees to carry professional indemnity insurance. <a href="/articles/trainee-yoga-teacher-insurance" className="text-blue-400 hover:text-blue-300 underline">Check our trainee insurance guide</a> for affordable coverage options during your training. Insurance protects both you and your students during the learning process and is often available at lower rates for trainees.
-              </p>
-            </details>
-
-            <details className="bg-slate-800/50 rounded-xl border border-slate-700/50 p-6 group">
-              <summary className="text-lg font-semibold text-white cursor-pointer list-none flex justify-between items-center">
-                What is yoga teacher liability insurance?
-                <svg className="w-5 h-5 text-blue-400 transform group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7"/>
-                </svg>
-              </summary>
-              <p className="mt-4 text-slate-400">
-                Yoga teacher liability insurance refers to both professional indemnity and public liability coverage combined. This comprehensive insurance protects you against claims from students regarding injury or damage caused by your teaching. It covers legal fees, compensation claims, and defense costs, making it essential for any yoga professional offering classes or one-on-one sessions. Having this coverage demonstrates professionalism to students and studios.
-              </p>
-            </details>
-
-            <details className="bg-slate-800/50 rounded-xl border border-slate-700/50 p-6 group">
-              <summary className="text-lg font-semibold text-white cursor-pointer list-none flex justify-between items-center">
-                Can hot yoga or aerial yoga be insured?
-                <svg className="w-5 h-5 text-blue-400 transform group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7"/>
-                </svg>
-              </summary>
-              <p className="mt-4 text-slate-400">
-                Yes, specialized yoga styles including hot yoga and aerial yoga can be insured. Some providers offer specific coverage for these high-risk practices. <a href="/articles/hot-yoga-insurance-coverage" className="text-blue-400 hover:text-blue-300 underline">Hot yoga requires coverage for heat-related risks</a>, while <a href="/articles/aerial-yoga-insurance-explained" className="text-blue-400 hover:text-blue-300 underline">aerial yoga requires coverage for fall and equipment risks</a>. Specialist insurers understand these specific requirements and can provide appropriate coverage at fair rates. When getting quotes, always mention your specific yoga specialties.
-              </p>
-            </details>
-
-            <details className="bg-slate-800/50 rounded-xl border border-slate-700/50 p-6 group">
-              <summary className="text-lg font-semibold text-white cursor-pointer list-none flex justify-between items-center">
-                Do studio owners need different yoga insurance?
-                <svg className="w-5 h-5 text-blue-400 transform group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7"/>
-                </svg>
-              </summary>
-              <p className="mt-4 text-slate-400">
-                Yes, yoga studio owners typically need more comprehensive insurance than independent teachers. Studio insurance should cover all teachers working at the studio, property damage, equipment, and employer's liability. Studio owners should also ensure they have adequate public liability coverage for the increased foot traffic and potential injury risks. Many insurers offer specific studio-owner policies designed to provide comprehensive protection for the entire business.
+                Security is built-in from day one. We follow enterprise security best practices including encryption at rest and in transit, role-based access control, audit logging, and compliance with major frameworks (SOC 2, GDPR, HIPAA where applicable). We can deploy on your infrastructure if required.
               </p>
             </details>
           </div>

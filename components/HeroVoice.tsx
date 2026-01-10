@@ -6,58 +6,54 @@ import { VoiceProvider, useVoice } from '@humeai/voice-react';
 import { authClient } from '@/lib/auth/client';
 import Link from 'next/link';
 
-// Get page context from pathname
+// Get page context from pathname for HITL demo
 function getPageContext(pathname: string): string {
-  if (pathname.includes('aerial')) {
-    return `The user is on the AERIAL YOGA INSURANCE page. Focus on aerial yoga topics:
-- Hammock/silk/swing equipment coverage
-- Fall injury risks (higher than standard yoga)
-- Rigging and installation liability
-- Premium typically 20-40% higher than standard
-- Not all insurers cover aerial - recommend Balens or BGI`;
+  if (pathname.includes('customer-service')) {
+    return `The user is exploring AI CUSTOMER SERVICE solutions. Focus on:
+- Chat and email automation with human escalation
+- 24/7 availability with instant response
+- Seamless handoff to human agents
+- Context preservation during escalation
+- Training AI from human decisions`;
   }
-  if (pathname.includes('hot-yoga')) {
-    return `The user is on the HOT YOGA INSURANCE page. Focus on hot yoga topics:
-- Heat-related illness risks (dehydration, heat exhaustion)
-- Higher liability due to heated environment
-- Bikram-specific requirements
-- Need explicit hot yoga coverage - not all policies include it
-- Premium typically 10-20% higher than standard`;
+  if (pathname.includes('voice') || pathname.includes('call')) {
+    return `The user is exploring VOICE CALL SYSTEMS. Focus on:
+- AI voice agents with emotional intelligence
+- Natural conversation flow
+- Sentiment detection for escalation
+- Call transfer with full context
+- Hume AI for emotional awareness`;
   }
-  if (pathname.includes('meditation')) {
-    return `The user is on the MEDITATION TEACHER INSURANCE page. Focus on:
-- Mindfulness and breathwork coverage
-- Lower physical risk than yoga
-- Psychological/emotional claim considerations
-- Often included in yoga policies
-- Good for yoga nidra, pranayama, guided meditation`;
+  if (pathname.includes('document')) {
+    return `The user is exploring DOCUMENT PROCESSING. Focus on:
+- Automated data extraction
+- Human review for uncertain items
+- 10x faster processing with accuracy
+- Compliance and audit trails
+- Pydantic AI for structured output`;
   }
-  if (pathname.includes('studio')) {
-    return `The user is on the YOGA STUDIO INSURANCE page. Focus on business coverage:
-- Public liability for premises
-- Employer's liability (required if you have staff)
-- Property and contents insurance
-- Business interruption cover
-- Equipment coverage`;
+  if (pathname.includes('moderation')) {
+    return `The user is exploring CONTENT MODERATION. Focus on:
+- AI filtering of obvious violations
+- Edge cases routed to humans
+- Scale without sacrificing quality
+- Consistent policy enforcement
+- Human judgment for nuanced decisions`;
   }
-  if (pathname.includes('public-liability')) {
-    return `The user is on the PUBLIC LIABILITY page. Focus on:
-- What public liability covers (injuries, property damage)
-- Typical coverage amounts (£1m-£10m)
-- Studio/venue requirements (usually £5m minimum)
-- Difference from professional indemnity`;
-  }
-  if (pathname.includes('profile')) {
-    return `The user is on their PROFILE page. Help them:
-- Complete their yoga teaching profile
-- Understand why this info helps get accurate quotes
-- Explain how their choices affect insurance needs`;
+  if (pathname.includes('contact')) {
+    return `The user is on the CONTACT page and interested in working with us. Be helpful and:
+- Ask about their current challenges
+- Understand their use case
+- Explain our process briefly
+- Encourage them to fill out the contact form`;
   }
   // Default homepage context
-  return `The user is on the HOMEPAGE. Help them:
-- Understand yoga teacher insurance basics
-- Compare UK providers (Balens, BGI, Insure4Sport)
-- Get started with a quote`;
+  return `The user is on the HOMEPAGE of HITL.quest. Help them understand:
+- What Human-in-the-Loop AI means
+- Benefits: 95%+ satisfaction, 80% automation, 10x faster
+- Our services: customer service, voice, documents, moderation
+- How escalation to humans works seamlessly
+- Our tech stack: CopilotKit, AG-UI, Pydantic AI, Hume`;
 }
 
 function VoiceOrb() {
@@ -91,11 +87,11 @@ function VoiceOrb() {
         // Get page-specific context
         const pageContext = getPageContext(pathname);
 
-        // Build comprehensive system prompt
+        // Build comprehensive system prompt for HITL agency
         const systemPrompt = `## CRITICAL IDENTITY
-You are the VOICE ASSISTANT for Yoga Teacher Insurance Quest - a UK yoga teacher insurance COMPARISON WEBSITE.
-You help yoga teachers find and compare insurance policies. You are NOT an elf, NOT a fantasy character, NOT a game assistant.
-You are a helpful, knowledgeable yoga insurance advisor with a calm, supportive personality.
+You are the VOICE ASSISTANT for HITL.quest - a Human-in-the-Loop AI agency.
+You help potential clients understand our services and the value of combining AI automation with human oversight.
+You are professional, knowledgeable, and passionate about building AI systems that work well with humans.
 
 ## USER INFORMATION
 - Name: ${firstName || user.name}
@@ -107,31 +103,38 @@ IMPORTANT: Address the user by their first name (${firstName || user.name}) in y
 ## CURRENT PAGE CONTEXT
 ${pageContext}
 
-## YOUR EXPERTISE (YOGA INSURANCE ONLY)
-- UK yoga teacher insurance requirements
-- Public liability insurance (£1m-£10m coverage)
-- Professional indemnity insurance
-- Specialist coverage: aerial yoga, hot yoga, prenatal yoga
-- UK Providers: Balens, BGI, Insure4Sport, Sports Coach UK
-- Typical pricing: £50-180/year depending on style and coverage
-- Yoga Alliance requirements
+## YOUR EXPERTISE (HITL AI SOLUTIONS)
+- Human-in-the-Loop AI design philosophy
+- AI customer service with human escalation
+- Voice AI systems with emotional intelligence (using Hume)
+- Document processing with human review
+- Content moderation at scale
+- Our tech stack: CopilotKit, AG-UI, Pydantic AI, Hume, Zep
+
+## KEY VALUE PROPOSITIONS
+- 95%+ customer satisfaction (vs 60-70% for full automation)
+- 80% of volume handled by AI
+- 10x faster than manual processing
+- Seamless escalation - customers never repeat themselves
+- AI learns from human decisions
 
 ## CONVERSATION RULES
-1. ONLY discuss yoga teacher insurance topics
-2. Be warm, supportive, and calm (like a yoga teacher)
+1. Focus on HITL solutions and our agency services
+2. Be professional, clear, and enthusiastic about AI+human collaboration
 3. Keep responses SHORT for voice (2-3 sentences max)
-4. Ask clarifying questions about their teaching (styles, locations, experience)
+4. Ask clarifying questions about their business needs
 5. Reference the current page context when relevant
-6. If asked about non-insurance topics, politely redirect to insurance
+6. If asked about implementation, mention we work in phases
+7. Encourage them to start a conversation with us
 
-## KEY FACTS TO MENTION
-- Most venues REQUIRE insurance before you can teach
-- Public liability covers student injuries and property damage
-- Professional indemnity covers claims about your instruction
-- Aerial and hot yoga need SPECIALIST cover - not all policies include it
-- Always recommend getting quotes from 2-3 providers
+## THINGS TO MENTION
+- We use CopilotKit for chat interfaces
+- Hume AI for emotionally intelligent voice
+- Pydantic AI for structured, reliable outputs
+- We can deploy on their infrastructure if needed
+- Enterprise security and compliance built-in
 
-Remember: You are a yoga insurance advisor. Stay focused on insurance.`;
+Remember: You represent a cutting-edge AI agency. Be helpful and showcase our expertise.`;
 
         await connect({
           auth: { type: 'accessToken', value: accessToken },
@@ -161,12 +164,12 @@ Remember: You are a yoga insurance advisor. Stay focused on insurance.`;
           </svg>
         </div>
         <div className="text-center">
-          <p className="text-white font-medium text-lg">Voice Advisor</p>
+          <p className="text-white font-medium text-lg">Voice Demo</p>
           <Link
             href="/auth/sign-in"
-            className="text-blue-400 hover:text-blue-300 text-sm underline"
+            className="text-cyan-400 hover:text-cyan-300 text-sm underline"
           >
-            Sign in to use voice
+            Sign in to try voice AI
           </Link>
         </div>
       </div>
@@ -185,15 +188,15 @@ Remember: You are a yoga insurance advisor. Stay focused on insurance.`;
             ? 'bg-gradient-to-br from-green-400 to-emerald-600'
             : isPending
               ? 'bg-gradient-to-br from-yellow-400 to-amber-600'
-              : 'bg-gradient-to-br from-blue-400 to-blue-600 animate-pulse'
+              : 'bg-gradient-to-br from-cyan-400 to-blue-600 animate-pulse'
           }
         `}
       >
         {/* Pulsing rings */}
         {!isConnected && !isPending && (
           <>
-            <span className="absolute inset-0 rounded-full animate-ping bg-blue-400 opacity-20" />
-            <span className="absolute inset-[-8px] rounded-full animate-pulse bg-blue-400/10" />
+            <span className="absolute inset-0 rounded-full animate-ping bg-cyan-400 opacity-20" />
+            <span className="absolute inset-[-8px] rounded-full animate-pulse bg-cyan-400/10" />
           </>
         )}
 
@@ -224,7 +227,7 @@ Remember: You are a yoga insurance advisor. Stay focused on insurance.`;
           {isConnected ? 'Listening...' : isPending ? 'Connecting...' : `Hi ${firstName}! Tap to talk`}
         </p>
         <p className="text-slate-300 text-sm">
-          {isConnected ? 'Tap to end' : 'Ask about yoga insurance'}
+          {isConnected ? 'Tap to end' : 'Ask about HITL solutions'}
         </p>
       </div>
     </div>
@@ -241,9 +244,9 @@ export function HeroVoice() {
   if (!mounted) {
     return (
       <div className="flex flex-col items-center gap-4">
-        <div className="w-24 h-24 rounded-full bg-blue-500/50 animate-pulse" />
+        <div className="w-24 h-24 rounded-full bg-cyan-500/50 animate-pulse" />
         <div className="text-center">
-          <p className="text-white font-medium text-lg">Talk to our Insurance Advisor</p>
+          <p className="text-white font-medium text-lg">Voice Demo</p>
           <p className="text-slate-300 text-sm">Loading...</p>
         </div>
       </div>

@@ -7,24 +7,25 @@ import { UserButton } from '@neondatabase/auth/react/ui'
 
 export function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const [insuranceOpen, setInsuranceOpen] = useState(false)
+  const [servicesOpen, setServicesOpen] = useState(false)
   const { data: session, isPending } = authClient.useSession()
   const user = session?.user
 
-  // Simplified nav - main items only
+  // Main navigation links
   const mainLinks = [
-    { href: '#calculator', label: 'Get Quote' },
-    { href: '/articles', label: 'Guides' },
+    { href: '#services', label: 'Services' },
+    { href: '#tech', label: 'Tech Stack' },
+    { href: '#faq', label: 'FAQ' },
   ]
 
-  // Insurance types for dropdown
-  const insuranceTypes = [
-    { href: '/aerial-yoga-insurance', label: 'Aerial Yoga', icon: '🎪' },
-    { href: '/hot-yoga-insurance', label: 'Hot Yoga', icon: '🔥' },
-    { href: '/meditation-teacher-insurance', label: 'Meditation', icon: '🧘' },
-    { href: '/yoga-studio-insurance', label: 'Studio Insurance', icon: '🏠' },
-    { href: '/public-liability-insurance-yoga-teachers', label: 'Public Liability', icon: '🛡️' },
-    { href: '/pilates-instructor-insurance', label: 'Pilates', icon: '💪' },
+  // Services dropdown
+  const serviceTypes = [
+    { href: '#services', label: 'AI Customer Service', icon: '💬' },
+    { href: '#services', label: 'Voice Call Systems', icon: '📞' },
+    { href: '#services', label: 'Document Processing', icon: '📄' },
+    { href: '#services', label: 'Content Moderation', icon: '🛡️' },
+    { href: '#services', label: 'Decision Support', icon: '🧠' },
+    { href: '#services', label: 'Custom Solutions', icon: '⚙️' },
   ]
 
   return (
@@ -33,67 +34,65 @@ export function Navigation() {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2">
-            <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center">
+            <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center">
               <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m0 0l-2-1m2 1v2.5M14 4l-2 1m0 0l-2-1m2 1v2.5" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
               </svg>
             </div>
             <span className="text-lg font-bold text-white hidden sm:block">
-              Yoga Insurance <span className="text-blue-400">UK</span>
+              HITL<span className="text-cyan-400">.quest</span>
             </span>
           </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-1">
-            {/* Main Links */}
-            {mainLinks.map((link) =>
-              link.href.startsWith('/') ? (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className="px-3 py-2 text-sm text-slate-300 hover:text-white hover:bg-slate-800/50 rounded-lg transition-colors"
-                >
-                  {link.label}
-                </Link>
-              ) : (
-                <a
-                  key={link.href}
-                  href={link.href}
-                  className="px-3 py-2 text-sm text-slate-300 hover:text-white hover:bg-slate-800/50 rounded-lg transition-colors"
-                >
-                  {link.label}
-                </a>
-              )
-            )}
+            {/* What is HITL link */}
+            <a
+              href="#what-is-hitl"
+              className="px-3 py-2 text-sm text-slate-300 hover:text-white hover:bg-slate-800/50 rounded-lg transition-colors"
+            >
+              What is HITL?
+            </a>
 
-            {/* Insurance Types Dropdown */}
+            {/* Services Dropdown */}
             <div className="relative">
               <button
-                onClick={() => setInsuranceOpen(!insuranceOpen)}
-                onBlur={() => setTimeout(() => setInsuranceOpen(false), 150)}
+                onClick={() => setServicesOpen(!servicesOpen)}
+                onBlur={() => setTimeout(() => setServicesOpen(false), 150)}
                 className="flex items-center gap-1 px-3 py-2 text-sm text-slate-300 hover:text-white hover:bg-slate-800/50 rounded-lg transition-colors"
               >
-                Insurance Types
-                <svg className={`w-4 h-4 transition-transform ${insuranceOpen ? 'rotate-180' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                Services
+                <svg className={`w-4 h-4 transition-transform ${servicesOpen ? 'rotate-180' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
               </button>
 
-              {insuranceOpen && (
+              {servicesOpen && (
                 <div className="absolute top-full left-0 mt-1 w-56 bg-slate-800 border border-slate-700 rounded-lg shadow-xl py-2 z-50">
-                  {insuranceTypes.map((type) => (
-                    <Link
-                      key={type.href}
+                  {serviceTypes.map((type) => (
+                    <a
+                      key={type.label}
                       href={type.href}
                       className="flex items-center gap-2 px-4 py-2 text-sm text-slate-300 hover:text-white hover:bg-slate-700 transition-colors"
                     >
                       <span>{type.icon}</span>
                       {type.label}
-                    </Link>
+                    </a>
                   ))}
                 </div>
               )}
             </div>
+
+            {/* Other Main Links */}
+            {mainLinks.slice(1).map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                className="px-3 py-2 text-sm text-slate-300 hover:text-white hover:bg-slate-800/50 rounded-lg transition-colors"
+              >
+                {link.label}
+              </a>
+            ))}
 
             {/* Divider */}
             <div className="w-px h-6 bg-slate-700 mx-2" />
@@ -105,22 +104,30 @@ export function Navigation() {
               <div className="flex items-center gap-2">
                 <Link
                   href="/profile"
-                  className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-purple-500/20 border border-purple-500/30 text-purple-300 hover:bg-purple-500/30 text-sm transition-colors"
+                  className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-cyan-500/20 border border-cyan-500/30 text-cyan-300 hover:bg-cyan-500/30 text-sm transition-colors"
                 >
-                  <span className="text-xs">🧘</span>
-                  <span>My Studio</span>
+                  <span className="text-xs">👤</span>
+                  <span>Dashboard</span>
                 </Link>
                 <div className="w-7 h-7">
                   <UserButton size="sm" />
                 </div>
               </div>
             ) : (
-              <Link
-                href="/auth/sign-in"
-                className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-1.5 rounded-lg text-sm font-medium transition-colors"
-              >
-                Sign In
-              </Link>
+              <div className="flex items-center gap-2">
+                <Link
+                  href="/auth/sign-in"
+                  className="px-3 py-1.5 text-sm text-slate-300 hover:text-white transition-colors"
+                >
+                  Sign In
+                </Link>
+                <Link
+                  href="/contact"
+                  className="bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 text-white px-4 py-1.5 rounded-lg text-sm font-medium transition-colors"
+                >
+                  Get Started
+                </Link>
+              </div>
             )}
           </nav>
 
@@ -148,64 +155,69 @@ export function Navigation() {
           <div className="md:hidden py-4 border-t border-slate-700 mt-3">
             <div className="flex flex-col space-y-1">
               {/* Main Links */}
-              {mainLinks.map((link) =>
-                link.href.startsWith('/') ? (
-                  <Link
-                    key={link.href}
-                    href={link.href}
-                    onClick={() => setMobileMenuOpen(false)}
-                    className="px-4 py-3 rounded-lg text-slate-300 hover:bg-slate-800 transition-colors"
-                  >
-                    {link.label}
-                  </Link>
-                ) : (
-                  <a
-                    key={link.href}
-                    href={link.href}
-                    onClick={() => setMobileMenuOpen(false)}
-                    className="px-4 py-3 rounded-lg text-slate-300 hover:bg-slate-800 transition-colors"
-                  >
-                    {link.label}
-                  </a>
-                )
-              )}
+              <a
+                href="#what-is-hitl"
+                onClick={() => setMobileMenuOpen(false)}
+                className="px-4 py-3 rounded-lg text-slate-300 hover:bg-slate-800 transition-colors"
+              >
+                What is HITL?
+              </a>
+              {mainLinks.map((link) => (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="px-4 py-3 rounded-lg text-slate-300 hover:bg-slate-800 transition-colors"
+                >
+                  {link.label}
+                </a>
+              ))}
 
-              {/* Insurance Types Section */}
+              {/* Services Section */}
               <div className="pt-2 pb-1 px-4">
-                <span className="text-xs font-semibold text-slate-500 uppercase tracking-wide">Insurance Types</span>
+                <span className="text-xs font-semibold text-slate-500 uppercase tracking-wide">Our Services</span>
               </div>
-              {insuranceTypes.map((type) => (
-                <Link
-                  key={type.href}
+              {serviceTypes.map((type) => (
+                <a
+                  key={type.label}
                   href={type.href}
                   onClick={() => setMobileMenuOpen(false)}
                   className="flex items-center gap-2 px-4 py-2 rounded-lg text-slate-300 hover:bg-slate-800 transition-colors"
                 >
                   <span>{type.icon}</span>
                   {type.label}
-                </Link>
+                </a>
               ))}
 
               {/* Mobile auth */}
               <div className="pt-3 border-t border-slate-700 mt-2">
                 {!isPending && !user && (
-                  <Link
-                    href="/auth/sign-in"
-                    onClick={() => setMobileMenuOpen(false)}
-                    className="mx-4 block bg-blue-600 hover:bg-blue-700 text-white px-4 py-3 rounded-lg text-center font-medium transition-colors"
-                  >
-                    Sign In
-                  </Link>
+                  <div className="px-4 space-y-2">
+                    <Link
+                      href="/auth/sign-in"
+                      onClick={() => setMobileMenuOpen(false)}
+                      className="block px-4 py-3 rounded-lg text-slate-300 hover:bg-slate-800 text-center transition-colors"
+                    >
+                      Sign In
+                    </Link>
+                    <Link
+                      href="/contact"
+                      onClick={() => setMobileMenuOpen(false)}
+                      className="block bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-4 py-3 rounded-lg text-center font-medium transition-colors"
+                    >
+                      Get Started
+                    </Link>
+                  </div>
                 )}
                 {user && (
                   <div className="px-4 space-y-2">
                     <Link
                       href="/profile"
                       onClick={() => setMobileMenuOpen(false)}
-                      className="flex items-center gap-2 px-4 py-2 rounded-lg bg-purple-500/20 text-purple-300 hover:bg-purple-500/30 transition-colors"
+                      className="flex items-center gap-2 px-4 py-2 rounded-lg bg-cyan-500/20 text-cyan-300 hover:bg-cyan-500/30 transition-colors"
                     >
-                      <span>🧘</span>
-                      My Studio
+                      <span>👤</span>
+                      Dashboard
                     </Link>
                     <div className="flex items-center gap-3 px-4 py-2">
                       <div className="w-7 h-7">

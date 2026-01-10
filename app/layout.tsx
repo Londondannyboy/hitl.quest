@@ -15,43 +15,46 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "Yoga Teacher Insurance UK 2026 | Compare Quotes from £15/month",
-    template: "%s | Yoga Teacher Insurance UK"
+    default: "HITL.quest | Human-in-the-Loop AI Agency",
+    template: "%s | HITL.quest"
   },
-  description: "Yoga teacher insurance UK - compare quotes from specialist providers. Get professional indemnity & public liability insurance for yoga instructors, trainers & studio owners. Quotes from leading insurers.",
+  description: "We build human-in-the-loop AI systems. Customer service automation, call response systems, and AI workflows with seamless human oversight. Best-in-class HITL solutions.",
   keywords: [
-    "yoga teacher insurance",
-    "yoga teacher insurance uk",
-    "yoga instructor insurance",
-    "insurance for yoga teachers",
-    "insurance for yoga teachers uk",
-    "yoga teachers insurance",
-    "professional indemnity yoga",
-    "yoga teacher liability insurance",
-    "yoga studio insurance",
-    "best yoga teacher insurance uk",
-    "compare yoga teacher insurance",
-    "yoga training insurance"
+    "human in the loop",
+    "HITL",
+    "AI customer service",
+    "AI automation",
+    "human oversight AI",
+    "call center AI",
+    "AI agency",
+    "CopilotKit",
+    "Pydantic AI",
+    "Hume AI",
+    "AG-UI",
+    "AI with human oversight",
+    "customer service automation",
+    "voice AI",
+    "document processing AI"
   ],
-  authors: [{ name: "Yoga Teacher Insurance UK" }],
-  creator: "Yoga Teacher Insurance UK",
-  publisher: "Yoga Teacher Insurance UK",
-  metadataBase: new URL("https://yogateacherinsurance.quest"),
+  authors: [{ name: "HITL.quest" }],
+  creator: "HITL.quest",
+  publisher: "HITL.quest",
+  metadataBase: new URL("https://hitl.quest"),
   alternates: {
-    canonical: "https://yogateacherinsurance.quest",
+    canonical: "https://hitl.quest",
   },
   openGraph: {
     type: "website",
-    locale: "en_GB",
-    url: "https://yogateacherinsurance.quest",
-    siteName: "Yoga Teacher Insurance UK",
-    title: "Yoga Teacher Insurance UK 2026 | Compare Quotes",
-    description: "Yoga teacher insurance UK - compare quotes from specialist providers. Get professional indemnity & public liability insurance for yoga instructors & studio owners.",
+    locale: "en_US",
+    url: "https://hitl.quest",
+    siteName: "HITL.quest",
+    title: "HITL.quest | Human-in-the-Loop AI Agency",
+    description: "We build AI systems that know when to ask for help. Customer service automation, call response, and AI workflows with seamless human oversight.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Yoga Teacher Insurance UK | Compare Quotes",
-    description: "Yoga teacher insurance from UK specialists. Compare quotes for yoga instructors, trainers & studio owners.",
+    title: "HITL.quest | Human-in-the-Loop AI Agency",
+    description: "AI systems that combine automation with human wisdom. Customer service, call response, document processing, and more.",
   },
   robots: {
     index: true,
@@ -65,35 +68,34 @@ export const metadata: Metadata = {
     },
   },
   appleWebApp: {
-    title: "Yoga Teacher Insurance UK",
+    title: "HITL.quest",
     capable: true,
     statusBarStyle: "black-translucent",
   },
-  // Icons auto-detected from app/ folder: favicon.ico, icon.png, icon.svg, apple-icon.png
 }
 
 const organizationJsonLd = {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  "@id": "https://yogateacherinsurance.quest/#website",
-  name: "Yoga Teacher Insurance UK",
-  alternateName: ["Yoga Instructor Insurance UK", "Insurance for Yoga Teachers", "Professional Indemnity Yoga"],
-  url: "https://yogateacherinsurance.quest",
-  description: "Yoga teacher insurance UK comparison service. Get professional indemnity & public liability insurance for yoga instructors, trainers & studio owners from specialist UK insurers.",
-  inLanguage: "en-GB",
+  "@id": "https://hitl.quest/#website",
+  name: "HITL.quest",
+  alternateName: ["Human in the Loop AI", "HITL AI Agency", "Human-in-the-Loop Solutions"],
+  url: "https://hitl.quest",
+  description: "We build human-in-the-loop AI systems. Customer service automation, call response systems, and AI workflows with seamless human oversight.",
+  inLanguage: "en-US",
   publisher: {
     "@type": "Organization",
-    "@id": "https://yogateacherinsurance.quest/#organization",
-    name: "Yoga Teacher Insurance UK",
-    url: "https://yogateacherinsurance.quest",
+    "@id": "https://hitl.quest/#organization",
+    name: "HITL.quest",
+    url: "https://hitl.quest",
     logo: {
       "@type": "ImageObject",
-      "@id": "https://yogateacherinsurance.quest/#logo",
-      url: "https://yogateacherinsurance.quest/icon.svg",
-      contentUrl: "https://yogateacherinsurance.quest/icon.svg",
+      "@id": "https://hitl.quest/#logo",
+      url: "https://hitl.quest/icon.svg",
+      contentUrl: "https://hitl.quest/icon.svg",
       width: 512,
       height: 512,
-      caption: "Yoga Teacher Insurance UK"
+      caption: "HITL.quest"
     }
   }
 }
@@ -101,24 +103,18 @@ const organizationJsonLd = {
 const serviceJsonLd = {
   "@context": "https://schema.org",
   "@type": "Service",
-  "@id": "https://yogateacherinsurance.quest/#service",
-  name: "Yoga Teacher Insurance UK Comparison",
-  alternateName: "Insurance for Yoga Teachers Comparison",
-  description: "Compare yoga teacher insurance UK quotes from specialist providers. Find professional indemnity & public liability insurance for yoga instructors, trainers & studio owners. Compare Yoga Alliance, Balens, specialist providers and more.",
+  "@id": "https://hitl.quest/#service",
+  name: "Human-in-the-Loop AI Solutions",
+  alternateName: "HITL AI Development",
+  description: "Custom human-in-the-loop AI systems including customer service automation, voice call systems, document processing, content moderation, and decision support tools. Built with CopilotKit, AG-UI, Pydantic AI, and Hume.",
   provider: {
     "@type": "Organization",
-    name: "Yoga Teacher Insurance UK"
+    name: "HITL.quest"
   },
-  areaServed: {
-    "@type": "Country",
-    name: "United Kingdom"
-  },
-  serviceType: "Yoga Teacher Insurance Comparison",
+  serviceType: "AI Development Agency",
   offers: {
     "@type": "Offer",
-    price: "0",
-    priceCurrency: "GBP",
-    description: "Free yoga teacher insurance quotes UK"
+    description: "Custom HITL AI Solutions"
   }
 }
 
@@ -129,8 +125,8 @@ const breadcrumbJsonLd = {
     {
       "@type": "ListItem",
       position: 1,
-      name: "Yoga Teacher Insurance",
-      item: "https://yogateacherinsurance.quest"
+      name: "HITL.quest",
+      item: "https://hitl.quest"
     }
   ]
 }

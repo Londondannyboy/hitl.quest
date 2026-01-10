@@ -1,6 +1,6 @@
 """
-Yoga Teacher Insurance Agent
-CopilotKit + Pydantic AI integration for insurance advice
+HITL.quest AI Agent
+CopilotKit + Pydantic AI integration for Human-in-the-Loop agency
 """
 from textwrap import dedent
 from typing import Optional, List
@@ -85,156 +85,154 @@ def get_effective_user_name(state_user) -> Optional[str]:
 
 
 # =====
-# Insurance Data (Static for MVP, can move to DB later)
+# HITL Services Data
 # =====
-INSURANCE_PROVIDERS = [
+HITL_SERVICES = [
     {
-        "name": "Balens",
-        "specialty": "Yoga and holistic therapies specialist",
-        "public_liability": "£1m - £5m",
-        "professional_indemnity": "£1m - £5m",
-        "annual_cost_from": 60,
-        "annual_cost_to": 150,
-        "covers_aerial": True,
-        "covers_hot_yoga": True,
-        "covers_teacher_training": True,
-        "website": "https://www.balens.co.uk",
-        "highlights": ["Yoga specialist since 1960s", "Covers 350+ therapies", "Instant cover available"]
+        "name": "AI Customer Service",
+        "description": "Chat and email support that handles routine queries instantly, escalates complex issues to humans with full context.",
+        "benefits": [
+            "24/7 availability with instant response",
+            "Handle 10x more tickets without hiring",
+            "Seamless escalation to human agents",
+            "Full context preservation during handoff",
+            "AI learns from human decisions"
+        ],
+        "tech_stack": ["CopilotKit", "AG-UI", "Zep Memory"],
+        "use_cases": ["E-commerce support", "SaaS helpdesk", "Financial services", "Healthcare inquiries"]
     },
     {
-        "name": "BGI",
-        "specialty": "Fitness and sports insurance",
-        "public_liability": "£1m - £10m",
-        "professional_indemnity": "£1m - £5m",
-        "annual_cost_from": 55,
-        "annual_cost_to": 180,
-        "covers_aerial": True,
-        "covers_hot_yoga": True,
-        "covers_teacher_training": True,
-        "website": "https://www.bgiuk.com",
-        "highlights": ["Part of Hiscox group", "Online quote system", "Covers equipment"]
+        "name": "Voice Call Systems",
+        "description": "AI voice agents with emotional intelligence that detect when to transfer to humans. Natural, empathetic conversations.",
+        "benefits": [
+            "Emotional awareness through Hume AI",
+            "Natural conversation flow",
+            "Sentiment-based escalation",
+            "Call transfer with full context",
+            "Reduces wait times dramatically"
+        ],
+        "tech_stack": ["Hume AI EVI", "Pydantic AI", "WebRTC"],
+        "use_cases": ["Call centers", "Appointment booking", "Technical support", "Customer callbacks"]
     },
     {
-        "name": "Insure4Sport",
-        "specialty": "Sports and fitness professionals",
-        "public_liability": "£1m - £10m",
-        "professional_indemnity": "£1m - £5m",
-        "annual_cost_from": 50,
-        "annual_cost_to": 160,
-        "covers_aerial": True,
-        "covers_hot_yoga": True,
-        "covers_teacher_training": False,
-        "website": "https://www.insure4sport.co.uk",
-        "highlights": ["Quick online quotes", "Monthly payment option", "24/7 claims"]
+        "name": "Document Processing",
+        "description": "AI extracts and validates data, flags uncertain items for human review. 10x faster with human-level accuracy.",
+        "benefits": [
+            "Automated data extraction",
+            "Confidence scoring for review routing",
+            "Human review for edge cases",
+            "Compliance audit trails",
+            "Structured, validated output"
+        ],
+        "tech_stack": ["Pydantic AI", "Structured Output", "Classification Models"],
+        "use_cases": ["Invoice processing", "Contract analysis", "Medical records", "Insurance claims"]
     },
     {
-        "name": "Sports Coach UK",
-        "specialty": "Coaches and instructors",
-        "public_liability": "£5m - £10m",
-        "professional_indemnity": "£1m - £5m",
-        "annual_cost_from": 65,
-        "annual_cost_to": 140,
-        "covers_aerial": False,
-        "covers_hot_yoga": True,
-        "covers_teacher_training": True,
-        "website": "https://www.sportscoachuk.org",
-        "highlights": ["Includes first aid cover", "Equipment cover available", "Multi-activity policies"]
+        "name": "Content Moderation",
+        "description": "AI filters obvious violations, surfaces edge cases for human judgment. Scale moderation without sacrificing quality.",
+        "benefits": [
+            "99%+ clear cases handled by AI",
+            "Nuanced decisions by humans",
+            "Consistent policy enforcement",
+            "Reduced moderator burnout",
+            "Continuous learning from decisions"
+        ],
+        "tech_stack": ["Classification AI", "Human Review Queues", "Feedback Loops"],
+        "use_cases": ["Social platforms", "Marketplaces", "Comment sections", "User uploads"]
+    },
+    {
+        "name": "Decision Support",
+        "description": "AI analyzes data and suggests actions, humans approve or override. Augment expertise, don't replace it.",
+        "benefits": [
+            "Data-driven recommendations",
+            "Human final authority",
+            "Explainable AI suggestions",
+            "Continuous model improvement",
+            "Risk flagging and alerts"
+        ],
+        "tech_stack": ["Analytics AI", "Workflow Engines", "Approval Systems"],
+        "use_cases": ["Loan approvals", "Hiring decisions", "Medical diagnosis assist", "Trading signals"]
     }
 ]
 
-COVERAGE_TYPES = {
-    "public_liability": {
-        "name": "Public Liability Insurance",
-        "description": "Covers you if a student or member of the public is injured during your class, or if you damage someone's property.",
-        "required": True,
-        "typical_amount": "£1m - £5m",
-        "why_needed": "Most venues require this before you can teach. Covers legal costs if someone sues you for injury.",
-        "examples": [
-            "A student slips on a yoga mat and breaks their wrist",
-            "You accidentally damage a mirror at the studio",
-            "A student trips over your bag and injures themselves"
-        ]
+TECH_STACK = {
+    "copilotkit": {
+        "name": "CopilotKit",
+        "category": "AI UI Framework",
+        "description": "Open-source framework for building AI-powered chat interfaces and copilots. Provides React components for chat, sidebars, and AI interactions.",
+        "why_we_use": "Best-in-class developer experience for building conversational AI interfaces. Handles state, streaming, and tool calling seamlessly.",
+        "url": "https://copilotkit.ai"
     },
-    "professional_indemnity": {
-        "name": "Professional Indemnity Insurance",
-        "description": "Covers you if a student claims your instruction caused them harm or you gave negligent advice.",
-        "required": True,
-        "typical_amount": "£1m - £5m",
-        "why_needed": "Protects you from claims that your teaching methods or advice caused injury.",
-        "examples": [
-            "A student claims your adjustment caused a back injury",
-            "Someone alleges your breathing instruction caused them to faint",
-            "A student says your advice worsened their condition"
-        ]
+    "ag_ui": {
+        "name": "AG-UI Protocol",
+        "category": "Agent Protocol",
+        "description": "Agent protocol for connecting AI agents to frontend applications. Standardized communication between AI backends and UIs.",
+        "why_we_use": "Enables our Pydantic AI agents to communicate with CopilotKit frontends using a standardized protocol.",
+        "url": "https://ag-ui.com"
     },
-    "personal_accident": {
-        "name": "Personal Accident Insurance",
-        "description": "Covers YOUR injuries if you're hurt while teaching.",
-        "required": False,
-        "typical_amount": "Up to £50,000",
-        "why_needed": "Provides income protection if you can't work due to injury.",
-        "examples": [
-            "You injure yourself demonstrating a pose",
-            "You slip and hurt your back during class",
-            "You're injured traveling to a class"
-        ]
+    "pydantic_ai": {
+        "name": "Pydantic AI",
+        "category": "Agent Framework",
+        "description": "Python framework for building AI agents with structured, validated outputs using Pydantic models.",
+        "why_we_use": "Type-safe, structured AI outputs. Perfect for document processing and data extraction where accuracy matters.",
+        "url": "https://pydantic.dev"
     },
-    "equipment": {
-        "name": "Equipment Insurance",
-        "description": "Covers your yoga props, mats, speakers, and other teaching equipment.",
-        "required": False,
-        "typical_amount": "Up to £5,000",
-        "why_needed": "Protects your investment in professional equipment.",
-        "examples": [
-            "Your yoga props are stolen from your car",
-            "Your speaker system is damaged in transit",
-            "Your bolsters are damaged by water leak at studio"
-        ]
+    "hume": {
+        "name": "Hume AI",
+        "category": "Emotional Voice AI",
+        "description": "Voice AI with emotional intelligence. EVI (Empathic Voice Interface) understands and responds to emotional cues.",
+        "why_we_use": "Essential for voice systems where emotional awareness determines when to escalate to humans. Natural, empathetic conversations.",
+        "url": "https://hume.ai"
+    },
+    "zep": {
+        "name": "Zep",
+        "category": "Memory Layer",
+        "description": "Long-term memory for AI assistants. Stores conversation history and user facts in a knowledge graph.",
+        "why_we_use": "Enables our agents to remember user context across sessions. Critical for personalized HITL experiences.",
+        "url": "https://getzep.com"
+    },
+    "nextjs": {
+        "name": "Next.js",
+        "category": "React Framework",
+        "description": "The React framework for production. Server-side rendering, API routes, and optimized performance.",
+        "why_we_use": "Industry-standard framework for production React applications. Excellent DX and performance.",
+        "url": "https://nextjs.org"
     }
 }
 
-YOGA_STYLES = {
-    "aerial": {
-        "name": "Aerial Yoga",
-        "risk_level": "Higher",
-        "insurance_notes": "Requires specialist cover. Not all insurers cover aerial. Check hammock/silk rigging is included.",
-        "typical_premium_increase": "10-30%"
+HITL_CONCEPTS = {
+    "what_is_hitl": {
+        "title": "What is Human-in-the-Loop?",
+        "explanation": "Human-in-the-Loop (HITL) is an AI design philosophy where humans and machines collaborate. The AI handles high-volume, routine tasks while humans step in for complex situations, edge cases, or when empathy and judgment are needed.",
+        "key_benefits": [
+            "95%+ customer satisfaction (vs 60-70% for full automation)",
+            "80% of volume handled by AI",
+            "10x faster than manual processing",
+            "Continuous improvement from human decisions",
+            "Trust and accountability through human oversight"
+        ]
     },
-    "hot_yoga": {
-        "name": "Hot Yoga / Bikram",
-        "risk_level": "Higher",
-        "insurance_notes": "Higher risk due to heat. Ensure dehydration/heat-related incidents are covered.",
-        "typical_premium_increase": "10-20%"
+    "escalation": {
+        "title": "How Escalation Works",
+        "explanation": "Our systems use multiple signals to detect when human intervention is needed: confidence scores, sentiment analysis, complexity detection, and explicit user requests.",
+        "key_points": [
+            "AI assesses every interaction for complexity",
+            "Low confidence triggers automatic escalation",
+            "Negative sentiment detected via Hume AI",
+            "Full context passed to human agent",
+            "Customer never repeats themselves"
+        ]
     },
-    "vinyasa": {
-        "name": "Vinyasa Flow",
-        "risk_level": "Standard",
-        "insurance_notes": "Standard coverage usually sufficient. Check adjustment/hands-on work is covered.",
-        "typical_premium_increase": "0%"
-    },
-    "hatha": {
-        "name": "Hatha Yoga",
-        "risk_level": "Lower",
-        "insurance_notes": "Generally lower risk. Most basic policies will cover this.",
-        "typical_premium_increase": "0%"
-    },
-    "yin": {
-        "name": "Yin Yoga",
-        "risk_level": "Lower",
-        "insurance_notes": "Passive style with lower injury risk. Standard cover usually fine.",
-        "typical_premium_increase": "0%"
-    },
-    "prenatal": {
-        "name": "Prenatal/Postnatal Yoga",
-        "risk_level": "Higher",
-        "insurance_notes": "Specialist cover required. Check pregnancy complications are included.",
-        "typical_premium_increase": "15-25%"
-    },
-    "teacher_training": {
-        "name": "Teacher Training",
-        "risk_level": "Standard",
-        "insurance_notes": "Not all policies cover running teacher training courses. Verify before signing up.",
-        "typical_premium_increase": "10-20%"
+    "continuous_learning": {
+        "title": "Continuous Learning",
+        "explanation": "Every human decision teaches the AI. When humans override or adjust AI suggestions, those decisions become training data.",
+        "key_points": [
+            "Human corrections improve AI models",
+            "Feedback loops built into workflows",
+            "Models retrained on production data",
+            "Edge cases become future training examples",
+            "System gets smarter over time"
+        ]
     }
 }
 
@@ -251,13 +249,12 @@ class UserProfile(BaseModel):
 
 class AppState(BaseModel):
     user: Optional[UserProfile] = None
-    # User's preferences for personalized recommendations
-    yoga_styles: list[str] = Field(default_factory=list)
-    teaching_locations: list[str] = Field(default_factory=list)  # studio, home, outdoor, online
-    student_count: Optional[str] = None  # "1-10", "11-50", "50+"
-    has_existing_insurance: bool = False
+    # User's interest areas
+    interested_services: list[str] = Field(default_factory=list)
+    company_type: Optional[str] = None  # "startup", "enterprise", "agency"
+    use_case: Optional[str] = None
     # Current page context from frontend
-    current_page: Optional[str] = None  # e.g., "aerial-yoga-insurance", "homepage"
+    current_page: Optional[str] = None
 
 
 # =====
@@ -267,89 +264,64 @@ agent = Agent(
     model=GoogleModel('gemini-2.0-flash'),
     deps_type=StateDeps[AppState],
     system_prompt=dedent("""
-        You are a friendly, knowledgeable yoga insurance advisor named Namaste (or just "your yoga insurance guide").
-        You speak with a calm, supportive energy - like a trusted yoga teacher helping with practical matters.
+        You are the AI assistant for HITL.quest - a Human-in-the-Loop AI agency.
+        You help potential clients understand our services and the value of combining AI automation with human oversight.
 
         ## Your Personality
-        - Warm and zen-like - use gentle, calming language
-        - Clear and jargon-free - explain insurance in simple terms
-        - Encouraging - help them feel confident about protecting their practice
-        - Use occasional yoga/mindfulness references naturally (not forced)
+        - Professional but approachable
+        - Knowledgeable about AI and HITL design
+        - Enthusiastic about human-AI collaboration
+        - Clear and jargon-free explanations
 
-        ## CRITICAL: PROFILE COMPLETION FIRST
-        Before recommending ANY insurance providers, you MUST gather the user's teaching profile.
-        This is like completing a yoga sequence - each step builds on the last.
+        ## Your Mission
+        Help visitors understand:
+        1. What Human-in-the-Loop means
+        2. Our services (customer service AI, voice, documents, moderation)
+        3. Our tech stack (CopilotKit, Hume, Pydantic AI, etc.)
+        4. Why HITL is better than full automation OR full manual
 
-        **The 5 Essential Questions (ask one at a time, conversationally):**
+        ## Key Value Propositions
+        - 95%+ customer satisfaction (vs 60-70% for full automation)
+        - 80% of volume handled by AI
+        - 10x faster than manual processing
+        - AI learns from human decisions
+        - Enterprise security and compliance
 
-        1. **STYLES** - "What yoga styles do you teach?"
-           Examples: Vinyasa, Hatha, Yin, Restorative, Aerial, Hot/Bikram, Prenatal, Meditation
+        ## Available Tools - USE THEM
+        | User asks about... | Use this tool |
+        |-------------------|---------------|
+        | Our services | get_services |
+        | A specific service | get_service_details |
+        | Tech stack / tools | get_tech_stack |
+        | What HITL means | explain_hitl |
+        | How escalation works | explain_escalation |
+        | Their profile | get_my_profile |
+        | Getting started | get_next_steps |
 
-        2. **LOCATIONS** - "Where do you teach your classes?"
-           Examples: Studio, Gym, Private homes, Outdoors, Online, Corporate, Schools
-
-        3. **EXPERIENCE** - "How long have you been teaching?"
-           Examples: Training now, 0-2 years, 2-5 years, 5+ years
-
-        4. **STUDENTS** - "How many students do you typically teach per class?"
-           Examples: 1-1 private, Small groups (2-10), Medium (11-20), Large (20+)
-
-        5. **CURRENT COVER** - "Do you currently have any yoga teacher insurance?"
-           Yes/No and with whom if yes
-
-        **Flow like a sun salutation:**
-        - Ask ONE question at a time
-        - Acknowledge their answer warmly
-        - Build on what they share
-        - Only recommend providers AFTER you understand their needs
-
-        ## Your Expertise
-        - UK yoga teacher insurance requirements
-        - Coverage types: public liability, professional indemnity, equipment
-        - Specialist needs for aerial, hot, prenatal yoga
-        - Provider comparison and recommendations
-
-        ## Available Tools - ALWAYS USE THEM
-        | User needs... | Use this tool |
-        |---------------|---------------|
-        | Compare providers | compare_providers |
-        | Explain coverage type | explain_coverage |
-        | Style-specific requirements | get_style_requirements |
-        | Specific provider details | get_provider_info |
-        | Their profile/name | get_my_profile |
-        | Quote preparation | get_quick_quote_checklist |
-
-        ## Key Insurance Facts
-        - Most venues REQUIRE insurance before you can teach
-        - Public liability: £1m-£5m typical (£5m recommended)
-        - Aerial/hot yoga needs SPECIALIST cover
-        - Prenatal yoga requires pregnancy-specific coverage
-        - Teacher training courses need explicit cover
-
-        ## Conversation Style
-        - Greet logged-in users by name (use get_my_profile)
-        - Be encouraging about their yoga journey
+        ## Conversation Guidelines
+        - Address logged-in users by name
         - Use bullet points for clarity
-        - Include specific prices when available
-        - End with a clear next step
+        - Keep responses concise (this is also used for voice)
+        - Ask clarifying questions about their needs
+        - Encourage them to reach out via /contact
 
-        Remember: Complete profile first, recommend second. Namaste! 🧘
+        ## Meta: You ARE a HITL Demo
+        Point out that this very conversation is an example of our work!
+        The CopilotKit chat and Hume voice integration on this site demonstrate our capabilities.
+
+        Remember: We build AI that knows when to ask for help. Be helpful and showcase our expertise!
     """)
 )
 
 
 # Page context descriptions
 PAGE_CONTEXTS = {
-    "aerial-yoga-insurance": "The user is on the AERIAL YOGA INSURANCE page. Focus on hammock/silk equipment, fall risks, rigging liability, and specialist coverage requirements.",
-    "hot-yoga-insurance": "The user is on the HOT YOGA INSURANCE page. Focus on heat-related risks, dehydration, Bikram requirements, and heated environment coverage.",
-    "meditation-teacher-insurance": "The user is on the MEDITATION TEACHER INSURANCE page. Focus on mindfulness, breathwork, lower physical risk, and mental health considerations.",
-    "yoga-studio-insurance": "The user is on the YOGA STUDIO INSURANCE page. Focus on business coverage, employer's liability, property insurance, and multi-teacher policies.",
-    "public-liability-insurance": "The user is on the PUBLIC LIABILITY INSURANCE page. Focus on what PL covers, coverage amounts (£1m-£10m), and venue requirements.",
-    "user-profile": "The user is on their PROFILE page. Help them complete their profile and explain how their choices affect insurance needs.",
-    "pilates-instructor-insurance": "The user is on the PILATES INSTRUCTOR page. Focus on combined yoga-pilates coverage.",
-    "compare-providers": "The user is on the COMPARE PROVIDERS page. Help them compare Balens, BGI, Insure4Sport, and others.",
-    "insurance-costs": "The user is on the COSTS page. Focus on pricing, factors affecting cost, and value for money.",
-    "homepage": "The user is on the HOMEPAGE. Give general guidance and help them find what they need.",
+    "customer-service": "User is exploring AI Customer Service solutions. Focus on chat/email automation, escalation, and 10x ticket handling.",
+    "voice": "User is exploring Voice Call Systems. Focus on Hume AI, emotional intelligence, and seamless call transfer.",
+    "document-processing": "User is exploring Document Processing. Focus on extraction, validation, human review for uncertain items.",
+    "content-moderation": "User is exploring Content Moderation. Focus on AI filtering, human judgment for edge cases, scaling.",
+    "contact": "User is on the Contact page. Help them articulate their needs and encourage form submission.",
+    "homepage": "User is on the homepage. Give overview of HITL and help them explore services."
 }
 
 # Dynamic instructions that inject user context from state
@@ -366,29 +338,24 @@ async def user_context_instructions(ctx: RunContext[StateDeps[AppState]]) -> str
     # Build user context section
     if user and (user.name or user.firstName):
         first_name = user.firstName or (user.name.split()[0] if user.name else None)
-        yoga_styles = ", ".join(state.yoga_styles) if state.yoga_styles else "Not specified"
-        locations = ", ".join(state.teaching_locations) if state.teaching_locations else "Not specified"
 
         return dedent(f"""
             ## CURRENT PAGE CONTEXT
             {page_context}
 
             ## CURRENT USER CONTEXT
-            You are speaking with a logged-in user. Here is their information:
+            You are speaking with a logged-in user:
             - Name: {user.name or 'Unknown'}
             - First Name: {first_name or 'Unknown'}
             - Email: {user.email or 'Not provided'}
-            - Yoga Styles They Teach: {yoga_styles}
-            - Teaching Locations: {locations}
-            - Student Count: {state.student_count or 'Not specified'}
-            - Has Existing Insurance: {'Yes' if state.has_existing_insurance else 'No'}
+            - Interested Services: {', '.join(state.interested_services) if state.interested_services else 'Not specified'}
+            - Company Type: {state.company_type or 'Not specified'}
+            - Use Case: {state.use_case or 'Not specified'}
 
             IMPORTANT INSTRUCTIONS:
             - ALWAYS address the user by their first name ({first_name}) in your responses
-            - When they ask "what's my name", "who am I", or about their profile, tell them: "{user.name}"
-            - Use their preferences to give personalized insurance recommendations
-            - Reference the current page context when relevant
-            - If they teach aerial or hot yoga, proactively mention specialist coverage requirements
+            - When they ask about their profile, tell them: "{user.name}"
+            - Reference their interests when relevant
         """)
     else:
         return dedent(f"""
@@ -396,8 +363,8 @@ async def user_context_instructions(ctx: RunContext[StateDeps[AppState]]) -> str
             {page_context}
 
             ## GUEST USER
-            This user is not logged in. They can browse general insurance information.
-            Encourage them to sign in for personalized recommendations.
+            This user is not logged in. They can browse general information.
+            Encourage them to sign in for a personalized experience.
         """)
 
 
@@ -405,207 +372,209 @@ async def user_context_instructions(ctx: RunContext[StateDeps[AppState]]) -> str
 # Tools
 # =====
 @agent.tool
-def compare_providers(
-    ctx: RunContext[StateDeps[AppState]],
-    yoga_style: Optional[str] = None
-) -> dict:
+def get_services(ctx: RunContext[StateDeps[AppState]]) -> dict:
     """
-    Compare UK yoga teacher insurance providers.
-    Shows pricing, coverage levels, and key features.
-
-    Args:
-        yoga_style: Optional filter for providers that cover specific styles (e.g., "aerial", "hot_yoga")
+    Get an overview of all HITL services we offer.
+    Use when the user wants to know what we do.
     """
-    providers = INSURANCE_PROVIDERS
-
-    # Filter by yoga style if specified
-    if yoga_style:
-        style_lower = yoga_style.lower().replace(" ", "_")
-        if style_lower == "aerial":
-            providers = [p for p in providers if p["covers_aerial"]]
-        elif style_lower in ["hot", "hot_yoga", "bikram"]:
-            providers = [p for p in providers if p["covers_hot_yoga"]]
-        elif style_lower in ["teacher_training", "teacher training", "ytt"]:
-            providers = [p for p in providers if p["covers_teacher_training"]]
-
     return {
-        "title": f"UK Yoga Insurance Providers" + (f" (covering {yoga_style})" if yoga_style else ""),
-        "providers": providers,
-        "note": "Prices are approximate and vary based on coverage level and yoga styles taught."
+        "title": "Our Human-in-the-Loop Services",
+        "services": [
+            {
+                "name": s["name"],
+                "description": s["description"],
+                "tech_stack": s["tech_stack"]
+            }
+            for s in HITL_SERVICES
+        ],
+        "note": "Each service combines AI automation with intelligent human escalation for the best of both worlds."
     }
 
 
 @agent.tool
-def explain_coverage(
+def get_service_details(
     ctx: RunContext[StateDeps[AppState]],
-    coverage_type: str
+    service_name: str
 ) -> dict:
     """
-    Explain what a specific type of insurance coverage means for yoga teachers.
+    Get detailed information about a specific service.
 
     Args:
-        coverage_type: The type of coverage to explain (e.g., "public_liability", "professional_indemnity", "equipment")
+        service_name: The service to get details for (e.g., "customer service", "voice", "document", "moderation", "decision")
     """
-    # Normalize the input
-    coverage_key = coverage_type.lower().replace(" ", "_")
+    service_lower = service_name.lower()
 
-    # Handle common variations
-    if "liability" in coverage_key and "public" in coverage_key:
-        coverage_key = "public_liability"
-    elif "indemnity" in coverage_key or "professional" in coverage_key:
-        coverage_key = "professional_indemnity"
-    elif "accident" in coverage_key or "personal" in coverage_key:
-        coverage_key = "personal_accident"
-    elif "equipment" in coverage_key or "prop" in coverage_key:
-        coverage_key = "equipment"
-
-    if coverage_key in COVERAGE_TYPES:
-        coverage = COVERAGE_TYPES[coverage_key]
-        return {
-            "coverage_type": coverage["name"],
-            "description": coverage["description"],
-            "required": coverage["required"],
-            "typical_amount": coverage["typical_amount"],
-            "why_needed": coverage["why_needed"],
-            "examples": coverage["examples"]
-        }
-    else:
-        return {
-            "error": f"Unknown coverage type: {coverage_type}",
-            "available_types": list(COVERAGE_TYPES.keys()),
-            "suggestion": "Try: public_liability, professional_indemnity, personal_accident, or equipment"
-        }
-
-
-@agent.tool
-def get_style_requirements(
-    ctx: RunContext[StateDeps[AppState]],
-    yoga_style: str
-) -> dict:
-    """
-    Get insurance requirements and considerations for a specific yoga style.
-
-    Args:
-        yoga_style: The yoga style to check (e.g., "aerial", "hot_yoga", "vinyasa", "prenatal")
-    """
-    # Normalize the input
-    style_key = yoga_style.lower().replace(" ", "_").replace("-", "_")
-
-    # Handle common variations
-    if "aerial" in style_key:
-        style_key = "aerial"
-    elif "hot" in style_key or "bikram" in style_key:
-        style_key = "hot_yoga"
-    elif "vinyasa" in style_key or "flow" in style_key:
-        style_key = "vinyasa"
-    elif "hatha" in style_key:
-        style_key = "hatha"
-    elif "yin" in style_key or "restorative" in style_key:
-        style_key = "yin"
-    elif "prenatal" in style_key or "postnatal" in style_key or "pregnancy" in style_key:
-        style_key = "prenatal"
-    elif "teacher" in style_key or "training" in style_key or "ytt" in style_key:
-        style_key = "teacher_training"
-
-    if style_key in YOGA_STYLES:
-        style = YOGA_STYLES[style_key]
-        # Also get providers that cover this style
-        if style_key == "aerial":
-            suitable_providers = [p["name"] for p in INSURANCE_PROVIDERS if p["covers_aerial"]]
-        elif style_key == "hot_yoga":
-            suitable_providers = [p["name"] for p in INSURANCE_PROVIDERS if p["covers_hot_yoga"]]
-        elif style_key == "teacher_training":
-            suitable_providers = [p["name"] for p in INSURANCE_PROVIDERS if p["covers_teacher_training"]]
-        else:
-            suitable_providers = [p["name"] for p in INSURANCE_PROVIDERS]
-
-        return {
-            "style": style["name"],
-            "risk_level": style["risk_level"],
-            "insurance_notes": style["insurance_notes"],
-            "premium_impact": style["typical_premium_increase"],
-            "suitable_providers": suitable_providers
-        }
-    else:
-        return {
-            "error": f"Unknown yoga style: {yoga_style}",
-            "available_styles": list(YOGA_STYLES.keys()),
-            "suggestion": "Try: aerial, hot_yoga, vinyasa, hatha, yin, prenatal, or teacher_training"
-        }
-
-
-@agent.tool
-def get_provider_info(
-    ctx: RunContext[StateDeps[AppState]],
-    provider_name: str
-) -> dict:
-    """
-    Get detailed information about a specific insurance provider.
-
-    Args:
-        provider_name: The name of the provider (e.g., "Balens", "BGI", "Insure4Sport")
-    """
-    provider_lower = provider_name.lower()
-
-    for provider in INSURANCE_PROVIDERS:
-        if provider_lower in provider["name"].lower():
+    for service in HITL_SERVICES:
+        if any(keyword in service_lower for keyword in service["name"].lower().split()):
             return {
-                "provider": provider["name"],
-                "specialty": provider["specialty"],
-                "public_liability": provider["public_liability"],
-                "professional_indemnity": provider["professional_indemnity"],
-                "annual_cost": f"£{provider['annual_cost_from']} - £{provider['annual_cost_to']}",
-                "covers_aerial": provider["covers_aerial"],
-                "covers_hot_yoga": provider["covers_hot_yoga"],
-                "covers_teacher_training": provider["covers_teacher_training"],
-                "website": provider["website"],
-                "highlights": provider["highlights"]
+                "service": service["name"],
+                "description": service["description"],
+                "benefits": service["benefits"],
+                "tech_stack": service["tech_stack"],
+                "use_cases": service["use_cases"]
             }
 
     return {
-        "error": f"Provider not found: {provider_name}",
-        "available_providers": [p["name"] for p in INSURANCE_PROVIDERS],
-        "suggestion": "Try: Balens, BGI, Insure4Sport, or Sports Coach UK"
+        "error": f"Service not found: {service_name}",
+        "available_services": [s["name"] for s in HITL_SERVICES],
+        "suggestion": "Try: 'customer service', 'voice', 'document processing', 'content moderation', or 'decision support'"
     }
 
 
 @agent.tool
-def get_quick_quote_checklist(
-    ctx: RunContext[StateDeps[AppState]]
+def get_tech_stack(
+    ctx: RunContext[StateDeps[AppState]],
+    technology: Optional[str] = None
 ) -> dict:
     """
-    Get a checklist of information needed to get an insurance quote.
-    Useful when preparing to contact insurers.
+    Get information about our tech stack.
+
+    Args:
+        technology: Optional specific technology to learn about (e.g., "copilotkit", "hume", "pydantic")
     """
+    if technology:
+        tech_lower = technology.lower().replace(" ", "_").replace("-", "_")
+
+        # Handle variations
+        if "copilot" in tech_lower:
+            tech_lower = "copilotkit"
+        elif "ag" in tech_lower or "agui" in tech_lower:
+            tech_lower = "ag_ui"
+        elif "pydantic" in tech_lower:
+            tech_lower = "pydantic_ai"
+        elif "hume" in tech_lower:
+            tech_lower = "hume"
+        elif "zep" in tech_lower:
+            tech_lower = "zep"
+        elif "next" in tech_lower:
+            tech_lower = "nextjs"
+
+        if tech_lower in TECH_STACK:
+            tech = TECH_STACK[tech_lower]
+            return {
+                "technology": tech["name"],
+                "category": tech["category"],
+                "description": tech["description"],
+                "why_we_use": tech["why_we_use"],
+                "url": tech["url"]
+            }
+        else:
+            return {
+                "error": f"Technology not found: {technology}",
+                "available": list(TECH_STACK.keys())
+            }
+
+    # Return all tech stack
     return {
-        "title": "Information Needed for Insurance Quote",
-        "checklist": [
-            {"item": "Your qualifications", "detail": "Yoga teacher training certificate, accreditation body"},
-            {"item": "Teaching experience", "detail": "How many years you've been teaching"},
-            {"item": "Yoga styles taught", "detail": "Especially aerial, hot, prenatal - these affect pricing"},
-            {"item": "Teaching locations", "detail": "Studio, gym, private homes, outdoors, online"},
-            {"item": "Class sizes", "detail": "Average and maximum number of students"},
-            {"item": "Annual turnover", "detail": "Approximate income from teaching (if known)"},
-            {"item": "Claims history", "detail": "Any previous insurance claims"},
-            {"item": "Additional activities", "detail": "Workshops, retreats, teacher training courses"}
-        ],
-        "tips": [
-            "Get quotes from at least 2-3 providers to compare",
-            "Ask specifically about aerial/hot yoga if you teach these",
-            "Check if online teaching is included (important post-COVID)",
-            "Ask about monthly payment options if budget is tight"
+        "title": "Our Tech Stack",
+        "technologies": [
+            {
+                "name": t["name"],
+                "category": t["category"],
+                "why_we_use": t["why_we_use"]
+            }
+            for t in TECH_STACK.values()
         ]
     }
 
 
 @agent.tool
-def get_my_profile(
-    ctx: RunContext[StateDeps[AppState]]
-) -> dict:
+def explain_hitl(ctx: RunContext[StateDeps[AppState]]) -> dict:
+    """
+    Explain what Human-in-the-Loop AI means.
+    Use when the user asks about HITL concepts.
+    """
+    concept = HITL_CONCEPTS["what_is_hitl"]
+    return {
+        "title": concept["title"],
+        "explanation": concept["explanation"],
+        "key_benefits": concept["key_benefits"],
+        "comparison": {
+            "full_automation": {
+                "satisfaction": "60-70%",
+                "handles": "Simple queries only",
+                "edge_cases": "Fails or frustrates"
+            },
+            "full_manual": {
+                "satisfaction": "High but slow",
+                "handles": "Everything",
+                "edge_cases": "Expensive at scale"
+            },
+            "hitl": {
+                "satisfaction": "95%+",
+                "handles": "80% by AI, 20% by humans",
+                "edge_cases": "Seamlessly escalated"
+            }
+        }
+    }
+
+
+@agent.tool
+def explain_escalation(ctx: RunContext[StateDeps[AppState]]) -> dict:
+    """
+    Explain how the escalation to humans works.
+    Use when user asks about handoffs or escalation.
+    """
+    concept = HITL_CONCEPTS["escalation"]
+    return {
+        "title": concept["title"],
+        "explanation": concept["explanation"],
+        "how_it_works": concept["key_points"],
+        "triggers": [
+            "Low AI confidence score",
+            "Negative sentiment detected",
+            "Complex multi-step request",
+            "User explicitly asks for human",
+            "High-stakes decision required"
+        ],
+        "what_human_sees": [
+            "Full conversation history",
+            "AI analysis and suggestions",
+            "Customer intent summary",
+            "Recommended actions"
+        ]
+    }
+
+
+@agent.tool
+def get_next_steps(ctx: RunContext[StateDeps[AppState]]) -> dict:
+    """
+    Get next steps for working with HITL.quest.
+    Use when user wants to get started or asks about process.
+    """
+    return {
+        "title": "Getting Started with HITL.quest",
+        "steps": [
+            {
+                "step": 1,
+                "title": "Discovery Call",
+                "description": "We learn about your current processes, pain points, and goals."
+            },
+            {
+                "step": 2,
+                "title": "Solution Design",
+                "description": "We design a custom HITL system for your specific needs."
+            },
+            {
+                "step": 3,
+                "title": "MVP Build",
+                "description": "We build a minimum viable product to validate the approach."
+            },
+            {
+                "step": 4,
+                "title": "Deploy & Iterate",
+                "description": "We deploy, monitor, and continuously improve based on real data."
+            }
+        ],
+        "cta": "Ready to start? Fill out the contact form at /contact and we'll be in touch!"
+    }
+
+
+@agent.tool
+def get_my_profile(ctx: RunContext[StateDeps[AppState]]) -> dict:
     """
     Get the current user's profile information.
-    Returns user details from state or cached instructions.
-    Use this when the user asks about their profile, name, or account.
+    Use when user asks about their profile or account.
     """
     state = ctx.deps.state
     user = state.user if state else None
@@ -619,8 +588,8 @@ def get_my_profile(
     if not user_id and not name:
         return {
             "logged_in": False,
-            "message": "You're not currently logged in. Sign in to save your preferences and get personalized insurance recommendations.",
-            "action": "Click 'Sign In' in the top navigation to create an account or log in."
+            "message": "You're not currently logged in. Sign in to save your preferences and get a personalized experience.",
+            "action": "Click 'Sign In' in the navigation to create an account."
         }
 
     return {
@@ -629,11 +598,10 @@ def get_my_profile(
         "name": name,
         "first_name": first_name,
         "email": email,
-        "preferences": {
-            "yoga_styles": state.yoga_styles if state else [],
-            "teaching_locations": state.teaching_locations if state else [],
-            "student_count": state.student_count if state else None,
-            "has_existing_insurance": state.has_existing_insurance if state else False
+        "interests": {
+            "services": state.interested_services if state else [],
+            "company_type": state.company_type if state else None,
+            "use_case": state.use_case if state else None
         },
         "message": f"Hi {first_name}! Here's your profile information."
     }
@@ -646,7 +614,7 @@ def get_my_profile(
 ag_ui_app = agent.to_ag_ui(deps=StateDeps(AppState()))
 
 # Main FastAPI app
-main_app = FastAPI(title="Yoga Insurance Agent", description="AI assistant for yoga teacher insurance")
+main_app = FastAPI(title="HITL.quest Agent", description="AI assistant for Human-in-the-Loop agency")
 
 # CORS middleware
 main_app.add_middleware(
@@ -662,7 +630,7 @@ def root():
     """Health check endpoint."""
     return {
         "status": "ok",
-        "agent": "yoga-insurance-agent",
+        "agent": "hitl-quest-agent",
         "endpoints": [
             "/agui (AG-UI for CopilotKit)",
             "/chat/completions (CLM for Hume Voice)",
@@ -686,7 +654,7 @@ class ChatMessage(BaseModel):
 
 class ChatCompletionRequest(BaseModel):
     messages: List[ChatMessage]
-    model: Optional[str] = "yoga-insurance-agent"
+    model: Optional[str] = "hitl-quest-agent"
     stream: Optional[bool] = True
 
 
@@ -698,7 +666,7 @@ async def stream_sse_response(content: str, msg_id: str):
             "id": msg_id,
             "object": "chat.completion.chunk",
             "created": int(time.time()),
-            "model": "yoga-insurance-agent",
+            "model": "hitl-quest-agent",
             "choices": [{
                 "index": 0,
                 "delta": {"content": word + (' ' if i < len(words) - 1 else '')},
@@ -752,7 +720,7 @@ async def run_agent_for_clm(user_message: str, system_prompt: str = None) -> str
         import traceback
         print(f"[CLM] Agent error: {e}", file=sys.stderr)
         print(f"[CLM] Traceback: {traceback.format_exc()}", file=sys.stderr)
-        return "Sorry, I couldn't process that request. Try asking about yoga teacher insurance!"
+        return "Sorry, I couldn't process that request. Try asking about our HITL services!"
 
 
 @main_app.post("/chat/completions")
@@ -789,7 +757,7 @@ async def clm_endpoint(request: ChatCompletionRequest):
             "id": f"chatcmpl-{uuid.uuid4().hex[:8]}",
             "object": "chat.completion",
             "created": int(time.time()),
-            "model": "yoga-insurance-agent",
+            "model": "hitl-quest-agent",
             "choices": [{
                 "index": 0,
                 "message": {"role": "assistant", "content": response_text},
