@@ -34,7 +34,7 @@ const faqJsonLd = {
       name: 'What services does HITL.quest offer?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'We build custom HITL solutions including AI-powered customer service with human escalation, intelligent call response systems, document processing with human review, content moderation systems, and AI-assisted decision support tools. We use cutting-edge tools like CopilotKit, AG-UI, Pydantic AI, and Hume for emotional intelligence.',
+        text: 'We build custom HITL solutions including AI-powered customer service with human escalation, intelligent call response systems, document processing with human review, content moderation systems, and AI-assisted decision support tools. We use cutting-edge AI frameworks and tools for emotional intelligence.',
       },
     },
     {
@@ -239,8 +239,8 @@ export default function HomePage() {
                 Chat and email support that handles routine queries instantly, escalates complex issues to humans with full context.
               </p>
               <div className="flex flex-wrap gap-2">
-                <span className="text-xs px-2 py-1 bg-blue-500/20 text-blue-300 rounded">CopilotKit</span>
-                <span className="text-xs px-2 py-1 bg-blue-500/20 text-blue-300 rounded">AG-UI</span>
+                <span className="text-xs px-2 py-1 bg-blue-500/20 text-blue-300 rounded">Chat</span>
+                <span className="text-xs px-2 py-1 bg-blue-500/20 text-blue-300 rounded">Email</span>
               </div>
             </div>
 
@@ -255,8 +255,8 @@ export default function HomePage() {
                 AI voice agents with emotional intelligence that detect when to transfer to humans. Natural, empathetic conversations.
               </p>
               <div className="flex flex-wrap gap-2">
-                <span className="text-xs px-2 py-1 bg-purple-500/20 text-purple-300 rounded">Hume AI</span>
-                <span className="text-xs px-2 py-1 bg-purple-500/20 text-purple-300 rounded">EVI</span>
+                <span className="text-xs px-2 py-1 bg-purple-500/20 text-purple-300 rounded">Voice AI</span>
+                <span className="text-xs px-2 py-1 bg-purple-500/20 text-purple-300 rounded">Emotional</span>
               </div>
             </div>
 
@@ -271,7 +271,7 @@ export default function HomePage() {
                 AI extracts and validates data, flags uncertain items for human review. 10x faster with human-level accuracy.
               </p>
               <div className="flex flex-wrap gap-2">
-                <span className="text-xs px-2 py-1 bg-green-500/20 text-green-300 rounded">Pydantic AI</span>
+                <span className="text-xs px-2 py-1 bg-green-500/20 text-green-300 rounded">Extraction</span>
                 <span className="text-xs px-2 py-1 bg-green-500/20 text-green-300 rounded">Structured</span>
               </div>
             </div>
@@ -379,58 +379,6 @@ export default function HomePage() {
               <p className="text-sm text-slate-400">
                 Human decisions train the AI. The system gets smarter over time.
               </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Tech Stack */}
-      <section id="tech" className="py-20 px-4">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-white mb-4">
-              HITL Agency Tech Stack
-            </h2>
-            <p className="text-slate-400 max-w-2xl mx-auto">
-              We use the best tools in the industry to build production-ready HITL systems
-            </p>
-          </div>
-
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-            <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700/50 text-center hover:border-blue-500/50 transition-colors">
-              <div className="text-3xl mb-3">🤖</div>
-              <h3 className="font-semibold text-white mb-1">CopilotKit</h3>
-              <p className="text-xs text-slate-400">AI UI Framework</p>
-            </div>
-
-            <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700/50 text-center hover:border-purple-500/50 transition-colors">
-              <div className="text-3xl mb-3">🎯</div>
-              <h3 className="font-semibold text-white mb-1">AG-UI</h3>
-              <p className="text-xs text-slate-400">Agent Protocol</p>
-            </div>
-
-            <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700/50 text-center hover:border-green-500/50 transition-colors">
-              <div className="text-3xl mb-3">🐍</div>
-              <h3 className="font-semibold text-white mb-1">Pydantic AI</h3>
-              <p className="text-xs text-slate-400">Structured Output</p>
-            </div>
-
-            <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700/50 text-center hover:border-pink-500/50 transition-colors">
-              <div className="text-3xl mb-3">🎭</div>
-              <h3 className="font-semibold text-white mb-1">Hume AI</h3>
-              <p className="text-xs text-slate-400">Emotional Voice</p>
-            </div>
-
-            <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700/50 text-center hover:border-cyan-500/50 transition-colors">
-              <div className="text-3xl mb-3">🧠</div>
-              <h3 className="font-semibold text-white mb-1">Zep</h3>
-              <p className="text-xs text-slate-400">Memory Layer</p>
-            </div>
-
-            <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700/50 text-center hover:border-orange-500/50 transition-colors">
-              <div className="text-3xl mb-3">⚡</div>
-              <h3 className="font-semibold text-white mb-1">Next.js</h3>
-              <p className="text-xs text-slate-400">React Framework</p>
             </div>
           </div>
         </div>

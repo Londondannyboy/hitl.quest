@@ -63,7 +63,7 @@ export default function ProfilePage() {
           <h3 className="text-xl font-bold text-white mb-6">Try Our Voice AI</h3>
           <HeroVoice />
           <p className="text-sm text-slate-400 mt-4">
-            Experience our Hume-powered voice assistant
+            Experience our emotionally intelligent voice assistant
           </p>
         </div>
 

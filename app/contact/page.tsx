@@ -76,7 +76,7 @@ export default function Page() {
               <h3 className="text-lg font-bold text-white mb-4">Try Our Voice AI</h3>
               <HeroVoice />
               <p className="text-sm text-slate-400 mt-4">
-                Experience our Hume-powered voice assistant
+                Experience our emotionally intelligent voice assistant
               </p>
             </div>
 
@@ -113,8 +113,8 @@ export default function Page() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/#tech" className="hover:text-cyan-400 transition-colors flex items-center gap-2">
-                    <span>→</span> Tech Stack
+                  <Link href="/#what-is-hitl" className="hover:text-cyan-400 transition-colors flex items-center gap-2">
+                    <span>→</span> What is HITL?
                   </Link>
                 </li>
                 <li>

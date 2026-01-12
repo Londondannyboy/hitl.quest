@@ -22,15 +22,12 @@ export const metadata: Metadata = {
   keywords: [
     "human in the loop",
     "HITL",
+    "HITL agency",
     "AI customer service",
     "AI automation",
     "human oversight AI",
     "call center AI",
     "AI agency",
-    "CopilotKit",
-    "Pydantic AI",
-    "Hume AI",
-    "AG-UI",
     "AI with human oversight",
     "customer service automation",
     "voice AI",
@@ -106,7 +103,7 @@ const serviceJsonLd = {
   "@id": "https://hitl.quest/#service",
   name: "Human-in-the-Loop AI Solutions",
   alternateName: "HITL AI Development",
-  description: "Custom human-in-the-loop AI systems including customer service automation, voice call systems, document processing, content moderation, and decision support tools. Built with CopilotKit, AG-UI, Pydantic AI, and Hume.",
+  description: "Custom human-in-the-loop AI systems including customer service automation, voice call systems, document processing, content moderation, and decision support tools. Built with cutting-edge AI frameworks.",
   provider: {
     "@type": "Organization",
     name: "HITL.quest"
