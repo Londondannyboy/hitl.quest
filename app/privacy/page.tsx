@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'Privacy Policy | HITL.quest',
@@ -41,6 +42,12 @@ export default function Page() {
           <h2 className="text-2xl font-bold text-white mb-4">5. Contact Us</h2>
           <p className="text-slate-400">If you have questions about this Privacy Policy, please contact us at: hello@hitl.quest</p>
         </section>
+
+        <div className="mt-12 pt-8 border-t border-slate-700">
+          <p className="text-slate-400">
+            Return to <Link href="/" className="text-cyan-400 hover:text-cyan-300 transition-colors font-semibold">HITL agency</Link> homepage to learn more about our human-in-the-loop AI solutions.
+          </p>
+        </div>
       </article>
     </div>
   )

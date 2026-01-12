@@ -2,8 +2,8 @@ import { Metadata } from 'next'
 import { HeroVoice } from '@/components/HeroVoice'
 
 export const metadata: Metadata = {
-  title: 'HITL.quest | Human-in-the-Loop AI Agency',
-  description: 'We build intelligent AI systems with human oversight. Customer service automation, call response systems, and AI workflows with the human touch. Best-in-class HITL solutions.',
+  title: 'HITL Agency | Human-in-the-Loop AI Solutions | HITL.quest',
+  description: 'HITL agency building intelligent AI systems with human oversight. Customer service automation, call response systems, and AI workflows with the human touch. Best-in-class HITL agency solutions.',
   alternates: {
     canonical: 'https://hitl.quest',
   },
@@ -73,20 +73,28 @@ export default function HomePage() {
 
         {/* Content */}
         <div className="relative z-10 max-w-4xl mx-auto text-center">
+          {/* HITL Agency Logo */}
+          <img
+            src="https://placehold.co/200x80/1e293b/38bdf8?text=HITL+Agency"
+            alt="HITL agency - Human-in-the-Loop AI Solutions"
+            className="mx-auto mb-6 rounded-lg"
+            width={200}
+            height={80}
+          />
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 mb-8">
             <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
             <span className="text-sm text-slate-200">AI + Human Intelligence</span>
           </div>
 
           <h1 className="text-4xl sm:text-6xl font-bold text-white mb-6 leading-tight">
-            Human-in-the-Loop
-            <span className="block bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent mt-2">AI Solutions</span>
+            HITL Agency:
+            <span className="block bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent mt-2">Human-in-the-Loop AI</span>
           </h1>
           <p className="text-xl text-slate-100 mb-4 font-light">
             We build AI systems that know when to ask for help
           </p>
           <p className="text-lg text-slate-300 mb-8 max-w-2xl mx-auto">
-            Customer service automation, intelligent call response, and AI workflows with <strong>seamless human oversight</strong>. The best of both worlds.
+            Customer service automation, intelligent call response, and AI workflows with <strong>seamless human oversight</strong>. <strong>HITL agency</strong> delivers the best of both worlds.
           </p>
 
           <div className="flex flex-wrap justify-center gap-3 text-sm text-slate-200 mb-10">
@@ -108,7 +116,7 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-white mb-4">
-              What is Human-in-the-Loop?
+              What is HITL Agency?
             </h2>
             <p className="text-slate-400 max-w-3xl mx-auto text-lg">
               HITL is an AI design philosophy where humans and machines work together.
@@ -212,7 +220,7 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-white mb-4">
-              What We Build
+              What HITL Agency Builds
             </h2>
             <p className="text-slate-400 max-w-2xl mx-auto">
               Custom HITL solutions powered by cutting-edge AI with elegant human escalation
@@ -381,7 +389,7 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-white mb-4">
-              Our Tech Stack
+              HITL Agency Tech Stack
             </h2>
             <p className="text-slate-400 max-w-2xl mx-auto">
               We use the best tools in the industry to build production-ready HITL systems
@@ -432,7 +440,7 @@ export default function HomePage() {
       <section className="py-20 px-4 bg-gradient-to-r from-blue-900/30 via-purple-900/30 to-blue-900/30">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-white mb-6">
-            Why HITL Matters
+            Why Choose HITL Agency
           </h2>
           <p className="text-slate-300 text-lg mb-10">
             The numbers speak for themselves

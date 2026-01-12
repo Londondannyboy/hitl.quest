@@ -145,6 +145,9 @@ export default function Page() {
           <p className="text-slate-400">
             Prefer to chat? Use the AI assistant in the bottom-right corner or try our voice demo above.
           </p>
+          <p className="text-slate-400 mt-4">
+            Learn more about our <Link href="/" className="text-cyan-400 hover:text-cyan-300 transition-colors font-semibold">HITL agency</Link> services and how we can help your business.
+          </p>
         </div>
       </article>
     </div>
