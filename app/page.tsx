@@ -268,7 +268,7 @@ export default function HomePage() {
               </div>
               <h3 className="text-lg font-semibold text-white mb-2">Document Processing</h3>
               <p className="text-sm text-slate-400 mb-4">
-                AI extracts and validates data, flags uncertain items for human review. 10x faster with human-level accuracy. See our partners at <a href="https://rfp.quest" target="_blank" rel="noopener noreferrer" className="text-green-400 hover:underline">RFP Quest</a> for government tender analysis.
+                AI extracts and validates data, flags uncertain items for human review. 10x faster with human-level accuracy. See our <a href="https://rfp.quest" target="_blank" rel="noopener noreferrer" className="text-green-400 hover:underline">RFP platform</a> for government tender analysis.
               </p>
               <div className="flex flex-wrap gap-2">
                 <span className="text-xs px-2 py-1 bg-green-500/20 text-green-300 rounded">Extraction</span>
